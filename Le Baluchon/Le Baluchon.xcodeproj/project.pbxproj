@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		4F4234AC27A974EA00512C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234AB27A974EA00512C5E /* AppDelegate.swift */; };
-		4F4234AE27A974EA00512C5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234AD27A974EA00512C5E /* SceneDelegate.swift */; };
-		4F4234B027A974EA00512C5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234AF27A974EA00512C5E /* ViewController.swift */; };
 		4F4234B327A974EA00512C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B127A974EA00512C5E /* Main.storyboard */; };
 		4F4234B527A974EB00512C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B427A974EB00512C5E /* Assets.xcassets */; };
 		4F4234B827A974EB00512C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */; };
+		4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355527A982F600512C5E /* MainTabbarController.swift */; };
+		4F42356E27A98A5D00512C5E /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */; };
+		4F42357427A999BB00512C5E /* Exchange_Rates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357327A999BB00512C5E /* Exchange_Rates.framework */; };
+		4F42357527A999BB00512C5E /* Exchange_Rates.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357327A999BB00512C5E /* Exchange_Rates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; };
+		4F42357C27A999CA00512C5E /* Translate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; };
+		4F42357F27A999CE00512C5E /* Weather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F42357627A999BB00512C5E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4F42357527A999BB00512C5E /* Exchange_Rates.framework in Embed Frameworks */,
+				4F42357F27A999CE00512C5E /* Weather.framework in Embed Frameworks */,
+				4F42357C27A999CA00512C5E /* Translate.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F4234A827A974EA00512C5E /* Le Baluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le Baluchon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4234AB27A974EA00512C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F4234AD27A974EA00512C5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F4234AF27A974EA00512C5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F4234B227A974EA00512C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F4234B427A974EB00512C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F4234B727A974EB00512C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F4234B927A974EB00512C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F42355527A982F600512C5E /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		4F42357327A999BB00512C5E /* Exchange_Rates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Exchange_Rates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F42357727A999C300512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F42357A27A999CA00512C5E /* Translate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Translate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F42357D27A999CE00512C5E /* Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F42357427A999BB00512C5E /* Exchange_Rates.framework in Frameworks */,
+				4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */,
+				4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,7 @@
 			children = (
 				4F4234AA27A974EA00512C5E /* Le Baluchon */,
 				4F4234A927A974EA00512C5E /* Products */,
+				4F42357227A999BB00512C5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,50 @@
 		4F4234AA27A974EA00512C5E /* Le Baluchon */ = {
 			isa = PBXGroup;
 			children = (
+				4F42356C27A98A1E00512C5E /* Extension */,
+				4F42354F27A97C0800512C5E /* Interface */,
 				4F4234AB27A974EA00512C5E /* AppDelegate.swift */,
-				4F4234AD27A974EA00512C5E /* SceneDelegate.swift */,
-				4F4234AF27A974EA00512C5E /* ViewController.swift */,
-				4F4234B127A974EA00512C5E /* Main.storyboard */,
 				4F4234B427A974EB00512C5E /* Assets.xcassets */,
 				4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */,
 				4F4234B927A974EB00512C5E /* Info.plist */,
 			);
 			path = "Le Baluchon";
+			sourceTree = "<group>";
+		};
+		4F42354F27A97C0800512C5E /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4F42355227A97E5800512C5E /* Main */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		4F42355227A97E5800512C5E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4F4234B127A974EA00512C5E /* Main.storyboard */,
+				4F42355527A982F600512C5E /* MainTabbarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4F42356C27A98A1E00512C5E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4F42357227A999BB00512C5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F42357D27A999CE00512C5E /* Weather.framework */,
+				4F42357A27A999CA00512C5E /* Translate.framework */,
+				4F42357727A999C300512C5E /* Network.framework */,
+				4F42357327A999BB00512C5E /* Exchange_Rates.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +142,7 @@
 				4F4234A427A974EA00512C5E /* Sources */,
 				4F4234A527A974EA00512C5E /* Frameworks */,
 				4F4234A627A974EA00512C5E /* Resources */,
+				4F42357627A999BB00512C5E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,9 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4234B027A974EA00512C5E /* ViewController.swift in Sources */,
 				4F4234AC27A974EA00512C5E /* AppDelegate.swift in Sources */,
-				4F4234AE27A974EA00512C5E /* SceneDelegate.swift in Sources */,
+				4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */,
+				4F42356E27A98A5D00512C5E /* UIViewController+Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +360,6 @@
 				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -323,7 +388,6 @@
 				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

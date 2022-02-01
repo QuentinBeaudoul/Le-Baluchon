@@ -11,6 +11,9 @@
 		4F42354027A977F700512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42353527A977F700512C5E /* Weather.framework */; };
 		4F42354527A977F700512C5E /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42354427A977F700512C5E /* WeatherTests.swift */; };
 		4F42354627A977F700512C5E /* Weather.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F42353827A977F700512C5E /* Weather.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F42356727A9870600512C5E /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F42356627A9870600512C5E /* Weather.storyboard */; };
+		4F42356927A9871800512C5E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356827A9871800512C5E /* WeatherViewController.swift */; };
+		4F42356B27A9874800512C5E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356A27A9874800512C5E /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		4F42353927A977F700512C5E /* Weather.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Weather.docc; sourceTree = "<group>"; };
 		4F42353F27A977F700512C5E /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42354427A977F700512C5E /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
+		4F42356627A9870600512C5E /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		4F42356827A9871800512C5E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		4F42356A27A9874800512C5E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		4F42352B27A977F700512C5E = {
 			isa = PBXGroup;
 			children = (
+				4F42356527A986F400512C5E /* Interface */,
 				4F42353727A977F700512C5E /* Weather */,
 				4F42354327A977F700512C5E /* WeatherTests */,
 				4F42353627A977F700512C5E /* Products */,
@@ -83,6 +90,16 @@
 				4F42354427A977F700512C5E /* WeatherTests.swift */,
 			);
 			path = WeatherTests;
+			sourceTree = "<group>";
+		};
+		4F42356527A986F400512C5E /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4F42356627A9870600512C5E /* Weather.storyboard */,
+				4F42356827A9871800512C5E /* WeatherViewController.swift */,
+				4F42356A27A9874800512C5E /* WeatherViewModel.swift */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F42356727A9870600512C5E /* Weather.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F42353A27A977F700512C5E /* Weather.docc in Sources */,
+				4F42356B27A9874800512C5E /* WeatherViewModel.swift in Sources */,
+				4F42356927A9871800512C5E /* WeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +420,7 @@
 		4F42354D27A977F700512C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JWQB2GF6V;
@@ -416,6 +437,7 @@
 		4F42354E27A977F700512C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JWQB2GF6V;

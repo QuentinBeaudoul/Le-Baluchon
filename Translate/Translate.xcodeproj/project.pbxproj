@@ -11,6 +11,9 @@
 		4F42351C27A976DE00512C5E /* Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42351127A976DE00512C5E /* Translate.framework */; };
 		4F42352127A976DE00512C5E /* TranslateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42352027A976DE00512C5E /* TranslateTests.swift */; };
 		4F42352227A976DE00512C5E /* Translate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F42351427A976DE00512C5E /* Translate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F42356027A9867900512C5E /* Translate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F42355F27A9867900512C5E /* Translate.storyboard */; };
+		4F42356227A986A000512C5E /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356127A986A000512C5E /* TranslateViewController.swift */; };
+		4F42356427A986AF00512C5E /* TranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356327A986AF00512C5E /* TranslateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		4F42351527A976DE00512C5E /* Translate.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Translate.docc; sourceTree = "<group>"; };
 		4F42351B27A976DE00512C5E /* TranslateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42352027A976DE00512C5E /* TranslateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTests.swift; sourceTree = "<group>"; };
+		4F42355F27A9867900512C5E /* Translate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Translate.storyboard; sourceTree = "<group>"; };
+		4F42356127A986A000512C5E /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		4F42356327A986AF00512C5E /* TranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		4F42350727A976DE00512C5E = {
 			isa = PBXGroup;
 			children = (
+				4F42355E27A9865E00512C5E /* Interface */,
 				4F42351327A976DE00512C5E /* Translate */,
 				4F42351F27A976DE00512C5E /* TranslateTests */,
 				4F42351227A976DE00512C5E /* Products */,
@@ -83,6 +90,16 @@
 				4F42352027A976DE00512C5E /* TranslateTests.swift */,
 			);
 			path = TranslateTests;
+			sourceTree = "<group>";
+		};
+		4F42355E27A9865E00512C5E /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4F42355F27A9867900512C5E /* Translate.storyboard */,
+				4F42356127A986A000512C5E /* TranslateViewController.swift */,
+				4F42356327A986AF00512C5E /* TranslateViewModel.swift */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F42356027A9867900512C5E /* Translate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F42356427A986AF00512C5E /* TranslateViewModel.swift in Sources */,
 				4F42351627A976DE00512C5E /* Translate.docc in Sources */,
+				4F42356227A986A000512C5E /* TranslateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +420,7 @@
 		4F42352927A976DE00512C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JWQB2GF6V;
@@ -416,6 +437,7 @@
 		4F42352A27A976DE00512C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JWQB2GF6V;

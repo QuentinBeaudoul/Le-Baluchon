@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:Weather/Weather.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Translate/Translate.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Exchange Rates/Exchange Rates.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Network/Network.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Frameworks">
+      <Group
+         location = "container:"
+         name = "Network">
+         <FileRef
+            location = "group:Network/Network.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Interface">
+         <FileRef
+            location = "group:Exchange Rates/Exchange Rates.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Translate/Translate.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Weather/Weather.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
       location = "group:Le Baluchon/Le Baluchon.xcodeproj">
    </FileRef>
