@@ -15,7 +15,6 @@
 		4F42356227A986A000512C5E /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356127A986A000512C5E /* TranslateViewController.swift */; };
 		4F42356427A986AF00512C5E /* TranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356327A986AF00512C5E /* TranslateViewModel.swift */; };
 		4F42358927AE838D00512C5E /* TranslateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42358827AE838D00512C5E /* TranslateManager.swift */; };
-		4F42358B27AE856E00512C5E /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F42358A27AE856E00512C5E /* assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +37,7 @@
 		4F42356127A986A000512C5E /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		4F42356327A986AF00512C5E /* TranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewModel.swift; sourceTree = "<group>"; };
 		4F42358827AE838D00512C5E /* TranslateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateManager.swift; sourceTree = "<group>"; };
-		4F42358A27AE856E00512C5E /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		4F4235B127AEC2BC00512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +62,12 @@
 		4F42350727A976DE00512C5E = {
 			isa = PBXGroup;
 			children = (
-				4F42358A27AE856E00512C5E /* assets.xcassets */,
 				4F42358727AE837200512C5E /* Manager */,
 				4F42355E27A9865E00512C5E /* Interface */,
 				4F42351327A976DE00512C5E /* Documentation */,
 				4F42351F27A976DE00512C5E /* TranslateTests */,
 				4F42351227A976DE00512C5E /* Products */,
+				4F4235B027AEC2BC00512C5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +113,14 @@
 				4F42358827AE838D00512C5E /* TranslateManager.swift */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		4F4235B027AEC2BC00512C5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F4235B127AEC2BC00512C5E /* Extension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +215,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F42358B27AE856E00512C5E /* assets.xcassets in Resources */,
 				4F42356027A9867900512C5E /* Translate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

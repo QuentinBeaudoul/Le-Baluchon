@@ -17,7 +17,6 @@
 		4F42357127A98C4A00512C5E /* ExchangeRatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42357027A98C4A00512C5E /* ExchangeRatesManager.swift */; };
 		4F42358227A99C6800512C5E /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358127A99C6800512C5E /* Network.framework */; };
 		4F42358327A99C6800512C5E /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358127A99C6800512C5E /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4F42359427AEBD7E00512C5E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42359327AEBD7E00512C5E /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 		4F42355C27A985E400512C5E /* ExchangeRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewModel.swift; sourceTree = "<group>"; };
 		4F42357027A98C4A00512C5E /* ExchangeRatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesManager.swift; sourceTree = "<group>"; };
 		4F42358127A99C6800512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F42359327AEBD7E00512C5E /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 		4F4234E327A9765700512C5E = {
 			isa = PBXGroup;
 			children = (
-				4F42359227AEBD6A00512C5E /* Extension */,
 				4F42356F27A98C3400512C5E /* Manager */,
 				4F42355727A984DE00512C5E /* Interface */,
 				4F4234EF27A9765700512C5E /* Documentation */,
@@ -141,14 +138,6 @@
 				4F42358127A99C6800512C5E /* Network.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4F42359227AEBD6A00512C5E /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				4F42359327AEBD7E00512C5E /* UIImage.swift */,
-			);
-			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +252,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F4234F227A9765700512C5E /* Exchange_Rates.docc in Sources */,
-				4F42359427AEBD7E00512C5E /* UIImage.swift in Sources */,
 				4F42355B27A985CA00512C5E /* ExchangeRatesViewController.swift in Sources */,
 				4F42357127A98C4A00512C5E /* ExchangeRatesManager.swift in Sources */,
 				4F42355D27A985E400512C5E /* ExchangeRatesViewModel.swift in Sources */,
