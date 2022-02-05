@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Network
 
 public final class TranslateManager {
     public static let shared = TranslateManager()
@@ -13,5 +14,17 @@ public final class TranslateManager {
 
     public func getViewController() -> UIViewController {
         return TranslateViewController()
+    }
+
+    public func fetchResult(text: String, sourceLang: String? = nil, targetLang: String, completion: Result<[Translation], NSError>) {
+        let url = Constante.baseUrl
+        let parameters = ["text": text, "source_lang": sourceLang, "target_lang": targetLang]
+
+        Service<Translation>.get(url: url, parameters: parameters, parser: Translation.Type) { (result, error) in
+            if let result = result as? [Translation] {
+                // TODO: Impl 
+            }
+        }
+
     }
 }
