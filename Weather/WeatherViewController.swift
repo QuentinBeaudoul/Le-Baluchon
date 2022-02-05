@@ -14,9 +14,6 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        let image = UIImage(systemName: "cloud.sun.rain")
-        let selectedImage = UIImage(systemName: "cloud.sun.rain.fill")
-        tabBarItem = UITabBarItem(title: "", image: image, selectedImage: selectedImage)
+        view.backgroundColor = .systemGroupedBackground
     }
 }

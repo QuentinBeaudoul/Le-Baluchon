@@ -12,6 +12,9 @@ public final class ExchangeRatesManager {
     private init() {}
 
     public func getViewController() -> UIViewController {
-        return ExchangeRatesViewController()
+        let viewController = ExchangeRatesViewController()
+        viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "eurosign.square"), selectedImage: UIImage(systemName: "eurosign.square.fill"))
+
+        return viewController
     }
 }
