@@ -7,153 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F4234CE27A9757C00512C5E /* Network.docc in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234CD27A9757C00512C5E /* Network.docc */; };
-		4F4234D427A9757D00512C5E /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4234C927A9757C00512C5E /* Network.framework */; };
-		4F4234D927A9757D00512C5E /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234D827A9757D00512C5E /* NetworkTests.swift */; };
-		4F4234DA27A9757D00512C5E /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4234CC27A9757C00512C5E /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F4235A327AEBF5B00512C5E /* Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4235A227AEBF5B00512C5E /* Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4F4234D527A9757D00512C5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4F4234C027A9757C00512C5E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F4234C827A9757C00512C5E;
-			remoteInfo = Network;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		4F4234C927A9757C00512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F4234CC27A9757C00512C5E /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
-		4F4234CD27A9757C00512C5E /* Network.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Network.docc; sourceTree = "<group>"; };
-		4F4234D327A9757D00512C5E /* NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F4234D827A9757D00512C5E /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		4F42359F27AEBF5B00512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4235A227AEBF5B00512C5E /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F4234C627A9757C00512C5E /* Frameworks */ = {
+		4F42359C27AEBF5B00512C5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F4234D027A9757D00512C5E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F4234D427A9757D00512C5E /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F4234BF27A9757C00512C5E = {
+		4F42359527AEBF5B00512C5E = {
 			isa = PBXGroup;
 			children = (
-				4F4234CB27A9757C00512C5E /* Documentation */,
-				4F4234D727A9757D00512C5E /* NetworkTests */,
-				4F4234CA27A9757C00512C5E /* Products */,
+				4F4235A127AEBF5B00512C5E /* Classes */,
+				4F4235A027AEBF5B00512C5E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F4234CA27A9757C00512C5E /* Products */ = {
+		4F4235A027AEBF5B00512C5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F4234C927A9757C00512C5E /* Network.framework */,
-				4F4234D327A9757D00512C5E /* NetworkTests.xctest */,
+				4F42359F27AEBF5B00512C5E /* Extension.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F4234CB27A9757C00512C5E /* Documentation */ = {
+		4F4235A127AEBF5B00512C5E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4F4234CC27A9757C00512C5E /* Network.h */,
-				4F4234CD27A9757C00512C5E /* Network.docc */,
+				4F4235A227AEBF5B00512C5E /* Extension.h */,
 			);
-			path = Documentation;
-			sourceTree = "<group>";
-		};
-		4F4234D727A9757D00512C5E /* NetworkTests */ = {
-			isa = PBXGroup;
-			children = (
-				4F4234D827A9757D00512C5E /* NetworkTests.swift */,
-			);
-			path = NetworkTests;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4F4234C427A9757C00512C5E /* Headers */ = {
+		4F42359A27AEBF5B00512C5E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4234DA27A9757D00512C5E /* Network.h in Headers */,
+				4F4235A327AEBF5B00512C5E /* Extension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4F4234C827A9757C00512C5E /* Network */ = {
+		4F42359E27AEBF5B00512C5E /* Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F4234DD27A9757D00512C5E /* Build configuration list for PBXNativeTarget "Network" */;
+			buildConfigurationList = 4F4235A627AEBF5B00512C5E /* Build configuration list for PBXNativeTarget "Extension" */;
 			buildPhases = (
-				4F4234C427A9757C00512C5E /* Headers */,
-				4F4234C527A9757C00512C5E /* Sources */,
-				4F4234C627A9757C00512C5E /* Frameworks */,
-				4F4234C727A9757C00512C5E /* Resources */,
+				4F42359A27AEBF5B00512C5E /* Headers */,
+				4F42359B27AEBF5B00512C5E /* Sources */,
+				4F42359C27AEBF5B00512C5E /* Frameworks */,
+				4F42359D27AEBF5B00512C5E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Network;
-			productName = Network;
-			productReference = 4F4234C927A9757C00512C5E /* Network.framework */;
+			name = Extension;
+			productName = Extension;
+			productReference = 4F42359F27AEBF5B00512C5E /* Extension.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		4F4234D227A9757D00512C5E /* NetworkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4F4234E027A9757D00512C5E /* Build configuration list for PBXNativeTarget "NetworkTests" */;
-			buildPhases = (
-				4F4234CF27A9757D00512C5E /* Sources */,
-				4F4234D027A9757D00512C5E /* Frameworks */,
-				4F4234D127A9757D00512C5E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4F4234D627A9757D00512C5E /* PBXTargetDependency */,
-			);
-			name = NetworkTests;
-			productName = NetworkTests;
-			productReference = 4F4234D327A9757D00512C5E /* NetworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F4234C027A9757C00512C5E /* Project object */ = {
+		4F42359627AEBF5B00512C5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					4F4234C827A9757C00512C5E = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
-					4F4234D227A9757D00512C5E = {
+					4F42359E27AEBF5B00512C5E = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 4F4234C327A9757C00512C5E /* Build configuration list for PBXProject "Network" */;
+			buildConfigurationList = 4F42359927AEBF5B00512C5E /* Build configuration list for PBXProject "Extension" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,26 +104,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F4234BF27A9757C00512C5E;
-			productRefGroup = 4F4234CA27A9757C00512C5E /* Products */;
+			mainGroup = 4F42359527AEBF5B00512C5E;
+			productRefGroup = 4F4235A027AEBF5B00512C5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F4234C827A9757C00512C5E /* Network */,
-				4F4234D227A9757D00512C5E /* NetworkTests */,
+				4F42359E27AEBF5B00512C5E /* Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F4234C727A9757C00512C5E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F4234D127A9757D00512C5E /* Resources */ = {
+		4F42359D27AEBF5B00512C5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,34 +125,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F4234C527A9757C00512C5E /* Sources */ = {
+		4F42359B27AEBF5B00512C5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4234CE27A9757C00512C5E /* Network.docc in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4F4234CF27A9757D00512C5E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F4234D927A9757D00512C5E /* NetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4F4234D627A9757D00512C5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4F4234C827A9757C00512C5E /* Network */;
-			targetProxy = 4F4234D527A9757D00512C5E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4F4234DB27A9757D00512C5E /* Debug */ = {
+		4F4235A427AEBF5B00512C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,7 +199,7 @@
 			};
 			name = Debug;
 		};
-		4F4234DC27A9757D00512C5E /* Release */ = {
+		4F4235A527AEBF5B00512C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,7 +257,7 @@
 			};
 			name = Release;
 		};
-		4F4234DE27A9757D00512C5E /* Debug */ = {
+		4F4235A727AEBF5B00512C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -358,72 +276,38 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbeaudoul.Network;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qbeaudoul.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		4F4234DF27A9757D00512C5E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3JWQB2GF6V;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbeaudoul.Network;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		4F4234E127A9757D00512C5E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3JWQB2GF6V;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbeaudoul.NetworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4F4234E227A9757D00512C5E /* Release */ = {
+		4F4235A827AEBF5B00512C5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3JWQB2GF6V;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbeaudoul.NetworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qbeaudoul.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -432,34 +316,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F4234C327A9757C00512C5E /* Build configuration list for PBXProject "Network" */ = {
+		4F42359927AEBF5B00512C5E /* Build configuration list for PBXProject "Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F4234DB27A9757D00512C5E /* Debug */,
-				4F4234DC27A9757D00512C5E /* Release */,
+				4F4235A427AEBF5B00512C5E /* Debug */,
+				4F4235A527AEBF5B00512C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F4234DD27A9757D00512C5E /* Build configuration list for PBXNativeTarget "Network" */ = {
+		4F4235A627AEBF5B00512C5E /* Build configuration list for PBXNativeTarget "Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F4234DE27A9757D00512C5E /* Debug */,
-				4F4234DF27A9757D00512C5E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4F4234E027A9757D00512C5E /* Build configuration list for PBXNativeTarget "NetworkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4F4234E127A9757D00512C5E /* Debug */,
-				4F4234E227A9757D00512C5E /* Release */,
+				4F4235A727AEBF5B00512C5E /* Debug */,
+				4F4235A827AEBF5B00512C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F4234C027A9757C00512C5E /* Project object */;
+	rootObject = 4F42359627AEBF5B00512C5E /* Project object */;
 }

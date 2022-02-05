@@ -6,6 +6,13 @@
       name = "Frameworks">
       <Group
          location = "container:"
+         name = "Extension">
+         <FileRef
+            location = "group:Extension/Extension.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Network">
          <FileRef
             location = "group:Network/Network.xcodeproj">

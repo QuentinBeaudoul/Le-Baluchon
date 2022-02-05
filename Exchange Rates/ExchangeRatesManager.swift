@@ -8,8 +8,7 @@
 import UIKit
 
 public final class ExchangeRatesManager {
-    public static let sharedInstance = ExchangeRatesManager()
-
+    public static let shared = ExchangeRatesManager()
     private init() {}
 
     public func getViewController() -> UIViewController {

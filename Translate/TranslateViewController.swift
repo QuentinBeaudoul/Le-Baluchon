@@ -15,6 +15,9 @@ class TranslateViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //let image = UIImage.image
+        let selectedImage = UIImage(systemName: "Translate.fill")
+        //tabBarItem = UITabBarItem(title: "", image: image, selectedImage: selectedImage)
     }
     
 

@@ -7,7 +7,9 @@
 
 import Foundation
 import UIKit
-import Exchange_Rates
+import ExchangeRates
+import Translate
+import Weather
 
 class MainTabbarController: UITabBarController, UITabBarControllerDelegate {
 
@@ -21,23 +23,16 @@ class MainTabbarController: UITabBarController, UITabBarControllerDelegate {
         super.viewWillAppear(animated)
 
         // Exchange Rates
-        let exchangeRatesViewController = ExchangeRatesManager.sharedInstance.getViewController()
-        let tabBarExchange = UITabBarItem(title: "", image: UIImage(systemName: "externaldrive"), selectedImage: UIImage(named: "ExchangeRateFilled"))
-        exchangeRatesViewController.tabBarItem = tabBarExchange
+        let exchangeRatesViewController = ExchangeRatesManager.shared.getViewController()
 
         // Translate
-        let translateViewController = UIViewController() // TODO: To be replace ⚠️
-//        let tabBarTranslate = UITabBarItem(title: "Translate", image: #imageLiteral(resourceName: "translate.png"), selectedImage: #imageLiteral(resourceName: "translateFilled.png"))
-//        translateViewController.tabBarItem = tabBarTranslate
+        let translateViewController = TranslateManager.shared.getViewController()
 
         // Weather
-        let weatherViewController = UIViewController() // TODO: To be replace ⚠️
-//        let tabBarWeather = UITabBarItem(title: "Weather", image: #imageLiteral(resourceName: "weather.png"), selectedImage: #imageLiteral(resourceName: "weatherFilled.png"))
-//        weatherViewController.tabBarItem = tabBarWeather
+        let weatherViewController = WeatherManager.shared.getViewController()
 
         let controllers = [exchangeRatesViewController, translateViewController, weatherViewController]
-
-        self.viewControllers = controllers
+        self.setViewControllers(controllers, animated: false)
     }
 
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {

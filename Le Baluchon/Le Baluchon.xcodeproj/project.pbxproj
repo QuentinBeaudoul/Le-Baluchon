@@ -13,12 +13,12 @@
 		4F4234B827A974EB00512C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */; };
 		4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355527A982F600512C5E /* MainTabbarController.swift */; };
 		4F42356E27A98A5D00512C5E /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */; };
-		4F42357427A999BB00512C5E /* Exchange_Rates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357327A999BB00512C5E /* Exchange_Rates.framework */; };
-		4F42357527A999BB00512C5E /* Exchange_Rates.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357327A999BB00512C5E /* Exchange_Rates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; };
 		4F42357C27A999CA00512C5E /* Translate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; };
 		4F42357F27A999CE00512C5E /* Weather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; };
+		4F42359127AE938900512C5E /* ExchangeRates.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +28,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4F42357527A999BB00512C5E /* Exchange_Rates.framework in Embed Frameworks */,
 				4F42357F27A999CE00512C5E /* Weather.framework in Embed Frameworks */,
 				4F42357C27A999CA00512C5E /* Translate.framework in Embed Frameworks */,
+				4F42359127AE938900512C5E /* ExchangeRates.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +50,7 @@
 		4F42357727A999C300512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42357A27A999CA00512C5E /* Translate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Translate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42357D27A999CE00512C5E /* Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F42358F27AE938900512C5E /* ExchangeRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ExchangeRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F42357427A999BB00512C5E /* Exchange_Rates.framework in Frameworks */,
 				4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */,
 				4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */,
+				4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +125,7 @@
 		4F42357227A999BB00512C5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F42358F27AE938900512C5E /* ExchangeRates.framework */,
 				4F42357D27A999CE00512C5E /* Weather.framework */,
 				4F42357A27A999CA00512C5E /* Translate.framework */,
 				4F42357727A999C300512C5E /* Network.framework */,
