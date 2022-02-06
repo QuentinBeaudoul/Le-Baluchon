@@ -12,6 +12,9 @@ public final class WeatherManager {
     private init() {}
 
     public func getViewController() -> UIViewController {
-        return WeatherViewController()
+        let viewController = WeatherViewController()
+        viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "cloud.sun.rain"), selectedImage: UIImage(systemName: "cloud.sun.rain.fill"))
+
+        return viewController
     }
 }

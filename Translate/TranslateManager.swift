@@ -13,7 +13,10 @@ public final class TranslateManager {
     private init() {}
 
     public func getViewController() -> UIViewController {
-        return TranslateViewController()
+        let viewController = TranslateViewController()
+        viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "captions.bubble"), selectedImage: UIImage(systemName: "captions.bubble.fill"))
+
+        return viewController
     }
 
     public func fetchResult(text: String, sourceLang: String? = nil, targetLang: String, completion: Result<[Translation], NSError>) {

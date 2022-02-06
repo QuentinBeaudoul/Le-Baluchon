@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F4234AC27A974EA00512C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234AB27A974EA00512C5E /* AppDelegate.swift */; };
-		4F4234B327A974EA00512C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B127A974EA00512C5E /* Main.storyboard */; };
 		4F4234B527A974EB00512C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B427A974EB00512C5E /* Assets.xcassets */; };
 		4F4234B827A974EB00512C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */; };
 		4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355527A982F600512C5E /* MainTabbarController.swift */; };
@@ -19,6 +18,7 @@
 		4F42357F27A999CE00512C5E /* Weather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; };
 		4F42359127AE938900512C5E /* ExchangeRates.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92D9FE303E2F7ABC0D549AF0 /* Pods_Le_Baluchon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059BE11A251957BE74E89211 /* Pods_Le_Baluchon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,9 +38,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		059BE11A251957BE74E89211 /* Pods_Le_Baluchon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Le_Baluchon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F71569C305B3F92FC7D8B87 /* Pods-Le Baluchon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Le Baluchon.debug.xcconfig"; path = "Target Support Files/Pods-Le Baluchon/Pods-Le Baluchon.debug.xcconfig"; sourceTree = "<group>"; };
 		4F4234A827A974EA00512C5E /* Le Baluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le Baluchon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4234AB27A974EA00512C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F4234B227A974EA00512C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F4234B427A974EB00512C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F4234B727A974EB00512C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F4234B927A974EB00512C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		4F42357A27A999CA00512C5E /* Translate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Translate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42357D27A999CE00512C5E /* Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42358F27AE938900512C5E /* ExchangeRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ExchangeRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C85EDD7DED329512E00AB6 /* Pods-Le Baluchon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Le Baluchon.release.xcconfig"; path = "Target Support Files/Pods-Le Baluchon/Pods-Le Baluchon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */,
 				4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */,
 				4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */,
+				92D9FE303E2F7ABC0D549AF0 /* Pods_Le_Baluchon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,7 @@
 				4F4234AA27A974EA00512C5E /* Le Baluchon */,
 				4F4234A927A974EA00512C5E /* Products */,
 				4F42357227A999BB00512C5E /* Frameworks */,
+				E09CC2F4209CEE85B12390D0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +112,6 @@
 		4F42355227A97E5800512C5E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4F4234B127A974EA00512C5E /* Main.storyboard */,
 				4F42355527A982F600512C5E /* MainTabbarController.swift */,
 			);
 			path = Main;
@@ -130,8 +133,19 @@
 				4F42357A27A999CA00512C5E /* Translate.framework */,
 				4F42357727A999C300512C5E /* Network.framework */,
 				4F42357327A999BB00512C5E /* Exchange_Rates.framework */,
+				059BE11A251957BE74E89211 /* Pods_Le_Baluchon.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E09CC2F4209CEE85B12390D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F71569C305B3F92FC7D8B87 /* Pods-Le Baluchon.debug.xcconfig */,
+				83C85EDD7DED329512E00AB6 /* Pods-Le Baluchon.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F4234BC27A974EB00512C5E /* Build configuration list for PBXNativeTarget "Le Baluchon" */;
 			buildPhases = (
+				A96B114D4BDEAB7355DF21E5 /* [CP] Check Pods Manifest.lock */,
 				4F4234A427A974EA00512C5E /* Sources */,
 				4F4234A527A974EA00512C5E /* Frameworks */,
 				4F4234A627A974EA00512C5E /* Resources */,
 				4F42357627A999BB00512C5E /* Embed Frameworks */,
+				57C1305993D782611067E3CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,11 +211,52 @@
 			files = (
 				4F4234B827A974EB00512C5E /* LaunchScreen.storyboard in Resources */,
 				4F4234B527A974EB00512C5E /* Assets.xcassets in Resources */,
-				4F4234B327A974EA00512C5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57C1305993D782611067E3CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Le Baluchon/Pods-Le Baluchon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Le Baluchon/Pods-Le Baluchon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Le Baluchon/Pods-Le Baluchon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A96B114D4BDEAB7355DF21E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Le Baluchon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4F4234A427A974EA00512C5E /* Sources */ = {
@@ -215,14 +272,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F4234B127A974EA00512C5E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F4234B227A974EA00512C5E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,13 +334,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -340,30 +391,30 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		4F4234BD27A974EB00512C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F71569C305B3F92FC7D8B87 /* Pods-Le Baluchon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3JWQB2GF6V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,25 +424,21 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4F4234BE27A974EB00512C5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83C85EDD7DED329512E00AB6 /* Pods-Le Baluchon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3JWQB2GF6V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,8 +448,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
