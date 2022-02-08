@@ -19,15 +19,14 @@ public final class TranslateManager {
         return viewController
     }
 
-    public func fetchResult(text: String, sourceLang: String? = nil, targetLang: String, completion: Result<[Translation], NSError>) {
+    func fetchTranslation(text: String, sourceLang: String? = nil, targetLang: String, completion: @escaping ([Translation]?, Error?) -> Void) {
         let url = Constante.baseUrl
-        let parameters = ["text": text, "source_lang": sourceLang, "target_lang": targetLang]
 
-        Service<Translation>.get(url: url, parameters: parameters, parser: Translation.Type) { (result, error) in
-            if let result = result as? [Translation] {
-                // TODO: Impl 
-            }
+        // TODO: find smartphone language here to replace "sourceLang ?? FR"
+
+        let parameters: [String : Any] = ["auth_key": Constante.apikey, "text": text, "source_lang": sourceLang ?? "FR", "target_lang": targetLang]
+        NetworkManager.fetchData(url: url, parameters: parameters, parser: [Translation].self) { result, error in
+            completion(result, error)
         }
-
     }
 }

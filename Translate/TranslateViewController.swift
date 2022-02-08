@@ -13,9 +13,6 @@ class TranslateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-
-        view.backgroundColor = .systemGroupedBackground
+        view.backgroundColor = .blue
     }
 }

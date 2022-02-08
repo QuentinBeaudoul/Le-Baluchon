@@ -17,6 +17,8 @@
 		4F42358927AE838D00512C5E /* TranslateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42358827AE838D00512C5E /* TranslateManager.swift */; };
 		4F4235BD27AEDAE600512C5E /* Constante.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4235BC27AEDAE600512C5E /* Constante.swift */; };
 		4F4235C027AEDCD700512C5E /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4235BF27AEDCD700512C5E /* Translation.swift */; };
+		4F4235C527B27DD000512C5E /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4235C427B27DD000512C5E /* Network.framework */; };
+		4F4235C627B27DD000512C5E /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4235C427B27DD000512C5E /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,20 @@
 			remoteInfo = Translate;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F4235C727B27DD000512C5E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4F4235C627B27DD000512C5E /* Network.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F42351127A976DE00512C5E /* Translate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Translate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +58,7 @@
 		4F4235B127AEC2BC00512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4235BC27AEDAE600512C5E /* Constante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constante.swift; sourceTree = "<group>"; };
 		4F4235BF27AEDCD700512C5E /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		4F4235C427B27DD000512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4235C527B27DD000512C5E /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +142,7 @@
 		4F4235B027AEC2BC00512C5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F4235C427B27DD000512C5E /* Network.framework */,
 				4F4235B127AEC2BC00512C5E /* Extension.framework */,
 			);
 			name = Frameworks;
@@ -167,6 +186,7 @@
 				4F42350D27A976DE00512C5E /* Sources */,
 				4F42350E27A976DE00512C5E /* Frameworks */,
 				4F42350F27A976DE00512C5E /* Resources */,
+				4F4235C727B27DD000512C5E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

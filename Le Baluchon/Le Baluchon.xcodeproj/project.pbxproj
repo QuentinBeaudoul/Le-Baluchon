@@ -424,6 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,6 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

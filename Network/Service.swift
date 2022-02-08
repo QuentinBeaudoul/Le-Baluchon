@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-public class Service<T : Decodable> {
+class Service<T : Decodable> {
 
     class func get(url: String, header: [String: Any]? = nil, parameters: [String: Any]? = nil, parser: T.Type, completion: @escaping (DataResponse<T, AFError>) -> Void)  {
         let request = AF.request(url, parameters: parameters)
