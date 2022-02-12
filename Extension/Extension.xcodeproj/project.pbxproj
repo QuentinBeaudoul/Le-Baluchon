@@ -7,29 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BEB1384D519F1FA7CDCB46C /* Pods_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7437BE7C8ACC72F94517E22 /* Pods_Extension.framework */; };
 		4F029C3D27B7B0090042B179 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F029C3C27B7B0090042B179 /* R.generated.swift */; };
-		4F029C4227B7B6B40042B179 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F029C4127B7B6B40042B179 /* UIColor.swift */; };
+		4F12AB7727B7F55E00B67FED /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12AB7627B7F55E00B67FED /* UIView.swift */; };
+		4F12AB7C27B7F8C700B67FED /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12AB7B27B7F8C700B67FED /* UIAlertController.swift */; };
+		4F12AB8E27B8201A00B67FED /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12AB8D27B8201A00B67FED /* UIImage.swift */; };
 		4F4235A327AEBF5B00512C5E /* Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4235A227AEBF5B00512C5E /* Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F4235AF27AEC23300512C5E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4235AE27AEC23300512C5E /* UIImage.swift */; };
 		4F4235C927B2C61400512C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4235C827B2C61400512C5E /* Assets.xcassets */; };
 		4F4235D027B2DB9C00512C5E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4235CF27B2DB9C00512C5E /* Extension.swift */; };
+		D3F23D4225B46B6CA718FEAB /* Pods_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582608E68D4B75762C0FF9B1 /* Pods_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F029C3C27B7B0090042B179 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		4F029C4127B7B6B40042B179 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4F029C4527B7B9940042B179 /* Rswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F029C5027B7BB2B0042B179 /* Rswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F12AB6927B7BF5700B67FED /* Rswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F12AB6E27B7C7A000B67FED /* Rswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F12AB7227B7CA5800B67FED /* Rswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F12AB7627B7F55E00B67FED /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		4F12AB7B27B7F8C700B67FED /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		4F12AB8D27B8201A00B67FED /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		4F42359F27AEBF5B00512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4235A227AEBF5B00512C5E /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
-		4F4235AE27AEC23300512C5E /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		4F4235C827B2C61400512C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F4235CF27B2DB9C00512C5E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		582608E68D4B75762C0FF9B1 /* Pods_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A92FBEE311C95B82DF09B0 /* Pods-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension.debug.xcconfig"; path = "Target Support Files/Pods-Extension/Pods-Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		B7437BE7C8ACC72F94517E22 /* Pods_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB9C2A28B609A49C67502E9 /* Pods-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension.release.xcconfig"; path = "Target Support Files/Pods-Extension/Pods-Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BEB1384D519F1FA7CDCB46C /* Pods_Extension.framework in Frameworks */,
+				D3F23D4225B46B6CA718FEAB /* Pods_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				4F4235A227AEBF5B00512C5E /* Extension.h */,
-				4F4235AE27AEC23300512C5E /* UIImage.swift */,
-				4F029C4127B7B6B40042B179 /* UIColor.swift */,
+				4F12AB7627B7F55E00B67FED /* UIView.swift */,
+				4F12AB7B27B7F8C700B67FED /* UIAlertController.swift */,
+				4F12AB8D27B8201A00B67FED /* UIImage.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -87,11 +91,12 @@
 		8A351E1803E8EC878E62773F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F12AB7227B7CA5800B67FED /* Rswift.framework */,
 				4F12AB6E27B7C7A000B67FED /* Rswift.framework */,
 				4F12AB6927B7BF5700B67FED /* Rswift.framework */,
 				4F029C5027B7BB2B0042B179 /* Rswift.framework */,
 				4F029C4527B7B9940042B179 /* Rswift.framework */,
-				B7437BE7C8ACC72F94517E22 /* Pods_Extension.framework */,
+				582608E68D4B75762C0FF9B1 /* Pods_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -233,8 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4235AF27AEC23300512C5E /* UIImage.swift in Sources */,
-				4F029C4227B7B6B40042B179 /* UIColor.swift in Sources */,
+				4F12AB7C27B7F8C700B67FED /* UIAlertController.swift in Sources */,
+				4F12AB8E27B8201A00B67FED /* UIImage.swift in Sources */,
+				4F12AB7727B7F55E00B67FED /* UIView.swift in Sources */,
 				4F4235D027B2DB9C00512C5E /* Extension.swift in Sources */,
 				4F029C3D27B7B0090042B179 /* R.generated.swift in Sources */,
 			);

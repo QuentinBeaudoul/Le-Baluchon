@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TLabel" customModule="Translate" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="eMx-EC-VDr" id="WZh-uD-ch2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="615"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zga-y1-WoQ" userLabel="Content View">
+                    <rect key="frame" x="16" y="16" width="382" height="583"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Text]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMx-EC-VDr">
+                            <rect key="frame" x="16" y="16" width="350" height="24.5"/>
+                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                            <color key="textColor" name="onBackground"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstItem="eMx-EC-VDr" firstAttribute="leading" secondItem="zga-y1-WoQ" secondAttribute="leading" constant="16" id="J4e-ml-XJz"/>
+                        <constraint firstItem="eMx-EC-VDr" firstAttribute="top" secondItem="zga-y1-WoQ" secondAttribute="top" constant="16" id="JQv-2s-eqc"/>
+                        <constraint firstAttribute="trailing" secondItem="eMx-EC-VDr" secondAttribute="trailing" constant="16" id="gMT-tx-CXc"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eMx-EC-VDr" secondAttribute="bottom" constant="16" id="qmh-PL-p3D"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="onBackground"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by DeepL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phk-QC-ZOm">
+                    <rect key="frame" x="302" y="601" width="96" height="10.5"/>
+                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="10"/>
+                    <color key="textColor" name="onBackground"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="background"/>
+            <constraints>
+                <constraint firstItem="zga-y1-WoQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="4u5-v7-ftv"/>
+                <constraint firstItem="phk-QC-ZOm" firstAttribute="top" secondItem="zga-y1-WoQ" secondAttribute="bottom" constant="2" id="9aW-gZ-rFW"/>
+                <constraint firstItem="zga-y1-WoQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="9dG-XC-2Pe"/>
+                <constraint firstAttribute="trailing" secondItem="zga-y1-WoQ" secondAttribute="trailing" constant="16" id="HaG-rc-ivP"/>
+                <constraint firstItem="phk-QC-ZOm" firstAttribute="trailing" secondItem="zga-y1-WoQ" secondAttribute="trailing" id="R3d-mx-12u"/>
+                <constraint firstAttribute="bottom" secondItem="zga-y1-WoQ" secondAttribute="bottom" constant="16" id="s8e-U2-Qvp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="37.834821428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="background">
+            <color red="0.98400002717971802" green="0.99199998378753662" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onBackground">
+            <color red="0.097999997437000275" green="0.10999999940395355" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

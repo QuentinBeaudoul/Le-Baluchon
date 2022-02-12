@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTextfield" customModule="Translate" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="oXv-iS-q8r" id="wu3-Ln-0x9"/>
+                <outlet property="button" destination="Hgv-JU-uYo" id="UfU-Zt-34K"/>
+                <outlet property="textfield" destination="HTR-em-A1X" id="xuN-wV-o4v"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type something..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HTR-em-A1X">
+                    <rect key="frame" x="8" y="0.0" width="337" height="64"/>
+                    <color key="textColor" name="onBackground"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                </textField>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="oXv-iS-q8r">
+                    <rect key="frame" x="361" y="13.5" width="37" height="37"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-JU-uYo">
+                    <rect key="frame" x="345" y="0.0" width="69" height="64"/>
+                    <color key="backgroundColor" name="primary"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
+                    <color key="tintColor" name="onPrimary"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Search"/>
+                    <connections>
+                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="oGp-7Z-kzf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Hgv-JU-uYo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5Z6-Z6-Gor"/>
+                <constraint firstItem="HTR-em-A1X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="8CQ-o1-lOb"/>
+                <constraint firstItem="HTR-em-A1X" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9BS-uI-q2w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oXv-iS-q8r" secondAttribute="trailing" constant="16" id="Aza-KS-tHO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HTR-em-A1X" secondAttribute="bottom" id="O0O-jw-FFN"/>
+                <constraint firstItem="Hgv-JU-uYo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="P5H-nB-9yc"/>
+                <constraint firstItem="oXv-iS-q8r" firstAttribute="leading" secondItem="HTR-em-A1X" secondAttribute="trailing" constant="16" id="YrA-f4-JGh"/>
+                <constraint firstItem="Hgv-JU-uYo" firstAttribute="leading" secondItem="HTR-em-A1X" secondAttribute="trailing" id="cjN-Gc-oql"/>
+                <constraint firstItem="oXv-iS-q8r" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="r1m-W1-XJv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Hgv-JU-uYo" secondAttribute="bottom" id="uEM-rb-3Hw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="131.19999999999999" y="-246.47676161919043"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="onBackground">
+            <color red="0.097999997437000275" green="0.10999999940395355" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.75300002098083496" green="0.0" blue="0.063000001013278961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -17,16 +17,19 @@ end
 target 'Exchange Rates' do
   project 'Exchange Rates/Exchange Rates.xcodeproj'
 	pod 'SwiftLint'
+	pod 'LoadableViews'
 end		
 
 target 'Weather' do
   project 'Weather/Weather.xcodeproj'
 	pod 'SwiftLint'
+	pod 'LoadableViews'
 end
 
 target 'Translate' do
   project 'Translate/Translate.xcodeproj'
 	pod 'SwiftLint'
+	pod 'LoadableViews'
 end
 
 target 'Extension' do
