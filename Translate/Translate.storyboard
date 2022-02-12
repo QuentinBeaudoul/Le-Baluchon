@@ -17,18 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dP-ki-SSp">
-                                <rect key="frame" x="172" y="437.5" width="70" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE1-Ia-t2o">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAS-oi-smK" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" placeholder="YES" id="nBj-pJ-yaR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vAS-oi-smK" firstAttribute="bottom" secondItem="ho2-gH-y00" secondAttribute="bottom" id="3JK-bw-BMS"/>
+                                    <constraint firstItem="vAS-oi-smK" firstAttribute="trailing" secondItem="ho2-gH-y00" secondAttribute="trailing" id="IK1-p7-Q4e"/>
+                                    <constraint firstItem="vAS-oi-smK" firstAttribute="width" secondItem="O9v-eH-UTN" secondAttribute="width" id="T3y-S5-Py5"/>
+                                    <constraint firstItem="vAS-oi-smK" firstAttribute="top" secondItem="ho2-gH-y00" secondAttribute="top" id="jeQ-Cb-e0a"/>
+                                    <constraint firstItem="vAS-oi-smK" firstAttribute="leading" secondItem="ho2-gH-y00" secondAttribute="leading" id="l3t-Cb-hf5"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ho2-gH-y00"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="O9v-eH-UTN"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4dP-ki-SSp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="8ym-zx-rlZ"/>
-                            <constraint firstItem="4dP-ki-SSp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Isz-O6-njC"/>
+                            <constraint firstItem="FE1-Ia-t2o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1fa-J6-m3o"/>
+                            <constraint firstItem="FE1-Ia-t2o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2t8-eS-sWs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FE1-Ia-t2o" secondAttribute="trailing" id="Vch-tg-oZs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FE1-Ia-t2o" secondAttribute="bottom" id="tg3-gg-XOw"/>
                         </constraints>
                     </view>
                 </viewController>

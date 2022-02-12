@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Extension
 
 class TranslateViewController: UIViewController {
 
@@ -13,6 +14,5 @@ class TranslateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
     }
 }

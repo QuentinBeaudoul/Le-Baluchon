@@ -25,8 +25,13 @@ public final class TranslateManager {
         // TODO: find smartphone language here to replace "sourceLang ?? FR"
 
         let parameters: [String : Any] = ["auth_key": Constante.apikey, "text": text, "source_lang": sourceLang ?? "FR", "target_lang": targetLang]
-        NetworkManager.fetchData(url: url, parameters: parameters, parser: [Translation].self) { result, error in
-            completion(result, error)
+        NetworkManager.fetchData(url: url, parameters: parameters, parser: [Translation].self) { result in
+            switch result {
+            case .success(let translation):
+                completion(translation, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
         }
     }
 }

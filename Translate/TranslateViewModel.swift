@@ -11,8 +11,8 @@ class TranslateViewModel {
     var translations: [Translation]?
 
     func processTranslation(text: String, sourceLang: String? = nil, targetLang: String, completion: @escaping (Bool) -> Void) {
-        TranslateManager.shared.fetchTranslation(text: text, sourceLang: sourceLang, targetLang: targetLang) { translations, error in
-
+        TranslateManager.shared.fetchTranslation(text: text, sourceLang: sourceLang, targetLang: targetLang) { translations, error  in
+            
             if let _ = error {
                 return completion(false)
             }

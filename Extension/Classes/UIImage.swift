@@ -8,7 +8,8 @@
 import UIKit
 
 public extension UIImage {
-    class func image(named: String, classe: AnyClass) -> UIImage {
-        return UIImage(named: named, in: Bundle(for: classe.self), with: nil) ?? UIImage()
+
+    class func image(named: String, in bundle: Bundle) -> UIImage {
+        return UIImage(named: named, in: bundle, with: nil) ?? UIImage()
     }
 }
