@@ -21,7 +21,7 @@ class TranslateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        switchImageView.setImageColor(Exposed.ressources.color.onTertiaryContainer())
+        switchImageView.setImageColor(Extension.R.color.onTertiaryContainer())
         sourceButton.delegate = self
         targetButton.delegate = self
     }

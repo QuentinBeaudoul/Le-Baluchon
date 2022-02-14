@@ -32,13 +32,13 @@ class TButton: LoadableView {
 
         switch type {
         case .source:
-            label.textColor = Exposed.ressources.color.onPrimaryContainer()
-            imageView.tintColor = Exposed.ressources.color.onPrimaryContainer()
-            backgroundColor = Exposed.ressources.color.primaryContainer()
+            label.textColor = Extension.R.color.onPrimaryContainer()
+            imageView.tintColor = Extension.R.color.onPrimaryContainer()
+            backgroundColor = Extension.R.color.primaryContainer()
         case .target:
-            label.textColor = Exposed.ressources.color.onSecondaryContainer()
-            imageView.tintColor = Exposed.ressources.color.onSecondaryContainer()
-            backgroundColor = Exposed.ressources.color.secondaryContainer()
+            label.textColor = Extension.R.color.onSecondaryContainer()
+            imageView.tintColor = Extension.R.color.onSecondaryContainer()
+            backgroundColor = Extension.R.color.secondaryContainer()
         }
     }
 

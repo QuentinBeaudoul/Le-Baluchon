@@ -14,25 +14,22 @@
 		4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355527A982F600512C5E /* MainTabbarController.swift */; };
 		4F42356E27A98A5D00512C5E /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */; };
 		4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; };
-		4F42357C27A999CA00512C5E /* Translate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; };
-		4F42357F27A999CE00512C5E /* Weather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; };
-		4F42359127AE938900512C5E /* ExchangeRates.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F4235CB27B2D6A400512C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4235CA27B2D6A400512C5E /* Main.storyboard */; };
 		E868FCD79D15BA1C2CA45213 /* Pods_Le_Baluchon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8990D613322A4E8D7B9C272B /* Pods_Le_Baluchon.framework */; };
+		ED731DD327BA4CED00638F6C /* Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; };
+		ED731DD427BA4CED00638F6C /* Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4F42357627A999BB00512C5E /* Embed Frameworks */ = {
+		ED731DD527BA4CED00638F6C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4F42357F27A999CE00512C5E /* Weather.framework in Embed Frameworks */,
-				4F42357C27A999CA00512C5E /* Translate.framework in Embed Frameworks */,
-				4F42359127AE938900512C5E /* ExchangeRates.framework in Embed Frameworks */,
+				ED731DD427BA4CED00638F6C /* Extension.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +54,7 @@
 		4F4235CA27B2D6A400512C5E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		83C85EDD7DED329512E00AB6 /* Pods-Le Baluchon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Le Baluchon.release.xcconfig"; path = "Target Support Files/Pods-Le Baluchon/Pods-Le Baluchon.release.xcconfig"; sourceTree = "<group>"; };
 		8990D613322A4E8D7B9C272B /* Pods_Le_Baluchon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Le_Baluchon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED731DD227BA4CED00638F6C /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +65,7 @@
 				4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */,
 				4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */,
 				4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */,
+				ED731DD327BA4CED00638F6C /* Extension.framework in Frameworks */,
 				E868FCD79D15BA1C2CA45213 /* Pods_Le_Baluchon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +133,7 @@
 		4F42357227A999BB00512C5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED731DD227BA4CED00638F6C /* Extension.framework */,
 				4F42358F27AE938900512C5E /* ExchangeRates.framework */,
 				4F42357D27A999CE00512C5E /* Weather.framework */,
 				4F42357A27A999CA00512C5E /* Translate.framework */,
@@ -165,8 +165,8 @@
 				4F4234A427A974EA00512C5E /* Sources */,
 				4F4234A527A974EA00512C5E /* Frameworks */,
 				4F4234A627A974EA00512C5E /* Resources */,
-				4F42357627A999BB00512C5E /* Embed Frameworks */,
 				5A7EFDF59B5329D232D5AAE3 /* [CP] Embed Pods Frameworks */,
+				ED731DD527BA4CED00638F6C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +325,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -342,15 +343,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
+				PRODUCT_NAME = "Le Baluchon";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,6 +395,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -399,14 +407,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
+				PRODUCT_NAME = "Le Baluchon";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -417,9 +431,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -428,11 +439,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -442,9 +448,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Le Baluchon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -453,11 +456,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qbeaudoul.le-baluchon";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
