@@ -7,13 +7,14 @@
 
 import UIKit
 import LBNetwork
+import Extension
 
 public final class TranslateManager {
     public static let shared = TranslateManager()
     private init() {}
 
     public func getViewController() -> UIViewController {
-        let viewController = TranslateViewController()
+        let viewController = TranslateViewController.makeFromStoryboard(in: Bundle(for: Self.self))
         viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "captions.bubble"), selectedImage: UIImage(systemName: "captions.bubble.fill"))
 
         return viewController

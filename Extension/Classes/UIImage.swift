@@ -8,8 +8,8 @@
 import UIKit
 
 public extension UIImageView {
-    func setImageColor(_ color: UIColor?) {
-        image = image?.withRenderingMode(.alwaysTemplate)
+    func setImage(_ image: UIImage?, with color: UIColor?) {
+        self.image = image?.withRenderingMode(.alwaysTemplate)
         tintColor = color
     }
 }
