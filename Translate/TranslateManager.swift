@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Network
+import LBNetwork
 
 public final class TranslateManager {
     public static let shared = TranslateManager()

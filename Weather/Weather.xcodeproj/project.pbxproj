@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F029C4D27B7BAE00042B179 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F029C4A27B7BAE00042B179 /* Network.framework */; };
 		4F42353A27A977F700512C5E /* Weather.docc in Sources */ = {isa = PBXBuildFile; fileRef = 4F42353927A977F700512C5E /* Weather.docc */; };
 		4F42354027A977F700512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42353527A977F700512C5E /* Weather.framework */; };
 		4F42354527A977F700512C5E /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42354427A977F700512C5E /* WeatherTests.swift */; };
@@ -68,7 +67,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED731DCF27BA4CB400638F6C /* Extension.framework in Frameworks */,
-				4F029C4D27B7BAE00042B179 /* Network.framework in Frameworks */,
 				835DC512BA45B6D930846F14 /* Pods_Weather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

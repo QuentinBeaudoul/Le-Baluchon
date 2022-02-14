@@ -15,7 +15,7 @@
          location = "container:"
          name = "Network">
          <FileRef
-            location = "group:Network/Network.xcodeproj">
+            location = "group:/Users/quentin/Documents/Perso/Formation/Le-Baluchon/Network/LBNetwork.xcodeproj">
          </FileRef>
       </Group>
       <Group

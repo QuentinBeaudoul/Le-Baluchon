@@ -186,7 +186,7 @@
                         <outlet property="noResultView" destination="TsM-AR-vSo" id="NyK-hh-7oG"/>
                         <outlet property="resultView" destination="lSo-hQ-dgp" id="evd-0v-vtW"/>
                         <outlet property="sourceButton" destination="H0K-sK-ArC" id="AAC-w8-1JN"/>
-                        <outlet property="switchImageView" destination="mZC-rr-BiX" id="gzk-vr-5lP"/>
+                        <outlet property="switchImageView" destination="mZC-rr-BiX" id="5l8-U5-1mg"/>
                         <outlet property="targetButton" destination="Onw-Ys-RDH" id="eTN-qL-eH0"/>
                         <outlet property="textfield" destination="e8d-Wp-SCu" id="fLe-eJ-Oez"/>
                     </connections>
