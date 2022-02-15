@@ -61,14 +61,14 @@ public final class TranslateManager {
         })
     }
     
-    func getSourceLangs() -> [String?]? {
+    func getSourceLangs() -> [String]? {
         guard let languages = languages else { return nil }
         return languages.map { lang in
             lang.sourceLang
         }
     }
     
-    func getTargetLangs() -> [String?]? {
+    func getTargetLangs() -> [String]? {
         guard let languages = languages else { return nil }
         return languages.map { lang in
             lang.targetLang

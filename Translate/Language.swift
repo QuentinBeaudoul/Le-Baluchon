@@ -8,8 +8,8 @@
 import Foundation
 
 public class Language: Decodable {
-    var sourceLang: String?
-    var targetLang: String?
+    var sourceLang: String
+    var targetLang: String
     
     enum CodingKeys: String, CodingKey {
         case sourceLang = "source_lang"
@@ -18,7 +18,7 @@ public class Language: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        sourceLang = try container.decodeIfPresent(String.self, forKey: .sourceLang)?.capitalized
-        targetLang = try container.decodeIfPresent(String.self, forKey: .targetLang)?.capitalized
+        sourceLang = try container.decode(String.self, forKey: .sourceLang).capitalized
+        targetLang = try container.decode(String.self, forKey: .targetLang).capitalized
     }
 }
