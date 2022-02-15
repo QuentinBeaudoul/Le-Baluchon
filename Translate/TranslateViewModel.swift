@@ -8,18 +8,21 @@
 import Foundation
 
 class TranslateViewModel {
-    var translations: [Translation]?
+    
+    var source: String?
+    var target: String?
 
-    func processTranslation(text: String, sourceLang: String? = nil, targetLang: String, completion: @escaping (Result<Bool, Error>) -> Void) {
-        TranslateManager.shared.fetchTranslation(text: text, sourceLang: sourceLang, targetLang: targetLang) { translations, error  in
-            
-            if let error = error {
+    func processTranslation(text: String, completion: @escaping (Result<String, Error>) -> Void) {
+    
+        guard let target = target else { return }
+        TranslateManager.shared.fetchTranslation(text: text, sourceLang: source, targetLang: target) { result  in
+            switch result {
+            case .success(let translationsContainer):
+                if let translations = translationsContainer?.translations, let text = translations.first?.text {
+                    return completion(.success(text))
+                }
+            case .failure(let error):
                 return completion(.failure(error))
-            }
-
-            if let translations = translations {
-                self.translations = translations
-                return completion(.success(true))
             }
         }
     }

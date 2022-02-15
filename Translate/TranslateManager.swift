@@ -20,19 +20,21 @@ public final class TranslateManager {
         return viewController
     }
 
-    func fetchTranslation(text: String, sourceLang: String? = nil, targetLang: String, completion: @escaping ([Translation]?, Error?) -> Void) {
+    func fetchTranslation(text: String, sourceLang: String? = nil, targetLang: String, completion: @escaping (Result<TranslationContainer?, Error>) -> Void) {
         let url = Constante.baseUrl
 
-        // TODO: find smartphone language here to replace "sourceLang ?? FR"
-
-        let parameters: [String : Any] = ["auth_key": Constante.apikey, "text": text, "source_lang": sourceLang ?? "FR", "target_lang": targetLang]
-        NetworkManager.fetchData(url: url, parameters: parameters, parser: [Translation].self) { result in
+        let parameters: [String : Any] = ["auth_key": Constante.apikey, "text": text, "source_lang": sourceLang ?? getDeviceLang(), "target_lang": targetLang]
+        NetworkManager.fetchData(url: url, parameters: parameters, parser: TranslationContainer.self) { result in
             switch result {
-            case .success(let translation):
-                completion(translation, nil)
+            case .success(let translationContainer):
+                completion(.success(translationContainer))
             case .failure(let error):
-                completion(nil, error)
+                completion(.failure(error))
             }
         }
+    }
+    
+    func getDeviceLang() -> String {
+        return Locale.current.languageCode?.capitalized ?? "FR"
     }
 }

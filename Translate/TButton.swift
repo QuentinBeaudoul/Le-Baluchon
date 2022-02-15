@@ -22,7 +22,8 @@ class TButton: LoadableView {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet var view: UIView!
+    
     weak var delegate: TButtonDelegate?
     var type: TButtonType?
 
@@ -34,11 +35,11 @@ class TButton: LoadableView {
         case .source:
             label.textColor = Extension.R.color.onPrimaryContainer()
             imageView.tintColor = Extension.R.color.onPrimaryContainer()
-            backgroundColor = Extension.R.color.primaryContainer()
+            view.backgroundColor = Extension.R.color.primaryContainer(compatibleWith: traitCollection)
         case .target:
             label.textColor = Extension.R.color.onSecondaryContainer()
             imageView.tintColor = Extension.R.color.onSecondaryContainer()
-            backgroundColor = Extension.R.color.secondaryContainer()
+            view.backgroundColor = Extension.R.color.secondaryContainer(compatibleWith: traitCollection)
         }
     }
 

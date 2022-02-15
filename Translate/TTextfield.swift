@@ -9,7 +9,7 @@ import Foundation
 import LoadableViews
 
 protocol TTextfieldDelegate: AnyObject {
-    func onButtonTapped()
+    func onButtonTapped(text: String?)
 }
 
 class TTextfield: LoadableView {
@@ -21,6 +21,11 @@ class TTextfield: LoadableView {
     weak var delegate: TTextfieldDelegate?
 
     @IBAction func buttonTapped() {
-        delegate?.onButtonTapped()
+        delegate?.onButtonTapped(text: textfield.text)
+    }
+    
+    func showLoader(_ bool: Bool) {
+        button.isHidden = bool
+        activityIndicator.isHidden = !bool
     }
 }

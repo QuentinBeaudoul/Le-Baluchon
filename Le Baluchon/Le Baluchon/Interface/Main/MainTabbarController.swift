@@ -9,20 +9,21 @@ import UIKit
 import ExchangeRates
 import Translate
 import Weather
+import Extension
 
 class MainTabbarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGroupedBackground
         delegate = self
+        tabBar.tintColor = R.color.primary()
 
         let exchangeRatesViewController = ExchangeRatesManager.shared.getViewController()
         let translateViewController = TranslateManager.shared.getViewController()
         let weatherViewController = WeatherManager.shared.getViewController()
 
-        setViewControllers([exchangeRatesViewController, translateViewController, weatherViewController], animated: true)
+        setViewControllers([exchangeRatesViewController, translateViewController, weatherViewController], animated: false)
 
-        selectedViewController = exchangeRatesViewController
+        selectedViewController = translateViewController
     }
 }

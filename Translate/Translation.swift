@@ -12,18 +12,13 @@ public class Translation: Decodable {
     var text: String?
 
     enum CodingKeys: String, CodingKey {
-        case translations
-    }
-
-    enum TranslationCodingKeys: String, CodingKey {
         case detectedSourceLanguage = "detected_source_language"
         case text
     }
 
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        let translationContainer = try container.nestedContainer(keyedBy: TranslationCodingKeys.self, forKey: .translations)
-        detectedSourceLanguage = try translationContainer.decodeIfPresent(String.self, forKey: .detectedSourceLanguage)
-        text = try translationContainer.decodeIfPresent(String.self, forKey: .text)
+        detectedSourceLanguage = try container.decodeIfPresent(String.self, forKey: .detectedSourceLanguage)
+        text = try container.decodeIfPresent(String.self, forKey: .text)
     }
 }
