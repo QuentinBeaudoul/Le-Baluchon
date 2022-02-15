@@ -1,4 +1,4 @@
-platform :ios, '13.0'
+platform :ios, '15.0'
 
 use_frameworks!
 
@@ -6,13 +6,10 @@ workspace 'Le Baluchon.xcworkspace'
 
 pod 'SwiftLint'
 
-target 'Network' do
-  project 'Network/Network.xcodeproj'
+target 'LBNetwork' do
+  project 'Network/LBNetwork.xcodeproj'
 
 	pod 'Alamofire', '~> 5.5'
-
-  target 'NetworkTests' do
-  end
 end
 
 target 'Exchange Rates' do

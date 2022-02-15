@@ -69,8 +69,8 @@ extension TranslateViewController: TButtonDelegate {
 
         switch type {
         case .source:
-            
-            guard let langs = viewModel.getSourceLangs() else { return }
+            print()
+            //guard let langs = viewModel.getSourceLangs() else { return }
             
         case .target:
             print() // TODO: display menu target lang
