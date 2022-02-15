@@ -18,7 +18,7 @@ public class Language: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        sourceLang = try container.decodeIfPresent(String.self, forKey: .sourceLang)
-        targetLang = try container.decodeIfPresent(String.self, forKey: .targetLang)
+        sourceLang = try container.decodeIfPresent(String.self, forKey: .sourceLang)?.capitalized
+        targetLang = try container.decodeIfPresent(String.self, forKey: .targetLang)?.capitalized
     }
 }

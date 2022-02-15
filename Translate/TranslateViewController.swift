@@ -64,12 +64,14 @@ extension TranslateViewController: TTextfieldDelegate {
 
 extension TranslateViewController: TButtonDelegate {
 
-    func onButtonTapped(type: TButtonType?) {
+    func onButtonTapped(sender: UIButton, type: TButtonType?) {
         guard let type = type else { return }
 
         switch type {
         case .source:
-            print() // TODO: display menu Source lang
+            
+            guard let langs = viewModel.getSourceLangs() else { return }
+            
         case .target:
             print() // TODO: display menu target lang
         }

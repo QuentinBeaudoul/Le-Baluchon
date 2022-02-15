@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TButton" customModule="Translate" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="Nwu-UO-hBP" id="KjI-2P-peh"/>
                 <outlet property="imageView" destination="UOG-8q-1Ll" id="rOc-zq-hyo"/>
                 <outlet property="label" destination="lMR-v2-4mF" id="bIK-TH-3Dl"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ehp-ce-8Bg"/>

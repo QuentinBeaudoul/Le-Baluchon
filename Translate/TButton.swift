@@ -10,7 +10,7 @@ import LoadableViews
 import Extension
 
 protocol TButtonDelegate: AnyObject {
-    func onButtonTapped(type: TButtonType?)
+    func onButtonTapped(sender: UIButton, type: TButtonType?)
 }
 
 enum TButtonType {
@@ -23,9 +23,18 @@ class TButton: LoadableView {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var view: UIView!
+    @IBOutlet weak var button: UIButton!
     
     weak var delegate: TButtonDelegate?
     var type: TButtonType?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        NSLayoutConstraint.activate([
+                button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+    }
 
     func fillView(title: String?, type: TButtonType) {
         self.type = type
@@ -43,7 +52,7 @@ class TButton: LoadableView {
         }
     }
 
-    @IBAction func buttonTapped() {
-        delegate?.onButtonTapped(type: type)
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        delegate?.onButtonTapped(sender: sender, type: type)
     }
 }

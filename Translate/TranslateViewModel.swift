@@ -26,4 +26,12 @@ class TranslateViewModel {
             }
         }
     }
+    
+    func getSourceLangs() -> [String?]? {
+        return TranslateManager.shared.getSourceLangs()
+    }
+    
+    func getTargetLangs() -> [String?]? {
+        return TranslateManager.shared.getTargetLangs()
+    }
 }

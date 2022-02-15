@@ -54,4 +54,24 @@ public final class TranslateManager {
     func getDeviceLang() -> String {
         return Locale.current.languageCode?.capitalized ?? "FR"
     }
+    
+    func getTargetLangs(for source: String) -> [Language]? {
+        return languages?.filter({ lang in
+            lang.sourceLang == source
+        })
+    }
+    
+    func getSourceLangs() -> [String?]? {
+        guard let languages = languages else { return nil }
+        return languages.map { lang in
+            lang.sourceLang
+        }
+    }
+    
+    func getTargetLangs() -> [String?]? {
+        guard let languages = languages else { return nil }
+        return languages.map { lang in
+            lang.targetLang
+        }
+    }
 }
