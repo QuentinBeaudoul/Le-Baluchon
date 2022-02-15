@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Translation: Decodable {
+class Translation: Decodable {
     var detectedSourceLanguage: String?
     var text: String?
 
@@ -16,7 +16,7 @@ public class Translation: Decodable {
         case text
     }
 
-    public required init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         detectedSourceLanguage = try container.decodeIfPresent(String.self, forKey: .detectedSourceLanguage)
         text = try container.decodeIfPresent(String.self, forKey: .text)

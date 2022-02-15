@@ -10,8 +10,9 @@ import Alamofire
 
 class Service<T : Decodable> {
 
-    class func get(url: String, header: [String: Any]? = nil, parameters: [String: Any]? = nil, parser: T.Type, completion: @escaping (DataResponse<T, AFError>) -> Void)  {
-        let request = AF.request(url, parameters: parameters)
+    class func get(url: String, headers: HTTPHeaders? = nil, parameters: [String: Any]? = nil, parser: T.Type, completion: @escaping (DataResponse<T, AFError>) -> Void)  {
+        
+        let request = AF.request(url, parameters: parameters, headers: headers)
         request.responseDecodable(of: parser, completionHandler: completion)
     }
 

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,12 +25,18 @@
                                     <constraint firstAttribute="width" constant="240" id="eIq-d2-RgQ"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="31i-Wc-hMu">
+                                <rect key="frame" x="176.66666666666666" y="606" width="37" height="37"/>
+                                <color key="color" name="primary"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="31i-Wc-hMu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="P4b-2p-3Qc"/>
                             <constraint firstItem="w7P-eJ-5ee" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="l6g-wd-oOn"/>
                             <constraint firstItem="w7P-eJ-5ee" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="obR-Sf-zDo"/>
+                            <constraint firstItem="31i-Wc-hMu" firstAttribute="top" secondItem="w7P-eJ-5ee" secondAttribute="bottom" constant="64" id="wSB-cG-qNz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +47,9 @@
     </scenes>
     <resources>
         <image name="Baluchon" width="1024" height="1024"/>
+        <namedColor name="primary">
+            <color red="0.75300002098083496" green="0.0" blue="0.063000001013278961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

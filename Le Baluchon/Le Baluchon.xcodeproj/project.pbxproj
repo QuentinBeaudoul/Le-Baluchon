@@ -12,7 +12,6 @@
 		4F4234B527A974EB00512C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B427A974EB00512C5E /* Assets.xcassets */; };
 		4F4234B827A974EB00512C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */; };
 		4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355527A982F600512C5E /* MainTabbarController.swift */; };
-		4F42356E27A98A5D00512C5E /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */; };
 		4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; };
 		4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; };
 		4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; };
@@ -45,7 +44,6 @@
 		4F4234B727A974EB00512C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F4234B927A974EB00512C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F42355527A982F600512C5E /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
-		4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		4F42357327A999BB00512C5E /* Exchange_Rates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Exchange_Rates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42357727A999C300512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42357A27A999CA00512C5E /* Translate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Translate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +96,6 @@
 				4F4234AB27A974EA00512C5E /* AppDelegate.swift */,
 				4F029C4327B7B8590042B179 /* SceneDelegate.swift */,
 				4F4234B427A974EB00512C5E /* Assets.xcassets */,
-				4F42356C27A98A1E00512C5E /* Extension */,
 				4F42354F27A97C0800512C5E /* Interface */,
 				4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */,
 			);
@@ -120,14 +117,6 @@
 				4F4235CA27B2D6A400512C5E /* Main.storyboard */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		4F42356C27A98A1E00512C5E /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				4F42356D27A98A5D00512C5E /* UIViewController+Storyboard.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		4F42357227A999BB00512C5E /* Frameworks */ = {
@@ -272,7 +261,6 @@
 			files = (
 				4F4234AC27A974EA00512C5E /* AppDelegate.swift in Sources */,
 				4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */,
-				4F42356E27A98A5D00512C5E /* UIViewController+Storyboard.swift in Sources */,
 				4F029C4427B7B8590042B179 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

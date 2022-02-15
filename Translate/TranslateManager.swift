@@ -12,6 +12,8 @@ import Extension
 public final class TranslateManager {
     public static let shared = TranslateManager()
     private init() {}
+    
+    var languages: [Language]?
 
     public func getViewController() -> UIViewController {
         let viewController = TranslateViewController.makeFromStoryboard(in: Bundle(for: Self.self))
@@ -19,9 +21,24 @@ public final class TranslateManager {
 
         return viewController
     }
+    
+    public func fetchLanguages(completion: @escaping (Result<LanguageContainer?, Error>) -> Void) {
+        let url = Constante.languagesUrl
+        let header = ["Authorization": Constante.authorization]
+        
+        NetworkManager.fetchData(url: url, headers: header, parser: LanguageContainer.self) { result in
+            switch result {
+            case .success(let container):
+                self.languages = container?.languages
+                completion(.success(container))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 
     func fetchTranslation(text: String, sourceLang: String? = nil, targetLang: String, completion: @escaping (Result<TranslationContainer?, Error>) -> Void) {
-        let url = Constante.baseUrl
+        let url = Constante.translateUrl
 
         let parameters: [String : Any] = ["auth_key": Constante.apikey, "text": text, "source_lang": sourceLang ?? getDeviceLang(), "target_lang": targetLang]
         NetworkManager.fetchData(url: url, parameters: parameters, parser: TranslationContainer.self) { result in

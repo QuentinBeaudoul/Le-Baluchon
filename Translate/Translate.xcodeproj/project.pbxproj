@@ -26,6 +26,8 @@
 		668AB9B227BA842C006EEA6D /* LBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668AB9B127BA842C006EEA6D /* LBNetwork.framework */; };
 		668AB9B327BA842C006EEA6D /* LBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 668AB9B127BA842C006EEA6D /* LBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66CDAC8A27BBBA70009E007C /* TranslationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDAC8927BBBA70009E007C /* TranslationContainer.swift */; };
+		66CDAC8E27BBD6DD009E007C /* LanguageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDAC8D27BBD6DD009E007C /* LanguageContainer.swift */; };
+		66CDAC9027BBD730009E007C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDAC8F27BBD730009E007C /* Language.swift */; };
 		6A68AD1241DEB2B351D8B685 /* Pods_Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89A4E8AF8625154E1ECEE9A /* Pods_Translate.framework */; };
 		ED731DC927BA4CA900638F6C /* Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F029C3E27B7B4840042B179 /* Extension.framework */; };
 		ED731DCA27BA4CA900638F6C /* Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F029C3E27B7B4840042B179 /* Extension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -80,6 +82,8 @@
 		600782A31E373593E7CD7080 /* Pods-Translate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translate.debug.xcconfig"; path = "Target Support Files/Pods-Translate/Pods-Translate.debug.xcconfig"; sourceTree = "<group>"; };
 		668AB9B127BA842C006EEA6D /* LBNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CDAC8927BBBA70009E007C /* TranslationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationContainer.swift; sourceTree = "<group>"; };
+		66CDAC8D27BBD6DD009E007C /* LanguageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageContainer.swift; sourceTree = "<group>"; };
+		66CDAC8F27BBD730009E007C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		F2A60DAF3A45C41B1D36592A /* Pods-Translate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translate.release.xcconfig"; path = "Target Support Files/Pods-Translate/Pods-Translate.release.xcconfig"; sourceTree = "<group>"; };
 		F89A4E8AF8625154E1ECEE9A /* Pods_Translate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Translate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -254,6 +258,8 @@
 		66CDAC8C27BBBF01009E007C /* Languages */ = {
 			isa = PBXGroup;
 			children = (
+				66CDAC8D27BBD6DD009E007C /* LanguageContainer.swift */,
+				66CDAC8F27BBD730009E007C /* Language.swift */,
 			);
 			name = Languages;
 			sourceTree = "<group>";
@@ -405,7 +411,9 @@
 				4F42356227A986A000512C5E /* TranslateViewController.swift in Sources */,
 				4F12AB8727B8091700B67FED /* TTextfield.swift in Sources */,
 				4F12AB8127B7FDB300B67FED /* TButton.swift in Sources */,
+				66CDAC8E27BBD6DD009E007C /* LanguageContainer.swift in Sources */,
 				4F4235C027AEDCD700512C5E /* Translation.swift in Sources */,
+				66CDAC9027BBD730009E007C /* Language.swift in Sources */,
 				4F12AB8C27B8133800B67FED /* TLabel.swift in Sources */,
 				66CDAC8A27BBBA70009E007C /* TranslationContainer.swift in Sources */,
 			);
