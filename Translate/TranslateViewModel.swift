@@ -27,11 +27,11 @@ class TranslateViewModel {
         }
     }
     
-    func getSourceLangs() -> [String?]? {
+    func getSourceLangs() -> [String]? {
         return TranslateManager.shared.getSourceLangs()
     }
     
-    func getTargetLangs() -> [String?]? {
+    func getTargetLangs() -> [String]? {
         return TranslateManager.shared.getTargetLangs()
     }
 }

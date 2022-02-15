@@ -69,9 +69,15 @@ extension TranslateViewController: TButtonDelegate {
 
         switch type {
         case .source:
-            print()
-            //guard let langs = viewModel.getSourceLangs() else { return }
-            
+            guard let langs = viewModel.getSourceLangs() else { return }
+            var menuElements = [UIAction]()
+            for lang in langs {
+                menuElements.append(UIAction(title: lang, handler: { action in
+                    print("Action tapped: \(action.title)")
+                }))
+            }
+            sender.menu = UIMenu(title: "Source", children: menuElements)
+            sender.showsMenuAsPrimaryAction = true
         case .target:
             print() // TODO: display menu target lang
         }

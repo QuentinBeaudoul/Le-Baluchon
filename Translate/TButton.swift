@@ -27,14 +27,6 @@ class TButton: LoadableView {
     
     weak var delegate: TButtonDelegate?
     var type: TButtonType?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        NSLayoutConstraint.activate([
-                button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-            ])
-    }
 
     func fillView(title: String?, type: TButtonType) {
         self.type = type
