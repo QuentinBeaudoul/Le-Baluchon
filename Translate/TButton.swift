@@ -37,13 +37,13 @@ class TButton: LoadableView {
             label.textColor = Extension.R.color.onPrimaryContainer()
             imageView.tintColor = Extension.R.color.onPrimaryContainer()
             view.backgroundColor = Extension.R.color.primaryContainer(compatibleWith: traitCollection)
-            button.menu = UIMenu(title: "Source", children: [UIMenuElement]())
+            button.menu = UIMenu(title: "Source", children: [UIAction]())
             updateMenu(langs)
         case .target:
             label.textColor = Extension.R.color.onSecondaryContainer()
             imageView.tintColor = Extension.R.color.onSecondaryContainer()
             view.backgroundColor = Extension.R.color.secondaryContainer(compatibleWith: traitCollection)
-            button.menu = UIMenu(title: "Target", children: [UIMenuElement]())
+            button.menu = UIMenu(title: "Target", children: [UIAction]())
             updateMenu(langs)
         }
     }
@@ -59,6 +59,6 @@ class TButton: LoadableView {
                 self.delegate?.onActionTapped(action: action, type: self.type)
             }))
         }
-        button.menu?.replacingChildren(actions)
+        button.menu = button.menu?.replacingChildren(actions)
     }
 }

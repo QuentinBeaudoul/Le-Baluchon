@@ -52,7 +52,7 @@ public final class TranslateManager {
     }
     
     func getDeviceLang() -> String {
-        return Locale.current.languageCode?.capitalized ?? "FR"
+        return Locale.current.languageCode?.capitalized ?? "Fr"
     }
     
     func getTargetLangs(for source: String) -> [Language]? {

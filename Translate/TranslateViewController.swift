@@ -22,12 +22,23 @@ class TranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         switchImageView.setImage(R.image.switch(), with: Extension.R.color.onTertiaryContainer())
+        
         sourceButton.fillView(title: viewModel.source, langs: viewModel.getSourceLangs(), type: .source)
-        targetButton.fillView(title: viewModel.target, type: .target)
+        targetButton.fillView(title: viewModel.target, langs: viewModel.getTargetLangs(for: viewModel.source), type: .target)
+        initTargetButton(source: viewModel.source)
         
         sourceButton.delegate = self
         targetButton.delegate = self
         textfield.delegate = self
+    }
+    
+    func initTargetButton(source: String) {
+        let langs = viewModel.getTargetLangs(for: source)
+        let defaultLang = langs.first
+        
+        viewModel.setTarget(with: defaultLang)
+        targetButton.updateLabel(text: defaultLang)
+        targetButton.updateMenu(langs)
     }
 
     @IBAction func switchButtonTapped() {
@@ -36,6 +47,11 @@ class TranslateViewController: UIViewController {
 
 extension TranslateViewController: TTextfieldDelegate {
     func onButtonTapped(text: String?) {
+        
+        guard let _ = viewModel.target else {
+            UIAlertController.showAlert(title: "Target language", message: "Please select a taget language", on: self)
+            return
+        }
         
         guard let text = text, !text.isEmpty else {
             UIAlertController.showAlert(title: "Missing Text", message: "Text is needed to process translations", on: self)
@@ -58,15 +74,19 @@ extension TranslateViewController: TTextfieldDelegate {
 }
 
 extension TranslateViewController: TButtonDelegate {
-
+    
     func onActionTapped(action: UIAction, type: TButtonType?) {
         guard let type = type else { return }
-
+        let chosenLang = action.title
         switch type {
         case .source:
-            <#code#>
+            viewModel.setSource(with: chosenLang)
+            sourceButton.updateLabel(text: chosenLang)
+            
+            initTargetButton(source: chosenLang)
         case .target:
-            <#code#>
+            viewModel.setTarget(with: chosenLang)
+            targetButton.updateLabel(text: chosenLang)
         }
     }
 }

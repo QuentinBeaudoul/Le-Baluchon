@@ -9,11 +9,11 @@ import Foundation
 
 class TranslateViewModel {
     
-    private(set) var source: String = "Fr"
-    private(set) var target: String = "En"
+    private(set) var source: String = TranslateManager.shared.getDeviceLang()
+    private(set) var target: String?
 
     func processTranslation(text: String, completion: @escaping (Result<String, Error>) -> Void) {
-    
+        guard let target = target else { return }
         TranslateManager.shared.fetchTranslation(text: text, sourceLang: source, targetLang: target) { result  in
             switch result {
             case .success(let translationsContainer):
@@ -30,15 +30,15 @@ class TranslateViewModel {
         source = choice
     }
     
-    func setTarget(with choice: String) {
+    func setTarget(with choice: String?) {
         target = choice
     }
     
-    func getSourceLangs() -> [String]? {
-        return TranslateManager.shared.getSourceLangs()
+    func getSourceLangs() -> [String] {
+        return TranslateManager.shared.getSourceLangs() ?? [String]()
     }
     
-    func getTargetLangs(for source: String) -> [String]? {
-        return TranslateManager.shared.getTargetLangs(for: source)
+    func getTargetLangs(for source: String) -> [String] {
+        return TranslateManager.shared.getTargetLangs(for: source) ?? [String]()
     }
 }
