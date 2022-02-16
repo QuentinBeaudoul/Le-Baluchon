@@ -10,7 +10,7 @@ import LoadableViews
 import Extension
 
 protocol TButtonDelegate: AnyObject {
-    func onButtonTapped(sender: UIButton, type: TButtonType?)
+    func onActionTapped(action: UIAction, type: TButtonType?)
 }
 
 enum TButtonType {
@@ -28,7 +28,7 @@ class TButton: LoadableView {
     weak var delegate: TButtonDelegate?
     var type: TButtonType?
 
-    func fillView(title: String?, type: TButtonType) {
+    func fillView(title: String?, langs: [String], type: TButtonType) {
         self.type = type
         label.text = title
 
@@ -37,18 +37,28 @@ class TButton: LoadableView {
             label.textColor = Extension.R.color.onPrimaryContainer()
             imageView.tintColor = Extension.R.color.onPrimaryContainer()
             view.backgroundColor = Extension.R.color.primaryContainer(compatibleWith: traitCollection)
+            button.menu = UIMenu(title: "Source", children: [UIMenuElement]())
+            updateMenu(langs)
         case .target:
             label.textColor = Extension.R.color.onSecondaryContainer()
             imageView.tintColor = Extension.R.color.onSecondaryContainer()
             view.backgroundColor = Extension.R.color.secondaryContainer(compatibleWith: traitCollection)
+            button.menu = UIMenu(title: "Target", children: [UIMenuElement]())
+            updateMenu(langs)
         }
     }
     
     func updateLabel(text: String?) {
         label.text = text
     }
-
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        delegate?.onButtonTapped(sender: sender, type: type)
+    
+    func updateMenu(_ langs: [String]) {
+        var actions = [UIAction]()
+        for lang in langs {
+            actions.append(UIAction(title: lang, handler: { action in
+                self.delegate?.onActionTapped(action: action, type: self.type)
+            }))
+        }
+        button.menu?.replacingChildren(actions)
     }
 }
