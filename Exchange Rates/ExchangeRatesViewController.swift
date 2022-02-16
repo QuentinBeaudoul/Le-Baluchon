@@ -13,9 +13,5 @@ class ExchangeRatesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if !ExchangeRatesManager.shared.isExchangeRateAvailable() {
-            UIAlertController.showAlert(title: "API Exchange Rates unavailable", message: "Api status is probably down", on: self)
-        }
     }
 }
