@@ -68,9 +68,11 @@ public final class TranslateManager {
         }
     }
     
-    func getTargetLangs() -> [String]? {
+    func getTargetLangs(for source: String) -> [String]? {
         guard let languages = languages else { return nil }
-        return languages.map { lang in
+        return languages.filter { lang in
+            lang.sourceLang == source
+        }.map { lang in
             lang.targetLang
         }
     }

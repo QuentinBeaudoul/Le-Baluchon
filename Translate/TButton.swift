@@ -43,6 +43,10 @@ class TButton: LoadableView {
             view.backgroundColor = Extension.R.color.secondaryContainer(compatibleWith: traitCollection)
         }
     }
+    
+    func updateLabel(text: String?) {
+        label.text = text
+    }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         delegate?.onButtonTapped(sender: sender, type: type)

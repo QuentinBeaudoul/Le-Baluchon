@@ -22,8 +22,8 @@ class TranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         switchImageView.setImage(R.image.switch(), with: Extension.R.color.onTertiaryContainer())
-        sourceButton.fillView(title: "French", type: .source)
-        targetButton.fillView(title: "English", type: .target)
+        sourceButton.fillView(title: viewModel.source, type: .source)
+        targetButton.fillView(title: viewModel.target, type: .target)
         
         sourceButton.delegate = self
         targetButton.delegate = self
@@ -36,11 +36,6 @@ class TranslateViewController: UIViewController {
 
 extension TranslateViewController: TTextfieldDelegate {
     func onButtonTapped(text: String?) {
-        viewModel.target = "EN"
-        if viewModel.target == nil {
-            UIAlertController.showAlert(title: "Missing Target", message: "Target is needed to process translations", on: self)
-            return
-        }
         
         guard let text = text, !text.isEmpty else {
             UIAlertController.showAlert(title: "Missing Text", message: "Text is needed to process translations", on: self)
@@ -73,13 +68,27 @@ extension TranslateViewController: TButtonDelegate {
             var menuElements = [UIAction]()
             for lang in langs {
                 menuElements.append(UIAction(title: lang, handler: { action in
-                    print("Action tapped: \(action.title)")
+                    let choice = action.title
+                    print("Action tapped: \(choice)")
+                    self.viewModel.setTarget(with: choice)
+                    self.sourceButton.updateLabel(text: choice)
                 }))
             }
             sender.menu = UIMenu(title: "Source", children: menuElements)
             sender.showsMenuAsPrimaryAction = true
         case .target:
-            print() // TODO: display menu target lang
+            guard let langs = viewModel.getTargetLangs(for: viewModel.source) else { return }
+            var menuElements = [UIAction]()
+            for lang in langs {
+                menuElements.append(UIAction(title: lang, handler: { action in
+                    let choice = action.title
+                    print("Action tapped: \(choice)")
+                    self.viewModel.setTarget(with: choice)
+                    self.targetButton.updateLabel(text: choice)
+                }))
+            }
+            sender.menu = UIMenu(title: "Target", children: menuElements)
+            sender.showsMenuAsPrimaryAction = true
         }
     }
 }
