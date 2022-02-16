@@ -88,7 +88,7 @@ extension TranslateViewController: TButtonDelegate {
     
     func onActionTapped(action: UIAction, type: TButtonType?) {
         guard let type = type else { return }
-        let chosenLang = action.title
+        let chosenLang = TranslateManager.shared.getNameFromLiteral(for: action.title)
         switch type {
         case .source:
             viewModel.setSource(with: chosenLang)

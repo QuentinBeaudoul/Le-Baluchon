@@ -80,4 +80,8 @@ public final class TranslateManager {
     func getLiteralName(for lang: String) -> String {
         return Constante.langDic[lang] ?? lang
     }
+    
+    func getNameFromLiteral(for literalName: String) -> String {
+        return String(literalName.prefix(2))
+    }
 }
