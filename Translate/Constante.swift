@@ -12,4 +12,9 @@ class Constante {
     static let translateUrl = "https://api-free.deepl.com/v2/translate"
     static let languagesUrl = "https://api-free.deepl.com/v2/glossary-language-pairs"
     static let authorization = "DeepL-Auth-Key \(apikey)"
+    
+    static let langDic = ["Fr": "Français",
+                          "Es": "Español",
+                          "En": "English",
+                          "De": "Deutsch"]
 }

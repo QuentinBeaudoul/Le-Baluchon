@@ -22,20 +22,47 @@ class TranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         switchImageView.setImage(R.image.switch(), with: Extension.R.color.onTertiaryContainer())
-        sourceButton.fillView(title: viewModel.source, type: .source)
-        targetButton.fillView(title: viewModel.target, type: .target)
+        
+        sourceButton.fillView(title: viewModel.source, langs: viewModel.getSourceLangs(), type: .source)
+        targetButton.fillView(title: viewModel.target, langs: viewModel.getTargetLangs(for: viewModel.source), type: .target)
+        initTargetButton(source: viewModel.source)
         
         sourceButton.delegate = self
         targetButton.delegate = self
         textfield.delegate = self
     }
+    
+    func initTargetButton(source: String) {
+        let langs = viewModel.getTargetLangs(for: source)
+        let defaultLang = langs.first
+        
+        viewModel.setTarget(with: defaultLang)
+        targetButton.updateLabel(text: defaultLang)
+        targetButton.updateMenu(langs)
+    }
 
+    func switchLangs() {
+        guard let target = viewModel.target else { return }
+        viewModel.swapSourceTraget(safeTarget: target)
+        
+        sourceButton.updateLabel(text: viewModel.source)
+        
+        targetButton.updateLabel(text: viewModel.target)
+        targetButton.updateMenu(viewModel.getTargetLangs(for: viewModel.source))
+    }
+    
     @IBAction func switchButtonTapped() {
+        switchLangs()
     }
 }
 
 extension TranslateViewController: TTextfieldDelegate {
     func onButtonTapped(text: String?) {
+        
+        guard let _ = viewModel.target else {
+            UIAlertController.showAlert(title: "Target language", message: "Please select a taget language", on: self)
+            return
+        }
         
         guard let text = text, !text.isEmpty else {
             UIAlertController.showAlert(title: "Missing Text", message: "Text is needed to process translations", on: self)
@@ -58,37 +85,19 @@ extension TranslateViewController: TTextfieldDelegate {
 }
 
 extension TranslateViewController: TButtonDelegate {
-
-    func onButtonTapped(sender: UIButton, type: TButtonType?) {
+    
+    func onActionTapped(action: UIAction, type: TButtonType?) {
         guard let type = type else { return }
-
+        let chosenLang = TranslateManager.shared.getNameFromLiteral(for: action.title)
         switch type {
         case .source:
-            guard let langs = viewModel.getSourceLangs() else { return }
-            var menuElements = [UIAction]()
-            for lang in langs {
-                menuElements.append(UIAction(title: lang, handler: { action in
-                    let choice = action.title
-                    print("Action tapped: \(choice)")
-                    self.viewModel.setTarget(with: choice)
-                    self.sourceButton.updateLabel(text: choice)
-                }))
-            }
-            sender.menu = UIMenu(title: "Source", children: menuElements)
-            sender.showsMenuAsPrimaryAction = true
+            viewModel.setSource(with: chosenLang)
+            sourceButton.updateLabel(text: chosenLang)
+            
+            initTargetButton(source: chosenLang)
         case .target:
-            guard let langs = viewModel.getTargetLangs(for: viewModel.source) else { return }
-            var menuElements = [UIAction]()
-            for lang in langs {
-                menuElements.append(UIAction(title: lang, handler: { action in
-                    let choice = action.title
-                    print("Action tapped: \(choice)")
-                    self.viewModel.setTarget(with: choice)
-                    self.targetButton.updateLabel(text: choice)
-                }))
-            }
-            sender.menu = UIMenu(title: "Target", children: menuElements)
-            sender.showsMenuAsPrimaryAction = true
+            viewModel.setTarget(with: chosenLang)
+            targetButton.updateLabel(text: chosenLang)
         }
     }
 }

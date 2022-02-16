@@ -52,7 +52,7 @@ public final class TranslateManager {
     }
     
     func getDeviceLang() -> String {
-        return Locale.current.languageCode?.capitalized ?? "FR"
+        return Locale.current.languageCode?.capitalized ?? "Fr"
     }
     
     func getTargetLangs(for source: String) -> [Language]? {
@@ -75,5 +75,13 @@ public final class TranslateManager {
         }.map { lang in
             lang.targetLang
         }
+    }
+    
+    func getLiteralName(for lang: String) -> String {
+        return Constante.langDic[lang] ?? lang
+    }
+    
+    func getNameFromLiteral(for literalName: String) -> String {
+        return String(literalName.prefix(2))
     }
 }
