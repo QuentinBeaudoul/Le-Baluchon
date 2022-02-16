@@ -63,9 +63,9 @@ public final class TranslateManager {
     
     func getSourceLangs() -> [String]? {
         guard let languages = languages else { return nil }
-        return languages.map { lang in
+        return Array(Set(languages.map { lang in
             lang.sourceLang
-        }
+        }))
     }
     
     func getTargetLangs(for source: String) -> [String]? {
