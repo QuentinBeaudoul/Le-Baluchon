@@ -41,7 +41,18 @@ class TranslateViewController: UIViewController {
         targetButton.updateMenu(langs)
     }
 
+    func switchLangs() {
+        guard let target = viewModel.target else { return }
+        viewModel.swapSourceTraget(safeTarget: target)
+        
+        sourceButton.updateLabel(text: viewModel.source)
+        
+        targetButton.updateLabel(text: viewModel.target)
+        targetButton.updateMenu(viewModel.getTargetLangs(for: viewModel.source))
+    }
+    
     @IBAction func switchButtonTapped() {
+        switchLangs()
     }
 }
 

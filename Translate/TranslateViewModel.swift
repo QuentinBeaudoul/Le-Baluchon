@@ -26,6 +26,12 @@ class TranslateViewModel {
         }
     }
     
+    func swapSourceTraget(safeTarget target: String) {
+        let tmp = source
+        source = target
+        self.target = tmp
+    }
+    
     func setSource(with choice: String) {
         source = choice
     }
