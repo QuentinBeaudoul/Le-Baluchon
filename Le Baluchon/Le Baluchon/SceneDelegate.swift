@@ -8,6 +8,7 @@
 import UIKit
 import Translate
 import Extension
+import ExchangeRates
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,12 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
         
+        ExchangeRatesManager.shared.fetchRates()
+        
         TranslateManager.shared.fetchLanguages { _ in
             DispatchQueue.main.async {
                 self.window?.rootViewController = MainTabbarController.makeFromStoryboard("Main")
             }
         }
-        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

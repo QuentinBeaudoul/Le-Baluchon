@@ -16,6 +16,7 @@
 		4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; };
 		4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; };
 		4F4235CB27B2D6A400512C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4235CA27B2D6A400512C5E /* Main.storyboard */; };
+		66C8AFBB27BD64550074DA24 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFBA27BD64550074DA24 /* AppManager.swift */; };
 		E868FCD79D15BA1C2CA45213 /* Pods_Le_Baluchon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8990D613322A4E8D7B9C272B /* Pods_Le_Baluchon.framework */; };
 		ED731DD327BA4CED00638F6C /* Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; };
 		ED731DD427BA4CED00638F6C /* Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -50,6 +51,7 @@
 		4F42357D27A999CE00512C5E /* Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F42358F27AE938900512C5E /* ExchangeRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ExchangeRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4235CA27B2D6A400512C5E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		66C8AFBA27BD64550074DA24 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		83C85EDD7DED329512E00AB6 /* Pods-Le Baluchon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Le Baluchon.release.xcconfig"; path = "Target Support Files/Pods-Le Baluchon/Pods-Le Baluchon.release.xcconfig"; sourceTree = "<group>"; };
 		8990D613322A4E8D7B9C272B /* Pods_Le_Baluchon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Le_Baluchon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED731DD227BA4CED00638F6C /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 		4F4234AA27A974EA00512C5E /* Le Baluchon */ = {
 			isa = PBXGroup;
 			children = (
+				66C8AFB927BD64450074DA24 /* Manager */,
 				4F4234B927A974EB00512C5E /* Info.plist */,
 				4F4234AB27A974EA00512C5E /* AppDelegate.swift */,
 				4F029C4327B7B8590042B179 /* SceneDelegate.swift */,
@@ -131,6 +134,14 @@
 				8990D613322A4E8D7B9C272B /* Pods_Le_Baluchon.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66C8AFB927BD64450074DA24 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				66C8AFBA27BD64550074DA24 /* AppManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		E09CC2F4209CEE85B12390D0 /* Pods */ = {
@@ -262,6 +273,7 @@
 				4F4234AC27A974EA00512C5E /* AppDelegate.swift in Sources */,
 				4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */,
 				4F029C4427B7B8590042B179 /* SceneDelegate.swift in Sources */,
+				66C8AFBB27BD64550074DA24 /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

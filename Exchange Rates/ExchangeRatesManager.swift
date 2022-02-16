@@ -7,15 +7,42 @@
 
 import UIKit
 import Extension
+import LBNetwork
 
 public final class ExchangeRatesManager {
     public static let shared = ExchangeRatesManager()
     private init() {}
+    
+    private(set) var usd: Double?
 
     public func getViewController() -> UIViewController {
         let viewController = ExchangeRatesViewController.makeFromStoryboard(in: Bundle(for: Self.self))
         viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "eurosign.square"), selectedImage: UIImage(systemName: "eurosign.square.fill"))
 
         return viewController
+    }
+    
+    public func fetchRates() {
+        let url = Constante.exchangeRatesUrl
+        let parameters = ["access_key": Constante.apikey]
+        
+        NetworkManager.fetchData(url: url, parameters: parameters, parser: ExchangeRatesContainer.self) { result in
+            switch result {
+            case .success(let container):
+                if let usd = container?.rates.usd {
+                    self.usd = usd
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    public func getUsdRate() -> Double? {
+        return usd
+    }
+    
+    func isExchangeRateAvailable() -> Bool {
+        return usd != nil
     }
 }
