@@ -22,7 +22,7 @@ class TranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         switchImageView.setImage(R.image.switch(), with: Extension.R.color.onTertiaryContainer())
-        sourceButton.fillView(title: viewModel.source, type: .source)
+        sourceButton.fillView(title: viewModel.source, langs: viewModel.getSourceLangs(), type: .source)
         targetButton.fillView(title: viewModel.target, type: .target)
         
         sourceButton.delegate = self
@@ -59,36 +59,14 @@ extension TranslateViewController: TTextfieldDelegate {
 
 extension TranslateViewController: TButtonDelegate {
 
-    func onButtonTapped(sender: UIButton, type: TButtonType?) {
+    func onActionTapped(action: UIAction, type: TButtonType?) {
         guard let type = type else { return }
 
         switch type {
         case .source:
-            guard let langs = viewModel.getSourceLangs() else { return }
-            var menuElements = [UIAction]()
-            for lang in langs {
-                menuElements.append(UIAction(title: lang, handler: { action in
-                    let choice = action.title
-                    print("Action tapped: \(choice)")
-                    self.viewModel.setTarget(with: choice)
-                    self.sourceButton.updateLabel(text: choice)
-                }))
-            }
-            sender.menu = UIMenu(title: "Source", children: menuElements)
-            sender.showsMenuAsPrimaryAction = true
+            <#code#>
         case .target:
-            guard let langs = viewModel.getTargetLangs(for: viewModel.source) else { return }
-            var menuElements = [UIAction]()
-            for lang in langs {
-                menuElements.append(UIAction(title: lang, handler: { action in
-                    let choice = action.title
-                    print("Action tapped: \(choice)")
-                    self.viewModel.setTarget(with: choice)
-                    self.targetButton.updateLabel(text: choice)
-                }))
-            }
-            sender.menu = UIMenu(title: "Target", children: menuElements)
-            sender.showsMenuAsPrimaryAction = true
+            <#code#>
         }
     }
 }
