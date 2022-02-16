@@ -76,4 +76,8 @@ public final class TranslateManager {
             lang.targetLang
         }
     }
+    
+    func getLiteralName(for lang: String) -> String {
+        return Constante.langDic[lang] ?? lang
+    }
 }

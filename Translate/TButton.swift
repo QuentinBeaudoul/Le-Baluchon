@@ -30,7 +30,7 @@ class TButton: LoadableView {
 
     func fillView(title: String?, langs: [String], type: TButtonType) {
         self.type = type
-        label.text = title
+        label.text = TranslateManager.shared.getLiteralName(for: title ?? "")
 
         switch type {
         case .source:
@@ -49,13 +49,13 @@ class TButton: LoadableView {
     }
     
     func updateLabel(text: String?) {
-        label.text = text
+        label.text = TranslateManager.shared.getLiteralName(for: text ?? "")
     }
     
     func updateMenu(_ langs: [String]) {
         var actions = [UIAction]()
         for lang in langs {
-            actions.append(UIAction(title: lang, handler: { action in
+            actions.append(UIAction(title: TranslateManager.shared.getLiteralName(for: lang), handler: { action in
                 self.delegate?.onActionTapped(action: action, type: self.type)
             }))
         }
