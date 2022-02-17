@@ -27,28 +27,6 @@
                                             <constraint firstAttribute="width" constant="100" id="CRq-A2-kcc"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-qM-mIZ">
-                                        <rect key="frame" x="145.33333333333334" y="434" width="99.666666666666657" height="48"/>
-                                        <color key="backgroundColor" name="error"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="sf3-GK-oSy"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
-                                        <color key="tintColor" name="onError"/>
-                                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Reload" image="arrow.clockwise" catalog="system">
-                                            <color key="titleColor" name="onError"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="noRatesButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="daw-X7-GNy"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aA-tL-1lH">
                                         <rect key="frame" x="16" y="323" width="358" height="81"/>
                                         <subviews>
@@ -88,31 +66,531 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-ao-fdi">
-                                        <rect key="frame" x="176.66666666666666" y="542" width="37" height="37"/>
+                                        <rect key="frame" x="176.66666666666666" y="434" width="37" height="37"/>
                                         <color key="color" name="primary"/>
                                     </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-qM-mIZ">
+                                        <rect key="frame" x="145.33333333333334" y="511" width="99.666666666666657" height="48"/>
+                                        <color key="backgroundColor" name="error"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="sf3-GK-oSy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
+                                        <color key="tintColor" name="onError"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Reload" image="arrow.clockwise" catalog="system">
+                                            <color key="titleColor" name="onError"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="noRatesButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="daw-X7-GNy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="background"/>
                                 <constraints>
                                     <constraint firstItem="3aA-tL-1lH" firstAttribute="leading" secondItem="Yxd-4X-g3o" secondAttribute="leading" constant="16" id="1dY-HG-de1"/>
                                     <constraint firstItem="4PP-Jf-vmT" firstAttribute="centerY" secondItem="Yxd-4X-g3o" secondAttribute="centerY" constant="-150" id="5jf-aw-3dc"/>
-                                    <constraint firstItem="C7C-qM-mIZ" firstAttribute="top" secondItem="3aA-tL-1lH" secondAttribute="bottom" constant="30" id="KrS-Sp-wd3"/>
+                                    <constraint firstItem="C7C-qM-mIZ" firstAttribute="top" secondItem="gxh-ao-fdi" secondAttribute="bottom" constant="40" id="9QP-7Z-HED"/>
                                     <constraint firstAttribute="trailing" secondItem="3aA-tL-1lH" secondAttribute="trailing" constant="16" id="Pef-QC-mnK"/>
-                                    <constraint firstItem="gxh-ao-fdi" firstAttribute="top" secondItem="C7C-qM-mIZ" secondAttribute="bottom" constant="60" id="QLo-ht-xvM"/>
                                     <constraint firstItem="4PP-Jf-vmT" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="Tfb-yI-EPg"/>
                                     <constraint firstItem="C7C-qM-mIZ" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="fr7-0s-hbd"/>
                                     <constraint firstItem="3aA-tL-1lH" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="kFJ-gs-d55"/>
                                     <constraint firstItem="3aA-tL-1lH" firstAttribute="top" secondItem="4PP-Jf-vmT" secondAttribute="bottom" constant="40" id="lpP-Dg-le6"/>
                                     <constraint firstItem="gxh-ao-fdi" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="o7T-K2-Vua"/>
+                                    <constraint firstItem="gxh-ao-fdi" firstAttribute="top" secondItem="3aA-tL-1lH" secondAttribute="bottom" constant="30" id="uIf-Dd-ucL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4F-ej-G6a" userLabel="Rate View">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV2-cm-yQf">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="766"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEA-0F-RyE" userLabel="Content View">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="793"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-Ls-gzK">
+                                                        <rect key="frame" x="16" y="24" width="223.33333333333334" height="28.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                                                        <color key="textColor" name="onBackground"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egy-Cj-PcX" userLabel="Rates View">
+                                                        <rect key="frame" x="16" y="92.666666666666643" width="358" height="169.33333333333337"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xnZ-TB-vo7">
+                                                                <rect key="frame" x="8" y="8" width="342" height="153.33333333333334"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlH-ye-cOE" userLabel="EUR View">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="72.666666666666671"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC1-Ds-lUZ">
+                                                                                <rect key="frame" x="8.0000000000000018" y="8" width="30.666666666666671" height="14.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="14"/>
+                                                                                <color key="textColor" name="onBackground"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HVg-3f-kEn">
+                                                                                <rect key="frame" x="8" y="32" width="326" height="24.666666666666671"/>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="textColor" name="onBackground"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" name="background"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="GC1-Ds-lUZ" firstAttribute="top" secondItem="UlH-ye-cOE" secondAttribute="top" constant="8" id="5Aj-5A-8pF"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="HVg-3f-kEn" secondAttribute="trailing" constant="8" id="JPj-F8-JUp"/>
+                                                                            <constraint firstItem="GC1-Ds-lUZ" firstAttribute="leading" secondItem="UlH-ye-cOE" secondAttribute="leading" constant="8" id="LyP-IW-NNi"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="HVg-3f-kEn" secondAttribute="bottom" constant="16" id="TSN-tq-DkL"/>
+                                                                            <constraint firstItem="HVg-3f-kEn" firstAttribute="leading" secondItem="UlH-ye-cOE" secondAttribute="leading" constant="8" id="hpl-d4-xk4"/>
+                                                                            <constraint firstItem="HVg-3f-kEn" firstAttribute="top" secondItem="UlH-ye-cOE" secondAttribute="top" constant="32" id="mff-5y-chW"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" name="onPrimaryContainer"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="8"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-vs-Ibf" userLabel="USD View">
+                                                                        <rect key="frame" x="0.0" y="80.666666666666686" width="342" height="72.666666666666686"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a43-dJ-vej">
+                                                                                <rect key="frame" x="8.0000000000000018" y="8" width="30.666666666666671" height="14.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="14"/>
+                                                                                <color key="textColor" name="onBackground"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="isx-qT-TaG">
+                                                                                <rect key="frame" x="8" y="31.999999999999972" width="326" height="24.666666666666671"/>
+                                                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                                                                <color key="textColor" name="onBackground"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" name="background"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="a43-dJ-vej" firstAttribute="top" secondItem="J8t-vs-Ibf" secondAttribute="top" constant="8" id="KcM-PS-iFg"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="isx-qT-TaG" secondAttribute="bottom" constant="16" id="NcH-GS-9VJ"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="isx-qT-TaG" secondAttribute="trailing" constant="8" id="bHk-ed-OW7"/>
+                                                                            <constraint firstItem="a43-dJ-vej" firstAttribute="leading" secondItem="J8t-vs-Ibf" secondAttribute="leading" constant="8" id="iUG-R3-2nG"/>
+                                                                            <constraint firstItem="isx-qT-TaG" firstAttribute="leading" secondItem="J8t-vs-Ibf" secondAttribute="leading" constant="8" id="pmw-yy-dcj"/>
+                                                                            <constraint firstItem="isx-qT-TaG" firstAttribute="top" secondItem="J8t-vs-Ibf" secondAttribute="top" constant="32" id="rkL-gR-wXi"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="8"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" name="onPrimaryContainer"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="primaryContainer"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="xnZ-TB-vo7" secondAttribute="bottom" constant="8" id="7ut-Sd-Peq"/>
+                                                            <constraint firstItem="xnZ-TB-vo7" firstAttribute="leading" secondItem="egy-Cj-PcX" secondAttribute="leading" constant="8" id="DU1-KF-YgZ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xnZ-TB-vo7" secondAttribute="trailing" constant="8" id="LTh-OV-lza"/>
+                                                            <constraint firstItem="xnZ-TB-vo7" firstAttribute="top" secondItem="egy-Cj-PcX" secondAttribute="top" constant="8" id="ujv-4s-Y2y"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Fixer.io" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaW-wD-85l">
+                                                        <rect key="frame" x="269" y="264" width="105" height="10.333333333333314"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="10"/>
+                                                        <color key="textColor" name="onBackground"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ9-NA-1k5" userLabel="Dial View">
+                                                        <rect key="frame" x="16" y="294.33333333333326" width="358" height="482.66666666666674"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nYY-7s-88D">
+                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="482.66666666666669"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="88L-fH-LDY">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="108.66666666666667"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQB-g5-IRs">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="aQB-g5-IRs" secondAttribute="height" id="1gl-UU-mZq"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="1"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a1Q-s1-1RD"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkG-eT-DTS">
+                                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="CkG-eT-DTS" secondAttribute="height" id="6la-N4-mlK"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="2"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8nd-Ij-KG7"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZc-1v-mCM">
+                                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="oZc-1v-mCM" secondAttribute="height" id="fb1-b6-u4e"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="3"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YKg-zD-umh"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="CkG-eT-DTS" firstAttribute="width" secondItem="aQB-g5-IRs" secondAttribute="width" id="Z8M-DV-76a"/>
+                                                                            <constraint firstItem="oZc-1v-mCM" firstAttribute="width" secondItem="aQB-g5-IRs" secondAttribute="width" id="emO-Qt-eR8"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UGH-Da-0gC">
+                                                                        <rect key="frame" x="0.0" y="124.66666666666669" width="358" height="108.66666666666669"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebE-WQ-NCY">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="ebE-WQ-NCY" secondAttribute="height" id="eX1-6l-uUe"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="4"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gHZ-sx-dGZ"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdM-1Y-PnR">
+                                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="fdM-1Y-PnR" secondAttribute="height" id="W4a-3Z-nGV"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="5"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wbW-W8-jme"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu6-ue-f7y">
+                                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Fu6-ue-f7y" secondAttribute="height" id="J3w-OC-OJs"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="6"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fnJ-KS-ndq"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="fdM-1Y-PnR" firstAttribute="width" secondItem="ebE-WQ-NCY" secondAttribute="width" id="RMK-R1-Kr3"/>
+                                                                            <constraint firstItem="Fu6-ue-f7y" firstAttribute="width" secondItem="ebE-WQ-NCY" secondAttribute="width" id="aal-HU-t52"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7to-yC-THB">
+                                                                        <rect key="frame" x="0.0" y="249.33333333333329" width="358" height="108.66666666666666"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3u-eI-4Kd">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="S3u-eI-4Kd" secondAttribute="height" id="ll7-RA-Em1"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="7"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PRO-Nb-M1E"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noh-FW-TIy">
+                                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="noh-FW-TIy" secondAttribute="height" id="72n-Ij-6Ph"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="8"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aou-tU-3jb"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wN2-Lb-nG3">
+                                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="wN2-Lb-nG3" secondAttribute="height" id="hBY-6S-vyH"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="9"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lQc-qp-gXp"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="noh-FW-TIy" firstAttribute="width" secondItem="S3u-eI-4Kd" secondAttribute="width" id="OOB-TE-2yX"/>
+                                                                            <constraint firstItem="wN2-Lb-nG3" firstAttribute="width" secondItem="S3u-eI-4Kd" secondAttribute="width" id="dHx-2X-pdH"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cwm-OK-x90">
+                                                                        <rect key="frame" x="0.0" y="374.00000000000006" width="358" height="108.66666666666669"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTj-Bz-Vo5">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="UTj-Bz-Vo5" secondAttribute="height" id="i99-Yy-Etb"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="0"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D6M-dU-iBk"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anc-e2-CGU">
+                                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="surface"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="anc-e2-CGU" secondAttribute="height" id="ZMJ-7h-fF5"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title=","/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="onBackground"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="8"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="brM-Rf-2na"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-6T-Tm3">
+                                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="108.66666666666666" height="108.66666666666667"/>
+                                                                                <color key="backgroundColor" name="primary"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="q8f-6T-Tm3" secondAttribute="height" id="18a-Xu-I9j"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                                                                <color key="tintColor" name="onSurface"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="Clear">
+                                                                                    <color key="titleColor" name="onPrimary"/>
+                                                                                </state>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <real key="value" value="16"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="dialButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j2e-bC-6yB"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="anc-e2-CGU" firstAttribute="width" secondItem="UTj-Bz-Vo5" secondAttribute="width" id="BRc-hl-R6A"/>
+                                                                            <constraint firstItem="q8f-6T-Tm3" firstAttribute="width" secondItem="UTj-Bz-Vo5" secondAttribute="width" id="Rxb-n5-bPd"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="background"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="nYY-7s-88D" secondAttribute="trailing" id="5fI-Rc-539"/>
+                                                            <constraint firstAttribute="bottom" secondItem="nYY-7s-88D" secondAttribute="bottom" id="Hgr-d1-f0z"/>
+                                                            <constraint firstItem="nYY-7s-88D" firstAttribute="top" secondItem="AQ9-NA-1k5" secondAttribute="top" id="l2R-vH-9x1"/>
+                                                            <constraint firstItem="nYY-7s-88D" firstAttribute="leading" secondItem="AQ9-NA-1k5" secondAttribute="leading" id="pu3-f1-Ajy"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" name="background"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="egy-Cj-PcX" secondAttribute="trailing" constant="16" id="2QT-wy-N2c"/>
+                                                    <constraint firstItem="egy-Cj-PcX" firstAttribute="leading" secondItem="YEA-0F-RyE" secondAttribute="leading" constant="16" id="514-HS-D30"/>
+                                                    <constraint firstItem="AQ9-NA-1k5" firstAttribute="leading" secondItem="YEA-0F-RyE" secondAttribute="leading" constant="16" id="CrR-J9-oUo"/>
+                                                    <constraint firstItem="g6Y-Ls-gzK" firstAttribute="leading" secondItem="YEA-0F-RyE" secondAttribute="leading" constant="16" id="Mud-4x-CmH"/>
+                                                    <constraint firstItem="aaW-wD-85l" firstAttribute="trailing" secondItem="egy-Cj-PcX" secondAttribute="trailing" id="Ocw-p1-QSY"/>
+                                                    <constraint firstItem="AQ9-NA-1k5" firstAttribute="top" secondItem="aaW-wD-85l" secondAttribute="bottom" constant="20" id="bqA-1K-k1j"/>
+                                                    <constraint firstItem="aaW-wD-85l" firstAttribute="top" secondItem="egy-Cj-PcX" secondAttribute="bottom" constant="2" id="e15-Ez-h3P"/>
+                                                    <constraint firstItem="g6Y-Ls-gzK" firstAttribute="top" secondItem="YEA-0F-RyE" secondAttribute="top" constant="24" id="fLN-I3-lsf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AQ9-NA-1k5" secondAttribute="bottom" constant="16" id="jmp-or-SlY"/>
+                                                    <constraint firstItem="egy-Cj-PcX" firstAttribute="top" secondItem="g6Y-Ls-gzK" secondAttribute="bottom" constant="40" id="lud-sZ-OPx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AQ9-NA-1k5" secondAttribute="trailing" constant="16" id="svO-rl-JcC"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YEA-0F-RyE" firstAttribute="leading" secondItem="bMQ-Yq-g4Z" secondAttribute="leading" id="0iZ-0t-rwy"/>
+                                            <constraint firstItem="YEA-0F-RyE" firstAttribute="width" secondItem="3sY-Tm-tl2" secondAttribute="width" id="5Gf-jm-OtM"/>
+                                            <constraint firstItem="YEA-0F-RyE" firstAttribute="trailing" secondItem="bMQ-Yq-g4Z" secondAttribute="trailing" id="S6m-jg-Py3"/>
+                                            <constraint firstItem="YEA-0F-RyE" firstAttribute="bottom" secondItem="bMQ-Yq-g4Z" secondAttribute="bottom" id="UgC-eG-mJZ"/>
+                                            <constraint firstItem="YEA-0F-RyE" firstAttribute="top" secondItem="bMQ-Yq-g4Z" secondAttribute="top" id="azJ-Ln-gWW"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="bMQ-Yq-g4Z"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="3sY-Tm-tl2"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sV2-cm-yQf" secondAttribute="trailing" id="0om-q4-Oow"/>
+                                    <constraint firstItem="sV2-cm-yQf" firstAttribute="top" secondItem="r4F-ej-G6a" secondAttribute="top" id="DX7-fb-OGs"/>
+                                    <constraint firstItem="sV2-cm-yQf" firstAttribute="leading" secondItem="r4F-ej-G6a" secondAttribute="leading" id="YEs-c6-VT1"/>
+                                    <constraint firstAttribute="bottom" secondItem="sV2-cm-yQf" secondAttribute="bottom" id="bBh-x8-dU3"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="r4F-ej-G6a" secondAttribute="trailing" id="3Dg-c7-g2v"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Yxd-4X-g3o" secondAttribute="bottom" id="B1z-nW-rws"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="r4F-ej-G6a" secondAttribute="bottom" id="Zf7-SB-tQJ"/>
+                            <constraint firstItem="r4F-ej-G6a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aMf-zy-Njm"/>
                             <constraint firstItem="Yxd-4X-g3o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fBo-fV-MVI"/>
                             <constraint firstItem="Yxd-4X-g3o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nq5-Ne-4iZ"/>
+                            <constraint firstItem="r4F-ej-G6a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="zeF-2s-ErB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Yxd-4X-g3o" secondAttribute="trailing" id="zqO-Vp-Wqp"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -120,11 +598,18 @@
                                 <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Yxd-4X-g3o"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="eurLabel" destination="HVg-3f-kEn" id="xWr-b7-ofu"/>
                         <outlet property="noRatesActivityIndicator" destination="gxh-ao-fdi" id="uIr-iB-9s9"/>
                         <outlet property="noRatesImageView" destination="4PP-Jf-vmT" id="gRF-JX-gLa"/>
                         <outlet property="noRatesView" destination="Yxd-4X-g3o" id="afg-zx-aVe"/>
+                        <outlet property="usdLabel" destination="isx-qT-TaG" id="M2q-AR-dEf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,17 +629,35 @@
         <namedColor name="errorContainer">
             <color red="1" green="0.85500001907348633" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="onBackground">
+            <color red="0.097999997437000275" green="0.10999999940395355" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="onError">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="onErrorContainer">
             <color red="0.25499999523162842" green="0.0" blue="0.0040000001899898052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="onPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onPrimaryContainer">
+            <color red="0.25499999523162842" green="0.0" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onSurface">
+            <color red="0.097999997437000275" green="0.10999999940395355" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="onTertiaryContainer">
             <color red="0.24300000071525574" green="0.0" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.75300002098083496" green="0.0" blue="0.063000001013278961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryContainer">
+            <color red="1" green="0.85500001907348633" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.92812512974664474" green="0.93731448746690849" blue="0.93731448746690849" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
