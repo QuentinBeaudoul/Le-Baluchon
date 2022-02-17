@@ -11,6 +11,7 @@
 		4F12AB7727B7F55E00B67FED /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12AB7627B7F55E00B67FED /* UIView.swift */; };
 		4F12AB7C27B7F8C700B67FED /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12AB7B27B7F8C700B67FED /* UIAlertController.swift */; };
 		4F12AB8E27B8201A00B67FED /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12AB8D27B8201A00B67FED /* UIImage.swift */; };
+		4F12AB9527BE610E00B67FED /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12AB9427BE610E00B67FED /* Result.swift */; };
 		4F4235A327AEBF5B00512C5E /* Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4235A227AEBF5B00512C5E /* Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F4235C927B2C61400512C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4235C827B2C61400512C5E /* Assets.xcassets */; };
 		668AB9B527BA8916006EEA6D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AB9B427BA8916006EEA6D /* UIViewController.swift */; };
@@ -27,6 +28,7 @@
 		4F12AB7627B7F55E00B67FED /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4F12AB7B27B7F8C700B67FED /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		4F12AB8D27B8201A00B67FED /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		4F12AB9427BE610E00B67FED /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4F42359F27AEBF5B00512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4235A227AEBF5B00512C5E /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
 		4F4235C827B2C61400512C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				4F12AB7B27B7F8C700B67FED /* UIAlertController.swift */,
 				4F12AB8D27B8201A00B67FED /* UIImage.swift */,
 				668AB9B427BA8916006EEA6D /* UIViewController.swift */,
+				4F12AB9427BE610E00B67FED /* Result.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F12AB9527BE610E00B67FED /* Result.swift in Sources */,
 				4F12AB7C27B7F8C700B67FED /* UIAlertController.swift in Sources */,
 				4F12AB8E27B8201A00B67FED /* UIImage.swift in Sources */,
 				4F12AB7727B7F55E00B67FED /* UIView.swift in Sources */,

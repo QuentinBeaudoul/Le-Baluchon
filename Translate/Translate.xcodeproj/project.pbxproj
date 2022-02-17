@@ -120,14 +120,14 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		4F12AB7D27B7FD6F00B67FED /* Composant */ = {
+		4F12AB7D27B7FD6F00B67FED /* Component */ = {
 			isa = PBXGroup;
 			children = (
 				4F12AB8827B80F3000B67FED /* TLabel */,
 				4F12AB8327B808D300B67FED /* TTextfield */,
 				4F12AB8227B808C800B67FED /* TButton */,
 			);
-			name = Composant;
+			name = Component;
 			sourceTree = "<group>";
 		};
 		4F12AB8227B808C800B67FED /* TButton */ = {
@@ -201,7 +201,7 @@
 		4F42355E27A9865E00512C5E /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				4F12AB7D27B7FD6F00B67FED /* Composant */,
+				4F12AB7D27B7FD6F00B67FED /* Component */,
 				4F42355F27A9867900512C5E /* Translate.storyboard */,
 				4F42356127A986A000512C5E /* TranslateViewController.swift */,
 				4F42356327A986AF00512C5E /* TranslateViewModel.swift */,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F12AB9027BE4EFD00B67FED /* LBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F12AB8F27BE4EFD00B67FED /* LBNetwork.framework */; };
+		4F12AB9127BE4EFD00B67FED /* LBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F12AB8F27BE4EFD00B67FED /* LBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F4234F227A9765700512C5E /* Exchange_Rates.docc in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234F127A9765700512C5E /* Exchange_Rates.docc */; };
 		4F4234F827A9765800512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4234ED27A9765700512C5E /* ExchangeRates.framework */; };
 		4F4234FD27A9765800512C5E /* Exchange_RatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234FC27A9765800512C5E /* Exchange_RatesTests.swift */; };
@@ -41,6 +43,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				ED731DCD27BA4CB000638F6C /* Extension.framework in Embed Frameworks */,
+				4F12AB9127BE4EFD00B67FED /* LBNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		4F12AB7827B7F6A600B67FED /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F12AB8F27BE4EFD00B67FED /* LBNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4234ED27A9765700512C5E /* ExchangeRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExchangeRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4234F027A9765700512C5E /* Exchange_Rates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exchange_Rates.h; sourceTree = "<group>"; };
 		4F4234F127A9765700512C5E /* Exchange_Rates.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Exchange_Rates.docc; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED731DCC27BA4CB000638F6C /* Extension.framework in Frameworks */,
+				4F12AB9027BE4EFD00B67FED /* LBNetwork.framework in Frameworks */,
 				C932DB4FF898F71CA5CAB693 /* Pods_Exchange_Rates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +102,13 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		4F12AB9227BE533C00B67FED /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 		4F4234E327A9765700512C5E = {
@@ -143,6 +155,7 @@
 		4F42355727A984DE00512C5E /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				4F12AB9227BE533C00B67FED /* Component */,
 				4F42355827A9850400512C5E /* ExchangeRates.storyboard */,
 				4F42355A27A985CA00512C5E /* ExchangeRatesViewController.swift */,
 				4F42355C27A985E400512C5E /* ExchangeRatesViewModel.swift */,
@@ -161,6 +174,7 @@
 		4F42358027A99C6800512C5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F12AB8F27BE4EFD00B67FED /* LBNetwork.framework */,
 				4F12AB7827B7F6A600B67FED /* Extension.framework */,
 				4F4235CC27B2DAF000512C5E /* Extension.framework */,
 				4F42358127A99C6800512C5E /* Network.framework */,

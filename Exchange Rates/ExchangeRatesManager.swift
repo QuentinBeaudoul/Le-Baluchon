@@ -22,7 +22,7 @@ public final class ExchangeRatesManager {
         return viewController
     }
     
-    public func fetchRates() {
+    public func fetchRates(completion: ((Result<Double, Error>) -> Void)? = nil) {
         let url = Constante.exchangeRatesUrl
         let parameters = ["access_key": Constante.apikey]
         
@@ -31,9 +31,10 @@ public final class ExchangeRatesManager {
             case .success(let container):
                 if let usd = container?.rates.usd {
                     self.usd = usd
+                    completion?(.success(usd))
                 }
-            case .failure(_):
-                break
+            case .failure(let error):
+                completion?(.failure(error))
             }
         }
     }

@@ -19,7 +19,7 @@
 		66C8AFBB27BD64550074DA24 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFBA27BD64550074DA24 /* AppManager.swift */; };
 		E868FCD79D15BA1C2CA45213 /* Pods_Le_Baluchon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8990D613322A4E8D7B9C272B /* Pods_Le_Baluchon.framework */; };
 		ED731DD327BA4CED00638F6C /* Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; };
-		ED731DD427BA4CED00638F6C /* Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED731DD427BA4CED00638F6C /* Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
