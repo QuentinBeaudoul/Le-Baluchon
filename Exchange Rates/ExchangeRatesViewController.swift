@@ -24,7 +24,6 @@ class ExchangeRatesViewController: UIViewController {
         // No rates stuff
         noRatesImageView.setImage(R.image.ic_100_no_rates(), with: R.color.primary())
         noRatesView.isHidden = viewModel.hasExchangeRates()
-        
     }
 
     private func updateUI() {
@@ -35,7 +34,7 @@ class ExchangeRatesViewController: UIViewController {
     @IBAction func dialButtonTapped(_ sender: UIButton) {
         switch sender.tag {
         case 10:
-            viewModel.updateSource(",")
+            viewModel.updateSource(".")
         case 11:
             viewModel.clear()
         default:
