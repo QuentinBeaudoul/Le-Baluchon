@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="766"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEA-0F-RyE" userLabel="Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="390" height="750.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="766.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-Ls-gzK">
                                                         <rect key="frame" x="16" y="24" width="223.33333333333334" height="28.666666666666671"/>
@@ -466,7 +466,7 @@
                                                     <constraint firstItem="AQ9-NA-1k5" firstAttribute="top" secondItem="aaW-wD-85l" secondAttribute="bottom" constant="20" id="bqA-1K-k1j"/>
                                                     <constraint firstItem="aaW-wD-85l" firstAttribute="top" secondItem="egy-Cj-PcX" secondAttribute="bottom" constant="2" id="e15-Ez-h3P"/>
                                                     <constraint firstItem="g6Y-Ls-gzK" firstAttribute="top" secondItem="YEA-0F-RyE" secondAttribute="top" constant="24" id="fLN-I3-lsf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="AQ9-NA-1k5" secondAttribute="bottom" constant="16" id="jmp-or-SlY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AQ9-NA-1k5" secondAttribute="bottom" constant="32" id="jmp-or-SlY"/>
                                                     <constraint firstItem="egy-Cj-PcX" firstAttribute="top" secondItem="g6Y-Ls-gzK" secondAttribute="bottom" constant="40" id="lud-sZ-OPx"/>
                                                     <constraint firstAttribute="trailing" secondItem="AQ9-NA-1k5" secondAttribute="trailing" constant="32" id="svO-rl-JcC"/>
                                                 </constraints>
@@ -652,7 +652,7 @@
             <color red="1" green="0.85500001907348633" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="surface">
-            <color red="0.92812512974664474" green="0.93731448746690849" blue="0.93731448746690849" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92799997329711914" green="0.93699997663497925" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
