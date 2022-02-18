@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         
         ExchangeRatesManager.shared.fetchRates()
+
         WeatherManager.shared.getWeather()
         
         TranslateManager.shared.fetchLanguages { _ in
