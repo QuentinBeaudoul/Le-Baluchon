@@ -9,6 +9,7 @@ import UIKit
 import Translate
 import Extension
 import ExchangeRates
+import Weather
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -23,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         
         ExchangeRatesManager.shared.fetchRates()
+        WeatherManager.shared.getWeather()
         
         TranslateManager.shared.fetchLanguages { _ in
             DispatchQueue.main.async {
