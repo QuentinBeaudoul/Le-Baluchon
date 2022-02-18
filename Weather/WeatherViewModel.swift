@@ -38,6 +38,10 @@ class WeatherViewModel: NSObject {
         }
     }
 
+    func requestLocation() {
+        locationManager.requestLocation()
+    }
+
 }
 
 extension WeatherViewModel: CLLocationManagerDelegate {

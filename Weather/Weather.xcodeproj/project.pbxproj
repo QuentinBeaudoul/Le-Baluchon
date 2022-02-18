@@ -21,6 +21,8 @@
 		4F9A815427BFAC3400963D28 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A815327BFAC3400963D28 /* Weather.swift */; };
 		4F9A815627BFAE5500963D28 /* WeatherTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A815527BFAE5500963D28 /* WeatherTemperature.swift */; };
 		4F9A815827BFB05B00963D28 /* WeatherSys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A815727BFB05B00963D28 /* WeatherSys.swift */; };
+		4F9A815E27BFF29A00963D28 /* WeatherDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9A815D27BFF29A00963D28 /* WeatherDetailsView.xib */; };
+		4F9A816027BFF2AD00963D28 /* WeatherDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A815F27BFF2AD00963D28 /* WeatherDetailsView.swift */; };
 		835DC512BA45B6D930846F14 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C3C8D0453D101E75B1DAC7 /* Pods_Weather.framework */; };
 		ED731DCF27BA4CB400638F6C /* Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F029C4927B7BAE00042B179 /* Extension.framework */; };
 		ED731DD027BA4CB400638F6C /* Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F029C4927B7BAE00042B179 /* Extension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -69,6 +71,8 @@
 		4F9A815327BFAC3400963D28 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4F9A815527BFAE5500963D28 /* WeatherTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTemperature.swift; sourceTree = "<group>"; };
 		4F9A815727BFB05B00963D28 /* WeatherSys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSys.swift; sourceTree = "<group>"; };
+		4F9A815D27BFF29A00963D28 /* WeatherDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherDetailsView.xib; sourceTree = "<group>"; };
+		4F9A815F27BFF2AD00963D28 /* WeatherDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsView.swift; sourceTree = "<group>"; };
 		F7436762E51A84C0E33DF42E /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C3C8D0453D101E75B1DAC7 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +152,7 @@
 		4F42356527A986F400512C5E /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				4F9A815B27BFF13B00963D28 /* Component */,
 				4F42356627A9870600512C5E /* Weather.storyboard */,
 				4F42356827A9871800512C5E /* WeatherViewController.swift */,
 				4F42356A27A9874800512C5E /* WeatherViewModel.swift */,
@@ -181,6 +186,23 @@
 				4F9A815727BFB05B00963D28 /* WeatherSys.swift */,
 			);
 			name = Modele;
+			sourceTree = "<group>";
+		};
+		4F9A815B27BFF13B00963D28 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4F9A815C27BFF27C00963D28 /* WeatherDetails */,
+			);
+			name = Component;
+			sourceTree = "<group>";
+		};
+		4F9A815C27BFF27C00963D28 /* WeatherDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4F9A815D27BFF29A00963D28 /* WeatherDetailsView.xib */,
+				4F9A815F27BFF2AD00963D28 /* WeatherDetailsView.swift */,
+			);
+			name = WeatherDetails;
 			sourceTree = "<group>";
 		};
 		E17839C1B7F77024D4E645B5 /* Pods */ = {
@@ -288,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F42356727A9870600512C5E /* Weather.storyboard in Resources */,
+				4F9A815E27BFF29A00963D28 /* WeatherDetailsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +358,7 @@
 				4F42356B27A9874800512C5E /* WeatherViewModel.swift in Sources */,
 				4F42358E27AE86E700512C5E /* WeatherManager.swift in Sources */,
 				4F9A814D27BFA73000963D28 /* Constante.swift in Sources */,
+				4F9A816027BFF2AD00963D28 /* WeatherDetailsView.swift in Sources */,
 				4F9A815627BFAE5500963D28 /* WeatherTemperature.swift in Sources */,
 				4F9A815027BFAAEC00963D28 /* WeatherContainer.swift in Sources */,
 				4F9A815227BFAB7000963D28 /* WeatherCoord.swift in Sources */,
