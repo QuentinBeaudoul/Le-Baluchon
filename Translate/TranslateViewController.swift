@@ -21,6 +21,8 @@ class TranslateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+
         switchImageView.setImage(R.image.switch(), with: Extension.R.color.onTertiaryContainer())
         
         sourceButton.fillView(title: viewModel.source, langs: viewModel.getSourceLangs(), type: .source)

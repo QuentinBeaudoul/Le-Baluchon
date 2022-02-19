@@ -20,6 +20,11 @@ class TTextfield: LoadableView {
 
     weak var delegate: TTextfieldDelegate?
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        textfield.delegate = self
+    }
+
     @IBAction func buttonTapped() {
         delegate?.onButtonTapped(text: textfield.text)
     }
@@ -27,5 +32,13 @@ class TTextfield: LoadableView {
     func showLoader(_ bool: Bool) {
         button.isHidden = bool
         activityIndicator.isHidden = !bool
+    }
+}
+
+extension TTextfield: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.onButtonTapped(text: textfield.text)
+        return true
     }
 }
