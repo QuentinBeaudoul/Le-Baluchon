@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum WeatherLocation: Int {
+    case NY = 0
+    case currLoc = 1
+}
+
 class WeatherCoord: Decodable {
     var lon: Double
     var lat: Double

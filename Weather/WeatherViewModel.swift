@@ -11,26 +11,42 @@ import CoreLocation
 protocol WeatherDelegate: AnyObject {
     func onLocationChanged(lat: Double, lon: Double)
     func onLocationFailed(error: Error)
+    func didChangeAuthorization()
 }
 
 class WeatherViewModel: NSObject {
 
-    private(set) var locationWeather: WeatherContainer?
-    private let locationManager = CLLocationManager()
+    private(set) var weathers : [WeatherLocation: WeatherContainer?] = [.NY: nil, .currLoc: nil]
+    private(set) var canUseLocation: Bool
+    let locationManager = CLLocationManager()
 
     weak var delegate: WeatherDelegate?
 
     override init() {
+        canUseLocation = locationManager.authorizationStatus == .authorizedWhenInUse
         super.init()
         locationManager.delegate = self
-        locationManager.requestLocation()
+        locationManager.requestWhenInUseAuthorization()
+
     }
 
     func fetchWeather(lat: Double, lon: Double, completion: @escaping (Result<Void, Error>) -> Void) {
-        WeatherManager.shared.getWeather(lat: lat, lon: lon) { result in
+        WeatherManager.shared.getWeather { [self] result in
             switch result {
-            case .success(let weatherContainer):
-                self.locationWeather = weatherContainer
+            case .success(let NYWeather):
+                weathers[.NY] = NYWeather
+                fetchCurrentLocationWeather(lat: lat, lon: lon, completion: completion)
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    private func fetchCurrentLocationWeather(lat: Double, lon: Double, completion: @escaping (Result<Void, Error>) -> Void) {
+        WeatherManager.shared.getWeather(lat: lat, lon: lon) { [self] result in
+            switch result {
+            case .success(let currentLocationWeather):
+                weathers[.currLoc] = currentLocationWeather
                 completion(.success())
             case .failure(let error):
                 completion(.failure(error))
@@ -39,7 +55,18 @@ class WeatherViewModel: NSObject {
     }
 
     func requestLocation() {
-        locationManager.requestLocation()
+        if canUseLocation {
+            locationManager.requestLocation()
+        }
+    }
+
+    func getNumberOfItems() -> Int {
+        return weathers.count
+    }
+
+    func getWeather(at indexPath: IndexPath) -> WeatherContainer? {
+        guard let weatherLocation = WeatherLocation.init(rawValue: indexPath.row) else { return nil }
+        return weathers[weatherLocation] ?? nil
     }
 
 }
@@ -56,5 +83,16 @@ extension WeatherViewModel: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         delegate?.onLocationFailed(error: error)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse:
+            // Enable your app's location features.
+            canUseLocation = true
+        default:
+            break
+        }
+        delegate?.didChangeAuthorization()
     }
 }

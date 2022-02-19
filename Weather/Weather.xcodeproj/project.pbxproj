@@ -15,6 +15,8 @@
 		4F42356927A9871800512C5E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356827A9871800512C5E /* WeatherViewController.swift */; };
 		4F42356B27A9874800512C5E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356A27A9874800512C5E /* WeatherViewModel.swift */; };
 		4F42358E27AE86E700512C5E /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42358D27AE86E700512C5E /* WeatherManager.swift */; };
+		4F92002E27C1344B00D9D5DF /* LBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F92002D27C1344B00D9D5DF /* LBNetwork.framework */; };
+		4F92002F27C1344B00D9D5DF /* LBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F92002D27C1344B00D9D5DF /* LBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F9A814D27BFA73000963D28 /* Constante.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A814C27BFA73000963D28 /* Constante.swift */; };
 		4F9A815027BFAAEC00963D28 /* WeatherContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A814F27BFAAEC00963D28 /* WeatherContainer.swift */; };
 		4F9A815227BFAB7000963D28 /* WeatherCoord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A815127BFAB7000963D28 /* WeatherCoord.swift */; };
@@ -46,6 +48,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				ED731DD027BA4CB400638F6C /* Extension.framework in Embed Frameworks */,
+				4F92002F27C1344B00D9D5DF /* LBNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +68,7 @@
 		4F42356827A9871800512C5E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		4F42356A27A9874800512C5E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		4F42358D27AE86E700512C5E /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		4F92002D27C1344B00D9D5DF /* LBNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9A814C27BFA73000963D28 /* Constante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constante.swift; sourceTree = "<group>"; };
 		4F9A814F27BFAAEC00963D28 /* WeatherContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContainer.swift; sourceTree = "<group>"; };
 		4F9A815127BFAB7000963D28 /* WeatherCoord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoord.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED731DCF27BA4CB400638F6C /* Extension.framework in Frameworks */,
+				4F92002E27C1344B00D9D5DF /* LBNetwork.framework in Frameworks */,
 				835DC512BA45B6D930846F14 /* Pods_Weather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +106,7 @@
 		100CFC1FCC765F93ACE87AA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F92002D27C1344B00D9D5DF /* LBNetwork.framework */,
 				4F029C4927B7BAE00042B179 /* Extension.framework */,
 				4F029C4A27B7BAE00042B179 /* Network.framework */,
 				F8C3C8D0453D101E75B1DAC7 /* Pods_Weather.framework */,

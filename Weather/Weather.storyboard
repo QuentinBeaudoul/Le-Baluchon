@@ -20,51 +20,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDZ-tL-VM7" userLabel="Weather View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adA-XB-jGz">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RBN-kK-D99">
                                         <rect key="frame" x="0.0" y="80" width="414" height="738"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVG-pD-w1B" userLabel="Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Rn-m4-XnB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxs-dv-L02" userLabel="NY View" customClass="WeatherDetailsView" customModule="Weather" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="150" placeholder="YES" id="Xhr-6x-Xyz"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVz-cK-ppV" userLabel="Current Location View" customClass="WeatherDetailsView" customModule="Weather" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="150" width="414" height="150"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="150" placeholder="YES" id="Xxr-Td-stQ"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="4Rn-m4-XnB" secondAttribute="trailing" id="EEK-pF-O7w"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4Rn-m4-XnB" secondAttribute="bottom" id="HEF-eW-lY8"/>
-                                                    <constraint firstItem="4Rn-m4-XnB" firstAttribute="top" secondItem="PVG-pD-w1B" secondAttribute="top" id="ewd-MI-YFd"/>
-                                                    <constraint firstItem="4Rn-m4-XnB" firstAttribute="leading" secondItem="PVG-pD-w1B" secondAttribute="leading" id="zqW-LN-45M"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="PVG-pD-w1B" firstAttribute="leading" secondItem="HBV-2M-Q2l" secondAttribute="leading" id="3JJ-aH-OgK"/>
-                                            <constraint firstItem="PVG-pD-w1B" firstAttribute="trailing" secondItem="HBV-2M-Q2l" secondAttribute="trailing" id="MK3-yT-Gx9"/>
-                                            <constraint firstItem="PVG-pD-w1B" firstAttribute="top" secondItem="HBV-2M-Q2l" secondAttribute="top" id="Tct-7V-xfK"/>
-                                            <constraint firstItem="PVG-pD-w1B" firstAttribute="width" secondItem="CWz-Yc-pXq" secondAttribute="width" id="aZH-0M-jSv"/>
-                                            <constraint firstItem="PVG-pD-w1B" firstAttribute="bottom" secondItem="HBV-2M-Q2l" secondAttribute="bottom" id="k5N-Kh-ybg"/>
-                                        </constraints>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="HBV-2M-Q2l"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="CWz-Yc-pXq"/>
-                                    </scrollView>
+                                        <color key="backgroundColor" name="background"/>
+                                    </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbL-VT-kNh" userLabel="Reload Button">
                                         <rect key="frame" x="350" y="16" width="48" height="48"/>
                                         <color key="backgroundColor" name="primary"/>
@@ -87,12 +46,12 @@
                                 </subviews>
                                 <color key="backgroundColor" name="background"/>
                                 <constraints>
-                                    <constraint firstItem="adA-XB-jGz" firstAttribute="leading" secondItem="fDZ-tL-VM7" secondAttribute="leading" id="IlE-8C-9Be"/>
+                                    <constraint firstAttribute="bottom" secondItem="RBN-kK-D99" secondAttribute="bottom" id="4iQ-cB-iFT"/>
                                     <constraint firstItem="HbL-VT-kNh" firstAttribute="top" secondItem="fDZ-tL-VM7" secondAttribute="top" constant="16" id="OcO-pj-VXL"/>
-                                    <constraint firstAttribute="trailing" secondItem="adA-XB-jGz" secondAttribute="trailing" id="Pcp-lR-Zi2"/>
+                                    <constraint firstAttribute="trailing" secondItem="RBN-kK-D99" secondAttribute="trailing" id="Oj6-kk-HJc"/>
+                                    <constraint firstItem="RBN-kK-D99" firstAttribute="leading" secondItem="fDZ-tL-VM7" secondAttribute="leading" id="YiI-LR-T4l"/>
                                     <constraint firstAttribute="trailing" secondItem="HbL-VT-kNh" secondAttribute="trailing" constant="16" id="a6G-CG-tzF"/>
-                                    <constraint firstItem="adA-XB-jGz" firstAttribute="top" secondItem="HbL-VT-kNh" secondAttribute="bottom" constant="16" id="ghB-Lh-txb"/>
-                                    <constraint firstAttribute="bottom" secondItem="adA-XB-jGz" secondAttribute="bottom" id="iWz-AU-aKH"/>
+                                    <constraint firstItem="RBN-kK-D99" firstAttribute="top" secondItem="HbL-VT-kNh" secondAttribute="bottom" constant="16" id="dLc-40-ObW"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwp-py-71X">
@@ -145,7 +104,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EL-7W-nLm">
-                                        <rect key="frame" x="84" y="513.5" width="246" height="48"/>
+                                        <rect key="frame" x="75" y="513.5" width="264.5" height="48"/>
                                         <color key="backgroundColor" name="error"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Dl9-7w-mIP"/>
@@ -154,7 +113,7 @@
                                         <color key="tintColor" name="onError"/>
                                         <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Ask for permission again" image="arrow.clockwise" catalog="system">
+                                        <state key="normal" title="Active location in settings" image="location.fill" catalog="system">
                                             <color key="titleColor" name="onError"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -163,7 +122,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="updateLocation" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fg6-Fo-5ZS"/>
+                                            <action selector="goToPermission" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bty-Ol-SgV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -238,6 +197,7 @@
                     <connections>
                         <outlet property="loaderView" destination="Fkv-KJ-Oxh" id="Lu2-hc-hRA"/>
                         <outlet property="noPermissionView" destination="Zwp-py-71X" id="wbd-Ix-Mzy"/>
+                        <outlet property="tableView" destination="RBN-kK-D99" id="JnT-nI-UH3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,6 +208,7 @@
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="location.slash" catalog="system" width="128" height="118"/>
         <namedColor name="background">
             <color red="0.98400002717971802" green="0.99199998378753662" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
