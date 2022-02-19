@@ -12,10 +12,10 @@
 		4F4234B527A974EB00512C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B427A974EB00512C5E /* Assets.xcassets */; };
 		4F4234B827A974EB00512C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4234B627A974EB00512C5E /* LaunchScreen.storyboard */; };
 		4F42355627A982F600512C5E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355527A982F600512C5E /* MainTabbarController.swift */; };
-		4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; };
-		4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; };
-		4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; };
 		4F4235CB27B2D6A400512C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4235CA27B2D6A400512C5E /* Main.storyboard */; };
+		4F92001C27C10D3C00D9D5DF /* Translate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357A27A999CA00512C5E /* Translate.framework */; };
+		4F92001E27C10D3E00D9D5DF /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42357D27A999CE00512C5E /* Weather.framework */; };
+		4F92002027C10E4C00D9D5DF /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42358F27AE938900512C5E /* ExchangeRates.framework */; };
 		66C8AFBB27BD64550074DA24 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFBA27BD64550074DA24 /* AppManager.swift */; };
 		E868FCD79D15BA1C2CA45213 /* Pods_Le_Baluchon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8990D613322A4E8D7B9C272B /* Pods_Le_Baluchon.framework */; };
 		ED731DD327BA4CED00638F6C /* Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED731DD227BA4CED00638F6C /* Extension.framework */; };
@@ -62,10 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F42357E27A999CE00512C5E /* Weather.framework in Frameworks */,
-				4F42357B27A999CA00512C5E /* Translate.framework in Frameworks */,
-				4F42359027AE938900512C5E /* ExchangeRates.framework in Frameworks */,
+				4F92001C27C10D3C00D9D5DF /* Translate.framework in Frameworks */,
+				4F92001E27C10D3E00D9D5DF /* Weather.framework in Frameworks */,
 				ED731DD327BA4CED00638F6C /* Extension.framework in Frameworks */,
+				4F92002027C10E4C00D9D5DF /* ExchangeRates.framework in Frameworks */,
 				E868FCD79D15BA1C2CA45213 /* Pods_Le_Baluchon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				DEVELOPMENT_TEAM = 3JWQB2GF6V;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -449,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				DEVELOPMENT_TEAM = 3JWQB2GF6V;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
