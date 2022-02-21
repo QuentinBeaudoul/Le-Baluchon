@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="113" height="67"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Label]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMR-v2-4mF">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Label]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="lMR-v2-4mF">
                     <rect key="frame" x="16" y="25.5" width="59" height="16.5"/>
                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                     <color key="textColor" name="primary"/>
@@ -53,6 +53,7 @@
                 <constraint firstItem="Nwu-UO-hBP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cth-G7-p1G"/>
                 <constraint firstAttribute="trailing" secondItem="UOG-8q-1Ll" secondAttribute="trailing" constant="4" id="e9R-5P-Nij"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Nwu-UO-hBP" secondAttribute="bottom" id="kb2-Wk-YsW"/>
+                <constraint firstItem="lMR-v2-4mF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="t5a-yZ-pbV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Nwu-UO-hBP" secondAttribute="trailing" id="zia-kb-0OD"/>
                 <constraint firstItem="lMR-v2-4mF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zjH-Ht-Ycr"/>
             </constraints>
