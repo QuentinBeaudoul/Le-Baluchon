@@ -43,6 +43,7 @@ class TButton: LoadableView {
             view.backgroundColor = Extension.R.color.primaryContainer(compatibleWith: traitCollection)
             if #available(iOS 14.0, *) {
                 button.menu = UIMenu(title: "Source", children: [UIAction]())
+                button.showsMenuAsPrimaryAction = true
             } else {
                 actionSheetController = UIAlertController(title: "Source", message: nil, preferredStyle: .actionSheet)
             }
