@@ -35,8 +35,8 @@ class WeatherDetailsView: UITableViewCell {
         minTemperatureLabel.text = "Min. \(weatherContainer.temperatures.tempMin.toInt())°"
         maxTemperatureLabel.text = "Max. \(weatherContainer.temperatures.tempMax.toInt())°"
 
-        let sunriseHour = Date(timeIntervalSince1970: weatherContainer.sys.sunrise).getFormattedHour()
-        let sunsetHour = Date(timeIntervalSince1970: weatherContainer.sys.sunset).getFormattedHour()
+        let sunriseHour = Date(timeIntervalSince1970: weatherContainer.sys.sunrise + weatherContainer.timezone).getFormattedHour()
+        let sunsetHour = Date(timeIntervalSince1970: weatherContainer.sys.sunset + weatherContainer.timezone).getFormattedHour()
 
         sunriseLabel.text = sunriseHour
         sunsetLabel.text = sunsetHour

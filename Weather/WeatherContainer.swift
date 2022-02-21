@@ -13,6 +13,7 @@ public class WeatherContainer: Decodable {
     var temperatures: WeatherTemperature
     var sys: WeatherSys
     var visibility: Int
+    var timezone: Double
     var name: String
 
     enum CodingKeys: String, CodingKey {
@@ -21,6 +22,7 @@ public class WeatherContainer: Decodable {
         case temperatures = "main"
         case sys
         case visibility
+        case timezone
         case name
     }
 
@@ -31,6 +33,7 @@ public class WeatherContainer: Decodable {
         temperatures = try container.decode(WeatherTemperature.self, forKey: .temperatures)
         sys = try container.decode(WeatherSys.self, forKey: .sys)
         visibility = try container.decode(Int.self, forKey: .visibility)
+        timezone = try container.decode(Double.self, forKey: .timezone)
         name = try container.decode(String.self, forKey: .name)
     }
 
