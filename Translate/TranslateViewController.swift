@@ -40,7 +40,10 @@ class TranslateViewController: UIViewController {
         
         viewModel.setTarget(with: defaultLang)
         targetButton.updateLabel(text: defaultLang)
-        targetButton.updateMenu(langs)
+        
+        if #available(iOS 14.0, *) {
+            targetButton.updateMenu(langs)
+        }
     }
 
     func switchLangs() {
@@ -48,9 +51,11 @@ class TranslateViewController: UIViewController {
         viewModel.swapSourceTraget(safeTarget: target)
         
         sourceButton.updateLabel(text: viewModel.source)
-        
         targetButton.updateLabel(text: viewModel.target)
-        targetButton.updateMenu(viewModel.getTargetLangs(for: viewModel.source))
+        
+        if #available(iOS 14.0, *) {
+            targetButton.updateMenu(viewModel.getTargetLangs(for: viewModel.source))
+        }
     }
     
     @IBAction func switchButtonTapped() {
@@ -88,8 +93,43 @@ extension TranslateViewController: TTextfieldDelegate {
 
 extension TranslateViewController: TButtonDelegate {
     
-    func onActionTapped(actionSheet: UIAlertController) {
-        present(actionSheet, animated: true)
+    func onActionTapped(type: TButtonType?) {
+        guard let type = type else { return }
+        
+        var langs = [String]()
+        var actionSheetController: UIAlertController?
+        
+        switch type {
+        case .source:
+            actionSheetController = UIAlertController(title: "Source", message: nil, preferredStyle: .actionSheet)
+            langs = viewModel.getSourceLangs()
+            for lang in langs {
+                actionSheetController?.addAction(UIAlertAction(title: TranslateManager.shared.getLiteralName(for: lang), style: .default, handler: { action in
+                    if let lang = action.title {
+                        let chosenLang = TranslateManager.shared.getNameFromLiteral(for: lang)
+                        self.viewModel.setSource(with: chosenLang)
+                        self.sourceButton.updateLabel(text: chosenLang)
+                        self.initTargetButton(source: chosenLang)
+                    }
+                }))
+            }
+        case .target:
+            actionSheetController = UIAlertController(title: "Target", message: nil, preferredStyle: .actionSheet)
+            langs = viewModel.getTargetLangs(for: viewModel.source)
+            for lang in langs {
+                actionSheetController?.addAction(UIAlertAction(title: TranslateManager.shared.getLiteralName(for: lang), style: .default, handler: { action in
+                    if let lang = action.title {
+                        let chosenLang = TranslateManager.shared.getNameFromLiteral(for: lang)
+                        self.viewModel.setTarget(with: chosenLang)
+                        self.targetButton.updateLabel(text: chosenLang)
+                    }
+                }))
+            }
+        }
+        
+        if let actionSheetController = actionSheetController {
+            present(actionSheetController, animated: true)
+        }
     }
     
     @available(iOS 14.0, *)
