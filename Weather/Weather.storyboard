@@ -202,6 +202,7 @@
                         <outlet property="activityIndicatorView" destination="p3h-Cu-vQr" id="8nW-VZ-C8A"/>
                         <outlet property="loaderView" destination="Fkv-KJ-Oxh" id="Lu2-hc-hRA"/>
                         <outlet property="noPermissionView" destination="Zwp-py-71X" id="wbd-Ix-Mzy"/>
+                        <outlet property="reloadButton" destination="HbL-VT-kNh" id="CpZ-90-LTR"/>
                         <outlet property="tableView" destination="RBN-kK-D99" id="JnT-nI-UH3"/>
                     </connections>
                 </viewController>

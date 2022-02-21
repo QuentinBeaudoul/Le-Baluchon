@@ -35,6 +35,10 @@ class TButton: LoadableView {
     func fillView(title: String?, langs: [String], type: TButtonType) {
         self.type = type
         label.text = TranslateManager.shared.getLiteralName(for: title ?? "")
+        
+        if #available(iOS 13.0, *) {} else {
+            imageView.setImage(R.image.chevronDown(), with: nil)
+        }
 
         switch type {
         case .source:

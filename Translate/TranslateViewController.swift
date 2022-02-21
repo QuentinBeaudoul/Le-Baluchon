@@ -23,7 +23,7 @@ class TranslateViewController: UIViewController {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
 
-        switchImageView.setImage(R.image.switch(), with: Extension.R.color.onTertiaryContainer())
+        switchImageView.setImage(R.image.switch(), with: R.color.onTertiaryContainer())
         
         sourceButton.fillView(title: viewModel.source, langs: viewModel.getSourceLangs(), type: .source)
         targetButton.fillView(title: viewModel.target, langs: viewModel.getTargetLangs(for: viewModel.source), type: .target)
@@ -126,6 +126,11 @@ extension TranslateViewController: TButtonDelegate {
                 }))
             }
         }
+        
+        let dismissAction = UIAlertAction(title: "Cancel", style: .cancel) { _R in
+            actionSheetController?.dismiss(animated: true)
+        }
+        actionSheetController?.addAction(dismissAction)
         
         if let actionSheetController = actionSheetController {
             present(actionSheetController, animated: true)
