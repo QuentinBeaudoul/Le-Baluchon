@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTextfield" customModule="Translate" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="oXv-iS-q8r" id="wu3-Ln-0x9"/>
                 <outlet property="button" destination="Hgv-JU-uYo" id="UfU-Zt-34K"/>
+                <outlet property="loaderView" destination="frb-Zo-tdI" id="4yR-KK-MZ8"/>
                 <outlet property="textfield" destination="HTR-em-A1X" id="xuN-wV-o4v"/>
             </connections>
         </placeholder>
@@ -28,10 +28,14 @@
                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
                 </textField>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oXv-iS-q8r">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frb-Zo-tdI" userLabel="Loader View">
                     <rect key="frame" x="372" y="22" width="20" height="20"/>
-                    <color key="color" name="primary"/>
-                </activityIndicatorView>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="frb-Zo-tdI" secondAttribute="height" multiplier="1:1" id="UIc-H1-m2d"/>
+                        <constraint firstAttribute="width" constant="20" id="scZ-Cf-eRi"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-JU-uYo">
                     <rect key="frame" x="350" y="0.0" width="64" height="64"/>
                     <color key="backgroundColor" name="primary"/>
@@ -53,11 +57,11 @@
                 <constraint firstItem="Hgv-JU-uYo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5Z6-Z6-Gor"/>
                 <constraint firstItem="HTR-em-A1X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="8CQ-o1-lOb"/>
                 <constraint firstItem="HTR-em-A1X" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9BS-uI-q2w"/>
+                <constraint firstItem="Hgv-JU-uYo" firstAttribute="centerY" secondItem="frb-Zo-tdI" secondAttribute="centerY" id="9X0-Y0-ngI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HTR-em-A1X" secondAttribute="bottom" id="O0O-jw-FFN"/>
                 <constraint firstItem="Hgv-JU-uYo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="P5H-nB-9yc"/>
-                <constraint firstItem="oXv-iS-q8r" firstAttribute="centerY" secondItem="Hgv-JU-uYo" secondAttribute="centerY" id="WZQ-jl-966"/>
                 <constraint firstItem="Hgv-JU-uYo" firstAttribute="leading" secondItem="HTR-em-A1X" secondAttribute="trailing" constant="8" id="cjN-Gc-oql"/>
-                <constraint firstItem="oXv-iS-q8r" firstAttribute="centerX" secondItem="Hgv-JU-uYo" secondAttribute="centerX" id="dpu-k7-TLg"/>
+                <constraint firstItem="Hgv-JU-uYo" firstAttribute="centerX" secondItem="frb-Zo-tdI" secondAttribute="centerX" id="ijB-MF-gaq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Hgv-JU-uYo" secondAttribute="bottom" id="uEM-rb-3Hw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

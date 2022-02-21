@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -500,7 +501,7 @@
                                             <constraint firstAttribute="width" constant="100" id="CRq-A2-kcc"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aA-tL-1lH">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aA-tL-1lH" userLabel="Info View">
                                         <rect key="frame" x="16" y="323" width="358" height="81"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We were not able to retrieve the information about the exchange rate API" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-Kx-ATF">
@@ -538,10 +539,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-ao-fdi">
-                                        <rect key="frame" x="176.66666666666666" y="434" width="37" height="37"/>
-                                        <color key="color" name="primary"/>
-                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-qM-mIZ">
                                         <rect key="frame" x="145.33333333333334" y="511" width="99.666666666666657" height="48"/>
                                         <color key="backgroundColor" name="error"/>
@@ -564,19 +561,27 @@
                                             <action selector="noRatesButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="daw-X7-GNy"/>
                                         </connections>
                                     </button>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aca-6n-ch1" userLabel="Loader View">
+                                        <rect key="frame" x="176.66666666666666" y="434" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aca-6n-ch1" secondAttribute="height" multiplier="1:1" id="DAt-Mn-sIr"/>
+                                            <constraint firstAttribute="width" constant="37" id="iCg-1I-aAI"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="background"/>
                                 <constraints>
                                     <constraint firstItem="3aA-tL-1lH" firstAttribute="leading" secondItem="Yxd-4X-g3o" secondAttribute="leading" constant="16" id="1dY-HG-de1"/>
                                     <constraint firstItem="4PP-Jf-vmT" firstAttribute="centerY" secondItem="Yxd-4X-g3o" secondAttribute="centerY" constant="-150" id="5jf-aw-3dc"/>
-                                    <constraint firstItem="C7C-qM-mIZ" firstAttribute="top" secondItem="gxh-ao-fdi" secondAttribute="bottom" constant="40" id="9QP-7Z-HED"/>
+                                    <constraint firstItem="C7C-qM-mIZ" firstAttribute="top" secondItem="aca-6n-ch1" secondAttribute="bottom" constant="40" id="9QP-7Z-HED"/>
                                     <constraint firstAttribute="trailing" secondItem="3aA-tL-1lH" secondAttribute="trailing" constant="16" id="Pef-QC-mnK"/>
+                                    <constraint firstItem="aca-6n-ch1" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="SlC-GW-7UC"/>
                                     <constraint firstItem="4PP-Jf-vmT" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="Tfb-yI-EPg"/>
+                                    <constraint firstItem="C7C-qM-mIZ" firstAttribute="top" secondItem="aca-6n-ch1" secondAttribute="bottom" constant="40" id="VJL-5a-3u7"/>
                                     <constraint firstItem="C7C-qM-mIZ" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="fr7-0s-hbd"/>
+                                    <constraint firstItem="aca-6n-ch1" firstAttribute="top" secondItem="3aA-tL-1lH" secondAttribute="bottom" constant="30" id="iWk-OG-310"/>
                                     <constraint firstItem="3aA-tL-1lH" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="kFJ-gs-d55"/>
                                     <constraint firstItem="3aA-tL-1lH" firstAttribute="top" secondItem="4PP-Jf-vmT" secondAttribute="bottom" constant="40" id="lpP-Dg-le6"/>
-                                    <constraint firstItem="gxh-ao-fdi" firstAttribute="centerX" secondItem="Yxd-4X-g3o" secondAttribute="centerX" id="o7T-K2-Vua"/>
-                                    <constraint firstItem="gxh-ao-fdi" firstAttribute="top" secondItem="3aA-tL-1lH" secondAttribute="bottom" constant="30" id="uIf-Dd-ucL"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -600,7 +605,7 @@
                     </view>
                     <connections>
                         <outlet property="eurLabel" destination="HVg-3f-kEn" id="xWr-b7-ofu"/>
-                        <outlet property="noRatesActivityIndicator" destination="gxh-ao-fdi" id="uIr-iB-9s9"/>
+                        <outlet property="loaderView" destination="aca-6n-ch1" id="YWB-gB-pUf"/>
                         <outlet property="noRatesImageView" destination="4PP-Jf-vmT" id="gRF-JX-gLa"/>
                         <outlet property="noRatesView" destination="Yxd-4X-g3o" id="afg-zx-aVe"/>
                         <outlet property="usdLabel" destination="isx-qT-TaG" id="M2q-AR-dEf"/>
@@ -608,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="116.74876847290641"/>
+            <point key="canvasLocation" x="130.76923076923077" y="116.58767772511848"/>
         </scene>
     </scenes>
     <resources>

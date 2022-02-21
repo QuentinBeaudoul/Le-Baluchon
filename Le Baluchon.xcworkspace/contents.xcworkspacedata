@@ -38,7 +38,4 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Network/LBNetwork.xcodeproj">
-   </FileRef>
 </Workspace>

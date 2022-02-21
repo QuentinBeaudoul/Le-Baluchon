@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SplashViewController" customModule="Le_Baluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Baluchon" translatesAutoresizingMaskIntoConstraints="NO" id="jV8-DA-Ehe">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="e6j-Ry-O6R"/>
+                                    <constraint firstAttribute="width" secondItem="jV8-DA-Ehe" secondAttribute="height" multiplier="1:1" id="x6O-sK-zSp"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eh8-DO-jOm" userLabel="Loader View">
+                                <rect key="frame" x="188.5" y="632" width="37" height="37"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eh8-DO-jOm" secondAttribute="height" multiplier="1:1" id="Lqb-iE-nsf"/>
+                                    <constraint firstAttribute="width" constant="37" id="pQ9-CE-las"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eh8-DO-jOm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="46D-OL-zxH"/>
+                            <constraint firstItem="jV8-DA-Ehe" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="5Xu-7K-hKj"/>
+                            <constraint firstItem="eh8-DO-jOm" firstAttribute="top" secondItem="jV8-DA-Ehe" secondAttribute="bottom" constant="64" id="JEJ-L6-ecc"/>
+                            <constraint firstItem="jV8-DA-Ehe" firstAttribute="width" secondItem="jV8-DA-Ehe" secondAttribute="height" multiplier="1:1" id="klG-Jm-Acw"/>
+                            <constraint firstItem="jV8-DA-Ehe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qUZ-QV-pc6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loaderView" destination="eh8-DO-jOm" id="ebr-VD-Ec3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Baluchon" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
