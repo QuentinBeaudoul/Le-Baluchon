@@ -17,7 +17,13 @@ public final class TranslateManager {
 
     public func getViewController() -> UIViewController {
         let viewController = TranslateViewController.makeFromStoryboard(in: Bundle(for: Self.self))
-        viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "captions.bubble"), selectedImage: UIImage(systemName: "captions.bubble.fill"))
+        if #available(iOS 13.0, *) {
+            viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "captions.bubble"), selectedImage: UIImage(systemName: "captions.bubble.fill"))
+        } else {
+            let image = R.image.ic_24_translate()
+            let selected = R.image.ic_24_translate_fill()
+            viewController.tabBarItem = UITabBarItem(title: "", image: image, selectedImage: selected)
+        }
 
         return viewController
     }

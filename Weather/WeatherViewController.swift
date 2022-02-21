@@ -13,12 +13,15 @@ class WeatherViewController: UIViewController {
 
     @IBOutlet weak var noPermissionView: UIView!
     @IBOutlet weak var loaderView: UIView!
+    @IBOutlet weak var activityIndicatorView: UIView!
     @IBOutlet weak var tableView: UITableView!
 
     let viewModel = WeatherViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicatorView.applyActivityIndicator()
+        
         viewModel.delegate = self
         viewModel.requestLocation()
         noPermissionView.isHidden = viewModel.canUseLocation

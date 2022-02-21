@@ -12,18 +12,20 @@ class ExchangeRatesViewController: UIViewController {
 
     @IBOutlet weak var noRatesView: UIView!
     @IBOutlet weak var noRatesImageView: UIImageView!
-    @IBOutlet weak var noRatesActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var eurLabel: UILabel!
     @IBOutlet weak var usdLabel: UILabel!
-
+    @IBOutlet weak var loaderView: UIView!
+    
     let viewModel = ExchangeRatesViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // No rates stuff
         noRatesImageView.setImage(R.image.ic_100_no_rates(), with: R.color.primary())
         noRatesView.isHidden = viewModel.hasExchangeRates()
+        
+        loaderView.applyActivityIndicator()
     }
 
     private func updateUI() {
@@ -47,11 +49,11 @@ class ExchangeRatesViewController: UIViewController {
     }
 
     @IBAction func noRatesButtonTapped(_ sender: UIButton) {
-        noRatesActivityIndicator.isHidden = false
+        loaderView.isHidden = false
         sender.isEnabled = false
 
         viewModel.reloadRates { result in
-            self.noRatesActivityIndicator.isHidden = true
+            self.loaderView.isHidden = true
             sender.isEnabled = true
 
             switch result {

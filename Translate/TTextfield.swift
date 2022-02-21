@@ -14,15 +14,17 @@ protocol TTextfieldDelegate: AnyObject {
 
 class TTextfield: LoadableView {
 
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var button: UIButton!
-
+    
+    @IBOutlet weak var loaderView: UIView!
+    
     weak var delegate: TTextfieldDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         textfield.delegate = self
+        loaderView.applyActivityIndicator()
     }
 
     @IBAction func buttonTapped() {
@@ -31,7 +33,7 @@ class TTextfield: LoadableView {
     
     func showLoader(_ bool: Bool) {
         button.isHidden = bool
-        activityIndicator.isHidden = !bool
+        loaderView.isHidden = !bool
     }
 }
 

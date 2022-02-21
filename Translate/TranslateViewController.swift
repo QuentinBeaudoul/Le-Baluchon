@@ -88,6 +88,11 @@ extension TranslateViewController: TTextfieldDelegate {
 
 extension TranslateViewController: TButtonDelegate {
     
+    func onActionTapped(actionSheet: UIAlertController) {
+        present(actionSheet, animated: true)
+    }
+    
+    @available(iOS 14.0, *)
     func onActionTapped(action: UIAction, type: TButtonType?) {
         guard let type = type else { return }
         let chosenLang = TranslateManager.shared.getNameFromLiteral(for: action.title)

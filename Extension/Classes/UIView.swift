@@ -38,5 +38,13 @@ import UIKit
             layer.borderColor = newValue?.cgColor
         }
     }
+    
+    func applyActivityIndicator() {
+        let noRatesActivityIndicator = UIActivityIndicatorView()
+        noRatesActivityIndicator.color = R.color.primary()
+        self.addSubview(noRatesActivityIndicator)
+        noRatesActivityIndicator.frame = self.bounds
+        noRatesActivityIndicator.startAnimating()
+    }
 }
 

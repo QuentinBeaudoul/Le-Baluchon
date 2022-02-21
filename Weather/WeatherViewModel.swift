@@ -23,7 +23,13 @@ class WeatherViewModel: NSObject {
     weak var delegate: WeatherDelegate?
 
     override init() {
-        canUseLocation = locationManager.authorizationStatus == .authorizedWhenInUse
+        
+        if #available(iOS 14.0, *) {
+            canUseLocation = locationManager.authorizationStatus == .authorizedWhenInUse
+        } else {
+            canUseLocation = true
+        }
+        
         super.init()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -148,17 +149,21 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIG-jQ-SeU">
                                         <rect key="frame" x="107" y="309" width="200" height="200"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lnT-7u-gBT">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-Cu-vQr">
                                                 <rect key="frame" x="81.5" y="81.5" width="37" height="37"/>
-                                                <color key="color" name="primary"/>
-                                            </activityIndicatorView>
+                                                <color key="backgroundColor" name="surface"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="p3h-Cu-vQr" secondAttribute="height" multiplier="1:1" id="SFe-xJ-aYI"/>
+                                                    <constraint firstAttribute="width" constant="37" id="VTo-X8-YU6"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" name="surface"/>
                                         <constraints>
-                                            <constraint firstItem="lnT-7u-gBT" firstAttribute="centerY" secondItem="sIG-jQ-SeU" secondAttribute="centerY" id="Ar5-fl-ueE"/>
                                             <constraint firstAttribute="width" secondItem="sIG-jQ-SeU" secondAttribute="height" multiplier="1:1" id="Ref-9Y-OOe"/>
                                             <constraint firstAttribute="height" constant="200" id="ZQQ-vz-r8T"/>
-                                            <constraint firstItem="lnT-7u-gBT" firstAttribute="centerX" secondItem="sIG-jQ-SeU" secondAttribute="centerX" id="f1P-70-Qc7"/>
+                                            <constraint firstItem="p3h-Cu-vQr" firstAttribute="centerX" secondItem="sIG-jQ-SeU" secondAttribute="centerX" id="ajQ-np-73Y"/>
+                                            <constraint firstItem="p3h-Cu-vQr" firstAttribute="centerY" secondItem="sIG-jQ-SeU" secondAttribute="centerY" id="wxp-0f-78u"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -194,6 +199,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="p3h-Cu-vQr" id="8nW-VZ-C8A"/>
                         <outlet property="loaderView" destination="Fkv-KJ-Oxh" id="Lu2-hc-hRA"/>
                         <outlet property="noPermissionView" destination="Zwp-py-71X" id="wbd-Ix-Mzy"/>
                         <outlet property="tableView" destination="RBN-kK-D99" id="JnT-nI-UH3"/>

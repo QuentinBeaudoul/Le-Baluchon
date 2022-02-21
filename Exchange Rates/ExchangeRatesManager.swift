@@ -17,7 +17,13 @@ public final class ExchangeRatesManager {
 
     public func getViewController() -> UIViewController {
         let viewController = ExchangeRatesViewController.makeFromStoryboard(in: Bundle(for: Self.self))
-        viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "eurosign.square"), selectedImage: UIImage(systemName: "eurosign.square.fill"))
+        if #available(iOS 13.0, *) {
+            viewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "eurosign.square"), selectedImage: UIImage(systemName: "eurosign.square.fill"))
+        } else {
+            let image = R.image.ic_24_euro()
+            let selectedImage = R.image.ic_24_euro_fill()
+            viewController.tabBarItem = UITabBarItem(title: "", image: image, selectedImage: selectedImage)
+        }
 
         return viewController
     }
