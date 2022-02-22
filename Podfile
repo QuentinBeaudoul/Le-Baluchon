@@ -37,7 +37,6 @@ target 'Translate' do
 
 	target 'TranslateTests' do
 		inherit! :complete
-		pod 'LoadableViews'
 		pod 'R.swift'
 		pod 'Alamofire'
 	end
