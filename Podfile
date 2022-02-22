@@ -34,6 +34,13 @@ target 'Translate' do
   project 'Translate/Translate.xcodeproj'
 
   pod 'LoadableViews'
+
+	target 'TranslateTests' do
+		inherit! :complete
+		pod 'LoadableViews'
+		pod 'R.swift'
+		pod 'Alamofire'
+	end
 end
 
 target 'Extension' do
