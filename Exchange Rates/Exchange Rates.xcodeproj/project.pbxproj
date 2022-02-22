@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DDAFAEE7B0CE2776D9543AA /* Pods_Exchange_Rates_ExchangeRatesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05721C06A3632DA631D9EAEE /* Pods_Exchange_Rates_ExchangeRatesTests.framework */; };
 		4F12AB9027BE4EFD00B67FED /* LBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F12AB8F27BE4EFD00B67FED /* LBNetwork.framework */; };
 		4F12AB9127BE4EFD00B67FED /* LBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F12AB8F27BE4EFD00B67FED /* LBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F4234F227A9765700512C5E /* Exchange_Rates.docc in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234F127A9765700512C5E /* Exchange_Rates.docc */; };
 		4F4234F827A9765800512C5E /* ExchangeRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4234ED27A9765700512C5E /* ExchangeRates.framework */; };
-		4F4234FD27A9765800512C5E /* Exchange_RatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4234FC27A9765800512C5E /* Exchange_RatesTests.swift */; };
 		4F4234FE27A9765800512C5E /* Exchange_Rates.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4234F027A9765700512C5E /* Exchange_Rates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F42355927A9850400512C5E /* ExchangeRates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F42355827A9850400512C5E /* ExchangeRates.storyboard */; };
 		4F42355B27A985CA00512C5E /* ExchangeRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355A27A985CA00512C5E /* ExchangeRatesViewController.swift */; };
 		4F42355D27A985E400512C5E /* ExchangeRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355C27A985E400512C5E /* ExchangeRatesViewModel.swift */; };
 		4F42357127A98C4A00512C5E /* ExchangeRatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42357027A98C4A00512C5E /* ExchangeRatesManager.swift */; };
+		66A9993D27C51DC500FBCA89 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */; };
 		66C8AFB227BD593F0074DA24 /* Constante.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFB127BD593F0074DA24 /* Constante.swift */; };
 		66C8AFB627BD5DA60074DA24 /* ExchangeRatesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFB527BD5DA60074DA24 /* ExchangeRatesContainer.swift */; };
 		66C8AFB827BD5E080074DA24 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFB727BD5E080074DA24 /* ExchangeRates.swift */; };
@@ -51,13 +52,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05721C06A3632DA631D9EAEE /* Pods_Exchange_Rates_ExchangeRatesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Exchange_Rates_ExchangeRatesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E4D6175F1A72B82BC3AB56F /* Pods-ExchangeRatesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRatesTests.release.xcconfig"; path = "Target Support Files/Pods-ExchangeRatesTests/Pods-ExchangeRatesTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A13D58E8E54744CF3C6E3FE /* Pods-ExchangeRatesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRatesTests.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeRatesTests/Pods-ExchangeRatesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4362AD44B5D60C26C971BD3C /* Pods-Exchange Rates-ExchangeRatesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exchange Rates-ExchangeRatesTests.release.xcconfig"; path = "Target Support Files/Pods-Exchange Rates-ExchangeRatesTests/Pods-Exchange Rates-ExchangeRatesTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F12AB7827B7F6A600B67FED /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F12AB8F27BE4EFD00B67FED /* LBNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4234ED27A9765700512C5E /* ExchangeRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExchangeRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4234F027A9765700512C5E /* Exchange_Rates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exchange_Rates.h; sourceTree = "<group>"; };
 		4F4234F127A9765700512C5E /* Exchange_Rates.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Exchange_Rates.docc; sourceTree = "<group>"; };
 		4F4234F727A9765800512C5E /* ExchangeRatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F4234FC27A9765800512C5E /* Exchange_RatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange_RatesTests.swift; sourceTree = "<group>"; };
 		4F42355827A9850400512C5E /* ExchangeRates.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExchangeRates.storyboard; sourceTree = "<group>"; };
 		4F42355A27A985CA00512C5E /* ExchangeRatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewController.swift; sourceTree = "<group>"; };
 		4F42355C27A985E400512C5E /* ExchangeRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewModel.swift; sourceTree = "<group>"; };
@@ -65,10 +69,12 @@
 		4F42358127A99C6800512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4235CC27B2DAF000512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1AD165FB5F2C332A53104D /* Pods-Exchange Rates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exchange Rates.release.xcconfig"; path = "Target Support Files/Pods-Exchange Rates/Pods-Exchange Rates.release.xcconfig"; sourceTree = "<group>"; };
+		66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		66C8AFB127BD593F0074DA24 /* Constante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constante.swift; sourceTree = "<group>"; };
 		66C8AFB527BD5DA60074DA24 /* ExchangeRatesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesContainer.swift; sourceTree = "<group>"; };
 		66C8AFB727BD5E080074DA24 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
 		ADD8C15A2C378609D92807BC /* Pods-Exchange Rates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exchange Rates.debug.xcconfig"; path = "Target Support Files/Pods-Exchange Rates/Pods-Exchange Rates.debug.xcconfig"; sourceTree = "<group>"; };
+		BBBD22A2FF73A11926744EA7 /* Pods-Exchange Rates-ExchangeRatesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exchange Rates-ExchangeRatesTests.debug.xcconfig"; path = "Target Support Files/Pods-Exchange Rates-ExchangeRatesTests/Pods-Exchange Rates-ExchangeRatesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E708E9E03EBE325FE62CF675 /* Pods_Exchange_Rates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Exchange_Rates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F4234F827A9765800512C5E /* ExchangeRates.framework in Frameworks */,
+				1DDAFAEE7B0CE2776D9543AA /* Pods_Exchange_Rates_ExchangeRatesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +106,10 @@
 			children = (
 				ADD8C15A2C378609D92807BC /* Pods-Exchange Rates.debug.xcconfig */,
 				5D1AD165FB5F2C332A53104D /* Pods-Exchange Rates.release.xcconfig */,
+				BBBD22A2FF73A11926744EA7 /* Pods-Exchange Rates-ExchangeRatesTests.debug.xcconfig */,
+				4362AD44B5D60C26C971BD3C /* Pods-Exchange Rates-ExchangeRatesTests.release.xcconfig */,
+				1A13D58E8E54744CF3C6E3FE /* Pods-ExchangeRatesTests.debug.xcconfig */,
+				0E4D6175F1A72B82BC3AB56F /* Pods-ExchangeRatesTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -119,7 +130,7 @@
 				4F42356F27A98C3400512C5E /* Manager */,
 				4F42355727A984DE00512C5E /* Interface */,
 				4F4234EF27A9765700512C5E /* Documentation */,
-				4F4234FB27A9765800512C5E /* Exchange RatesTests */,
+				4F4234FB27A9765800512C5E /* ExchangeRatesTests */,
 				4F4234EE27A9765700512C5E /* Products */,
 				4F42358027A99C6800512C5E /* Frameworks */,
 				0E043273AAF987D74D71FF9E /* Pods */,
@@ -144,12 +155,12 @@
 			path = Documentation;
 			sourceTree = "<group>";
 		};
-		4F4234FB27A9765800512C5E /* Exchange RatesTests */ = {
+		4F4234FB27A9765800512C5E /* ExchangeRatesTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F4234FC27A9765800512C5E /* Exchange_RatesTests.swift */,
+				66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */,
 			);
-			path = "Exchange RatesTests";
+			path = ExchangeRatesTests;
 			sourceTree = "<group>";
 		};
 		4F42355727A984DE00512C5E /* Interface */ = {
@@ -179,6 +190,7 @@
 				4F4235CC27B2DAF000512C5E /* Extension.framework */,
 				4F42358127A99C6800512C5E /* Network.framework */,
 				E708E9E03EBE325FE62CF675 /* Pods_Exchange_Rates.framework */,
+				05721C06A3632DA631D9EAEE /* Pods_Exchange_Rates_ExchangeRatesTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,20 +246,22 @@
 			productReference = 4F4234ED27A9765700512C5E /* ExchangeRates.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4F4234F627A9765800512C5E /* Exchange RatesTests */ = {
+		4F4234F627A9765800512C5E /* ExchangeRatesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F42350427A9765800512C5E /* Build configuration list for PBXNativeTarget "Exchange RatesTests" */;
+			buildConfigurationList = 4F42350427A9765800512C5E /* Build configuration list for PBXNativeTarget "ExchangeRatesTests" */;
 			buildPhases = (
+				EF07A985122064268C187F4A /* [CP] Check Pods Manifest.lock */,
 				4F4234F327A9765800512C5E /* Sources */,
 				4F4234F427A9765800512C5E /* Frameworks */,
 				4F4234F527A9765800512C5E /* Resources */,
+				6DA148F94CB81D929457AA66 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				4F4234FA27A9765800512C5E /* PBXTargetDependency */,
 			);
-			name = "Exchange RatesTests";
+			name = ExchangeRatesTests;
 			productName = "Exchange RatesTests";
 			productReference = 4F4234F727A9765800512C5E /* ExchangeRatesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -284,7 +298,7 @@
 			projectRoot = "";
 			targets = (
 				4F4234EC27A9765700512C5E /* Exchange Rates */,
-				4F4234F627A9765800512C5E /* Exchange RatesTests */,
+				4F4234F627A9765800512C5E /* ExchangeRatesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +322,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6DA148F94CB81D929457AA66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Exchange Rates-ExchangeRatesTests/Pods-Exchange Rates-ExchangeRatesTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Exchange Rates-ExchangeRatesTests/Pods-Exchange Rates-ExchangeRatesTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Exchange Rates-ExchangeRatesTests/Pods-Exchange Rates-ExchangeRatesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B84F96C2CC29988DBD3C3B8A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +355,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Exchange Rates-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF07A985122064268C187F4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Exchange Rates-ExchangeRatesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4234FD27A9765800512C5E /* Exchange_RatesTests.swift in Sources */,
+				66A9993D27C51DC500FBCA89 /* ViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +597,10 @@
 		};
 		4F42350527A9765800512C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBBD22A2FF73A11926744EA7 /* Pods-Exchange Rates-ExchangeRatesTests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 52H82A67C3;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)Tests";
 				PRODUCT_NAME = "$(PRODUCT_NAME)Tests";
 			};
@@ -552,7 +608,10 @@
 		};
 		4F42350627A9765800512C5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4362AD44B5D60C26C971BD3C /* Pods-Exchange Rates-ExchangeRatesTests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 52H82A67C3;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)Tests";
 				PRODUCT_NAME = "$(PRODUCT_NAME)Tests";
 			};
@@ -579,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F42350427A9765800512C5E /* Build configuration list for PBXNativeTarget "Exchange RatesTests" */ = {
+		4F42350427A9765800512C5E /* Build configuration list for PBXNativeTarget "ExchangeRatesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F42350527A9765800512C5E /* Debug */,

@@ -6,9 +6,6 @@
 //
 
 import UIKit
-import Translate
-import Extension
-import ExchangeRates
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

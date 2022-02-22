@@ -9,13 +9,19 @@ pod 'SwiftLint'
 target 'LBNetwork' do
   project 'Network/LBNetwork.xcodeproj'
 
-	pod 'Alamofire', '~> 5.5'
+	pod 'Alamofire'
 end
 
 target 'Exchange Rates' do
   project 'Exchange Rates/Exchange Rates.xcodeproj'
 
-  pod 'LoadableViews'
+  	pod 'LoadableViews'
+	
+	target 'ExchangeRatesTests' do
+		inherit! :complete
+		pod 'R.swift'
+		pod 'Alamofire'
+	end
 end		
 
 target 'Weather' do

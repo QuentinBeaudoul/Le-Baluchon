@@ -6,10 +6,6 @@
 //
 
 import UIKit
-import Translate
-import Extension
-import ExchangeRates
-import Weather
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
