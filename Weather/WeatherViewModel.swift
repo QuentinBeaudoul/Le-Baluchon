@@ -16,7 +16,7 @@ protocol WeatherDelegate: AnyObject {
 
 class WeatherViewModel: NSObject {
 
-    private(set) var weathers : [WeatherLocation: WeatherContainer?] = [.NY: nil, .currLoc: nil]
+    private var weathers : [WeatherLocation: WeatherContainer?] = [.NY: nil, .currLoc: nil]
     private(set) var canUseLocation: Bool
     let locationManager = CLLocationManager()
 

@@ -12,6 +12,11 @@ class ExchangeRatesViewModel {
 
     private(set) var source = ""
     private(set) var target = ""
+    private let manager: ExchangeRateManagerProtocol
+
+    init(manager: ExchangeRateManagerProtocol = ExchangeRatesManager.shared) {
+        self.manager = manager
+    }
 
     func reloadRates(completion: @escaping (Result<Void, Error>) -> Void) {
         ExchangeRatesManager.shared.fetchRates { result in
@@ -39,7 +44,7 @@ class ExchangeRatesViewModel {
     }
 
     func hasExchangeRates() -> Bool {
-        return ExchangeRatesManager.shared.isExchangeRateAvailable()
+        return manager.isExchangeRateAvailable()
     }
 
     func getUSDExchangeRate() -> Double {

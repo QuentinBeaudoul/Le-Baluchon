@@ -28,8 +28,4 @@ public class NetworkManager {
             }
         }
     }
-
-    public class func sendData() {
-
-    }
 }

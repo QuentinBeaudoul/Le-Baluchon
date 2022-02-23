@@ -9,7 +9,12 @@ import UIKit
 import Extension
 import LBNetwork
 
-public final class ExchangeRatesManager {
+protocol ExchangeRateManagerProtocol {
+    func fetchRates(completion: ((Result<Double, Error>) -> Void)?)
+    func isExchangeRateAvailable() -> Bool
+}
+
+public final class ExchangeRatesManager: ExchangeRateManagerProtocol {
     public static let shared = ExchangeRatesManager()
     private init() {}
     

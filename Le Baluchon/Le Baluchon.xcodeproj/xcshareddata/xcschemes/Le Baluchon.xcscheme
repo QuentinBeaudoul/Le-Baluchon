@@ -20,14 +20,80 @@
                ReferencedContainer = "container:Le Baluchon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4F4234EC27A9765700512C5E"
+               BuildableName = "ExchangeRates.framework"
+               BlueprintName = "Exchange Rates"
+               ReferencedContainer = "container:../Exchange Rates/Exchange Rates.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4F42351027A976DE00512C5E"
+               BuildableName = "Translate.framework"
+               BlueprintName = "Translate"
+               ReferencedContainer = "container:../Translate/Translate.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4F4234EC27A9765700512C5E"
+            BuildableName = "ExchangeRates.framework"
+            BlueprintName = "Exchange Rates"
+            ReferencedContainer = "container:../Exchange Rates/Exchange Rates.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4F42351027A976DE00512C5E"
+            BuildableName = "Translate.framework"
+            BlueprintName = "Translate"
+            ReferencedContainer = "container:../Translate/Translate.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4F4234F627A9765800512C5E"
+               BuildableName = "ExchangeRatesTests.xctest"
+               BlueprintName = "ExchangeRatesTests"
+               ReferencedContainer = "container:../Exchange Rates/Exchange Rates.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4F42351A27A976DE00512C5E"
+               BuildableName = "TranslateTests.xctest"
+               BlueprintName = "TranslateTests"
+               ReferencedContainer = "container:../Translate/Translate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
