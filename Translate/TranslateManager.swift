@@ -9,7 +9,16 @@ import UIKit
 import LBNetwork
 import Extension
 
-public final class TranslateManager {
+protocol TranslateManagerProtocol {
+    func fetchTranslation(text: String, sourceLang: String?, targetLang: String, completion: @escaping (Result<TranslationContainer?, Error>) -> Void)
+    func getDeviceLang() -> String
+    func getSourceLangs() -> [String]?
+    func getTargetLangs(for source: String) -> [String]?
+    func getLiteralName(for lang: String) -> String
+    func getNameFromLiteral(for literalName: String) -> String
+}
+
+public final class TranslateManager: TranslateManagerProtocol {
     public static let shared = TranslateManager()
     private init() {}
     
@@ -59,12 +68,6 @@ public final class TranslateManager {
     
     func getDeviceLang() -> String {
         return Locale.current.languageCode?.capitalized ?? "Fr"
-    }
-    
-    func getTargetLangs(for source: String) -> [Language]? {
-        return languages?.filter({ lang in
-            lang.sourceLang == source
-        })
     }
     
     func getSourceLangs() -> [String]? {

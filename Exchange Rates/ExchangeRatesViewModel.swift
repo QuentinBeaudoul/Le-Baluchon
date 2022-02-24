@@ -19,7 +19,7 @@ class ExchangeRatesViewModel {
     }
 
     func reloadRates(completion: @escaping (Result<Void, Error>) -> Void) {
-        ExchangeRatesManager.shared.fetchRates { result in
+        manager.fetchRates { result in
             switch result {
             case .success(_):
                 completion(.success())
@@ -48,6 +48,6 @@ class ExchangeRatesViewModel {
     }
 
     func getUSDExchangeRate() -> Double {
-        return ExchangeRatesManager.shared.getUsdRate() ?? 0
+        return manager.getUsdRate() ?? 0
     }
 }

@@ -36,20 +36,20 @@ class WeatherViewModel: NSObject {
 
     }
 
-    func fetchWeather(lat: Double, lon: Double, completion: @escaping (Result<Void, Error>) -> Void) {
-        WeatherManager.shared.getWeather { [self] result in
+    func fetchWeather(lat: Double, lon: Double, manager: WeatherManagerProtocol = WeatherManager.shared, completion: @escaping (Result<Void, Error>) -> Void) {
+        manager.getWeather(lat: nil, lon: nil) { [self] result in
             switch result {
             case .success(let NYWeather):
                 weathers[.NY] = NYWeather
-                fetchCurrentLocationWeather(lat: lat, lon: lon, completion: completion)
+                fetchCurrentLocationWeather(lat: lat, lon: lon, manager: manager, completion: completion)
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
 
-    private func fetchCurrentLocationWeather(lat: Double, lon: Double, completion: @escaping (Result<Void, Error>) -> Void) {
-        WeatherManager.shared.getWeather(lat: lat, lon: lon) { [self] result in
+    private func fetchCurrentLocationWeather(lat: Double, lon: Double, manager: WeatherManagerProtocol, completion: @escaping (Result<Void, Error>) -> Void) {
+        manager.getWeather(lat: lat, lon: lon) { [self] result in
             switch result {
             case .success(let currentLocationWeather):
                 weathers[.currLoc] = currentLocationWeather

@@ -10,35 +10,56 @@ import XCTest
 
 class ViewModelTests: XCTestCase {
 
-    let viewModel = TranslateViewModel()
+    let viewModel = TranslateViewModel(manager: StubManager())
     
-    func testGivenSourceAndTarget_WhenSwappingValues_ThenValuesAreSwapped() {
+    override func setUp() {
+        super.setUp()
         
         // Given
-        viewModel.setSource(with: "Français")
-        viewModel.setTarget(with: "English")
+        viewModel.setSource(with: "Fr")
+        viewModel.setTarget(with: "En")
+    }
+    
+    func testGivenSourceAndTarget_WhenSwappingValues_ThenValuesAreSwapped() {
         
         // When
         viewModel.swapSourceTraget(safeTarget: viewModel.target ?? "")
         
         // Then
-        XCTAssertTrue(viewModel.source == "English" && viewModel.target == "Français")
+        XCTAssertTrue(viewModel.source == "En" && viewModel.target == "Fr")
     }
     
     func testGivenNewSource_WhenSettingSource_ThenSourceIsSet() {
         // When
-        viewModel.setSource(with: "Español")
+        viewModel.setSource(with: "Es")
         
         // Then
-        XCTAssertTrue(viewModel.source == "Español")
+        XCTAssertTrue(viewModel.source == "Es")
     }
     
     func testGivenNewtarget_WhenSettingTarget_ThenTargetIsSet() {
         // When
-        viewModel.setTarget(with: "Français")
+        viewModel.setTarget(with: "Fr")
         
         // Then
-        XCTAssertTrue(viewModel.target == "Français")
+        XCTAssertTrue(viewModel.target == "Fr")
+    }
+    
+    func testGivenTextInSourceLang_WhenTranslating_ThenTextIsTranslated() {
+        
+        let text = "hello"
+        
+        // When
+        viewModel.processTranslation(text: text) { result in
+            switch result {
+                
+            case .success(let translatedText):
+                // Then
+                XCTAssert(translatedText == "Bonjour")
+            case .failure(_):
+                break
+            }
+        }
     }
 
 }

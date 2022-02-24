@@ -11,6 +11,7 @@ import LBNetwork
 
 protocol ExchangeRateManagerProtocol {
     func fetchRates(completion: ((Result<Double, Error>) -> Void)?)
+    func getUsdRate() -> Double?
     func isExchangeRateAvailable() -> Bool
 }
 

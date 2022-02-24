@@ -18,6 +18,7 @@
 		4F92003127C13B2D00D9D5DF /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92003027C13B2D00D9D5DF /* Number.swift */; };
 		4F92003327C1405000D9D5DF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92003227C1405000D9D5DF /* Date.swift */; };
 		668AB9B527BA8916006EEA6D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AB9B427BA8916006EEA6D /* UIViewController.swift */; };
+		66A35CB927C7A214006B01AD /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A35CB827C7A214006B01AD /* Bundle.swift */; };
 		D3F23D4225B46B6CA718FEAB /* Pods_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582608E68D4B75762C0FF9B1 /* Pods_Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		4F92003227C1405000D9D5DF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		582608E68D4B75762C0FF9B1 /* Pods_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		668AB9B427BA8916006EEA6D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		66A35CB827C7A214006B01AD /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		94A92FBEE311C95B82DF09B0 /* Pods-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension.debug.xcconfig"; path = "Target Support Files/Pods-Extension/Pods-Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		DFB9C2A28B609A49C67502E9 /* Pods-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension.release.xcconfig"; path = "Target Support Files/Pods-Extension/Pods-Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				4F92002B27C12B1000D9D5DF /* UITableViewCell.swift */,
 				4F92003027C13B2D00D9D5DF /* Number.swift */,
 				4F92003227C1405000D9D5DF /* Date.swift */,
+				66A35CB827C7A214006B01AD /* Bundle.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				4F12AB9527BE610E00B67FED /* Result.swift in Sources */,
 				4F92002C27C12B1000D9D5DF /* UITableViewCell.swift in Sources */,
 				4F92003127C13B2D00D9D5DF /* Number.swift in Sources */,
+				66A35CB927C7A214006B01AD /* Bundle.swift in Sources */,
 				4F12AB7C27B7F8C700B67FED /* UIAlertController.swift in Sources */,
 				4F12AB8E27B8201A00B67FED /* UIImage.swift in Sources */,
 				4F12AB7727B7F55E00B67FED /* UIView.swift in Sources */,

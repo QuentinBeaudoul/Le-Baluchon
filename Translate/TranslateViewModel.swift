@@ -11,10 +11,17 @@ class TranslateViewModel {
     
     private(set) var source: String = TranslateManager.shared.getDeviceLang()
     private(set) var target: String?
+    
+    private let manager: TranslateManagerProtocol
+    
+    init(manager: TranslateManagerProtocol = TranslateManager.shared) {
+        self.manager = manager
+        source = manager.getDeviceLang()
+    }
 
     func processTranslation(text: String, completion: @escaping (Result<String, Error>) -> Void) {
         guard let target = target else { return }
-        TranslateManager.shared.fetchTranslation(text: text, sourceLang: source, targetLang: target) { result  in
+        manager.fetchTranslation(text: text, sourceLang: source, targetLang: target) { result  in
             switch result {
             case .success(let translationsContainer):
                 if let translations = translationsContainer?.translations, let text = translations.first?.text {
@@ -41,10 +48,10 @@ class TranslateViewModel {
     }
     
     func getSourceLangs() -> [String] {
-        return TranslateManager.shared.getSourceLangs() ?? [String]()
+        return manager.getSourceLangs() ?? [String]()
     }
     
     func getTargetLangs(for source: String) -> [String] {
-        return TranslateManager.shared.getTargetLangs(for: source) ?? [String]()
+        return manager.getTargetLangs(for: source) ?? [String]()
     }
 }

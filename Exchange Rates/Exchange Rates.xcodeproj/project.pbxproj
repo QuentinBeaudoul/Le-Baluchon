@@ -17,6 +17,7 @@
 		4F42355B27A985CA00512C5E /* ExchangeRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355A27A985CA00512C5E /* ExchangeRatesViewController.swift */; };
 		4F42355D27A985E400512C5E /* ExchangeRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355C27A985E400512C5E /* ExchangeRatesViewModel.swift */; };
 		4F42357127A98C4A00512C5E /* ExchangeRatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42357027A98C4A00512C5E /* ExchangeRatesManager.swift */; };
+		66A35CB227C77CB4006B01AD /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A35CB127C77CB4006B01AD /* StubManager.swift */; };
 		66A9993D27C51DC500FBCA89 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */; };
 		66C8AFB227BD593F0074DA24 /* Constante.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFB127BD593F0074DA24 /* Constante.swift */; };
 		66C8AFB627BD5DA60074DA24 /* ExchangeRatesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFB527BD5DA60074DA24 /* ExchangeRatesContainer.swift */; };
@@ -69,6 +70,7 @@
 		4F42358127A99C6800512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4235CC27B2DAF000512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1AD165FB5F2C332A53104D /* Pods-Exchange Rates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exchange Rates.release.xcconfig"; path = "Target Support Files/Pods-Exchange Rates/Pods-Exchange Rates.release.xcconfig"; sourceTree = "<group>"; };
+		66A35CB127C77CB4006B01AD /* StubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
 		66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		66C8AFB127BD593F0074DA24 /* Constante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constante.swift; sourceTree = "<group>"; };
 		66C8AFB527BD5DA60074DA24 /* ExchangeRatesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesContainer.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */,
+				66A35CB127C77CB4006B01AD /* StubManager.swift */,
 			);
 			path = ExchangeRatesTests;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66A9993D27C51DC500FBCA89 /* ViewModelTests.swift in Sources */,
+				66A35CB227C77CB4006B01AD /* StubManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

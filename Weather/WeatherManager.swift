@@ -9,7 +9,11 @@ import UIKit
 import Extension
 import LBNetwork
 
-public final class WeatherManager {
+protocol WeatherManagerProtocol {
+    func getWeather(lat: Double?, lon: Double?, completion: @escaping ((Result<WeatherContainer?, Error>) -> Void))
+}
+
+public final class WeatherManager: WeatherManagerProtocol {
     public static let shared = WeatherManager()
     private init() {}
 

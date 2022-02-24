@@ -48,6 +48,20 @@
                ReferencedContainer = "container:../Translate/Translate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4F42353427A977F700512C5E"
+               BuildableName = "Weather.framework"
+               BlueprintName = "Weather"
+               ReferencedContainer = "container:../Weather/Weather.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -72,6 +86,13 @@
             BlueprintName = "Translate"
             ReferencedContainer = "container:../Translate/Translate.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4F42353427A977F700512C5E"
+            BuildableName = "Weather.framework"
+            BlueprintName = "Weather"
+            ReferencedContainer = "container:../Weather/Weather.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
@@ -92,6 +113,16 @@
                BuildableName = "TranslateTests.xctest"
                BlueprintName = "TranslateTests"
                ReferencedContainer = "container:../Translate/Translate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "66A35CA627C7770D006B01AD"
+               BuildableName = "WeatherTests.xctest"
+               BlueprintName = "WeatherTests"
+               ReferencedContainer = "container:../Weather/Weather.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
