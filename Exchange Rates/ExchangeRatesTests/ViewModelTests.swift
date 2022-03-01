@@ -10,7 +10,7 @@ import XCTest
 
 class ViewModelTests: XCTestCase {
 
-    let viewModel = ExchangeRatesViewModel(manager: StubManager())
+    let viewModel = ExchangeRatesViewModel(manager: ExchangeRatesManager(manager: StubNetworkManager()))
     
     func testGivenSource_WhenUpdateSource_ThenSourceIsUpdated() {
         
@@ -35,10 +35,11 @@ class ViewModelTests: XCTestCase {
     func testGivenNoRates_WhenReloadRates_ThenHasRates() {
         
         // When
-        viewModel.reloadRates { _ in }
-        
-        // Then
-        XCTAssertTrue(viewModel.hasExchangeRates() == true)
+        viewModel.reloadRates {[self] _ in
+            // Then
+            XCTAssertTrue(viewModel.hasExchangeRates() == true)
+        }
+
     }
     
     func testGivenNoRates_WhenReloadRates_ThenRatesUpdated() {
@@ -48,21 +49,26 @@ class ViewModelTests: XCTestCase {
         
         // Then
         let rate = viewModel.getUSDExchangeRate()
-        XCTAssertTrue(rate == 5)
+        XCTAssertTrue(rate == 1.116757)
     }
     
     func testGivenSourceToConvert_WhenConverting_ThenSourceIsConvertedIntoTarget() {
         
         // Given
         viewModel.updateSource("10.5")
-        
-        // When
-        viewModel.convert()
-        
-        // Then
-        let result = viewModel.target
-        XCTAssert(result == "52.5")
-        
+        viewModel.reloadRates {[self] result in
+            switch result {
+            case .success():
+                // When
+                viewModel.convert()
+
+                // Then
+                let result = viewModel.target
+                XCTAssertEqual(result, "11.7259485")
+            case .failure(let error):
+                XCTAssertThrowsError(error)
+            }
+        }
     }
 
 }

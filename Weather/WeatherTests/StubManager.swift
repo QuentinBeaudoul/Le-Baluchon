@@ -11,9 +11,18 @@ import Foundation
 class StubManager: WeatherManagerProtocol {
     
     func getWeather(lat: Double?, lon: Double?, completion: @escaping ((Result<WeatherContainer?, Error>) -> Void)) {
-        let weather = Bundle.decode(WeatherContainer.self, from: "Weather.json", in: Bundle(for: Self.self))
-        
-        completion(.success(weather))
+        let network = StubNetworkManager()
+
+        network.fetchData(url: "dump", headers: nil, parameters: nil, parser: WeatherContainer.self) { result in
+
+            switch result {
+
+            case .success(let weather):
+                completion(.success(weather))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
     
 }

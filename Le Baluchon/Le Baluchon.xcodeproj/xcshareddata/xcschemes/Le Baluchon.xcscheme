@@ -86,6 +86,13 @@
             BlueprintName = "Translate"
             ReferencedContainer = "container:../Translate/Translate.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4F42353427A977F700512C5E"
+            BuildableName = "Weather.framework"
+            BlueprintName = "Weather"
+            ReferencedContainer = "container:../Weather/Weather.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference

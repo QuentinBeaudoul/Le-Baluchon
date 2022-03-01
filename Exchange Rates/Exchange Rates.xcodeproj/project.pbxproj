@@ -17,7 +17,8 @@
 		4F42355B27A985CA00512C5E /* ExchangeRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355A27A985CA00512C5E /* ExchangeRatesViewController.swift */; };
 		4F42355D27A985E400512C5E /* ExchangeRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42355C27A985E400512C5E /* ExchangeRatesViewModel.swift */; };
 		4F42357127A98C4A00512C5E /* ExchangeRatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42357027A98C4A00512C5E /* ExchangeRatesManager.swift */; };
-		66A35CB227C77CB4006B01AD /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A35CB127C77CB4006B01AD /* StubManager.swift */; };
+		4F875D7727CE2A480006574C /* StubNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F875D7627CE2A480006574C /* StubNetworkManager.swift */; };
+		4F875D7A27CE334C0006574C /* ExchangeRates.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F875D7927CE334C0006574C /* ExchangeRates.json */; };
 		66A9993D27C51DC500FBCA89 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */; };
 		66C8AFB227BD593F0074DA24 /* Constante.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFB127BD593F0074DA24 /* Constante.swift */; };
 		66C8AFB627BD5DA60074DA24 /* ExchangeRatesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8AFB527BD5DA60074DA24 /* ExchangeRatesContainer.swift */; };
@@ -69,8 +70,9 @@
 		4F42357027A98C4A00512C5E /* ExchangeRatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesManager.swift; sourceTree = "<group>"; };
 		4F42358127A99C6800512C5E /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4235CC27B2DAF000512C5E /* Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F875D7627CE2A480006574C /* StubNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetworkManager.swift; sourceTree = "<group>"; };
+		4F875D7927CE334C0006574C /* ExchangeRates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExchangeRates.json; sourceTree = "<group>"; };
 		5D1AD165FB5F2C332A53104D /* Pods-Exchange Rates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exchange Rates.release.xcconfig"; path = "Target Support Files/Pods-Exchange Rates/Pods-Exchange Rates.release.xcconfig"; sourceTree = "<group>"; };
-		66A35CB127C77CB4006B01AD /* StubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
 		66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		66C8AFB127BD593F0074DA24 /* Constante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constante.swift; sourceTree = "<group>"; };
 		66C8AFB527BD5DA60074DA24 /* ExchangeRatesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesContainer.swift; sourceTree = "<group>"; };
@@ -160,8 +162,9 @@
 		4F4234FB27A9765800512C5E /* ExchangeRatesTests */ = {
 			isa = PBXGroup;
 			children = (
+				4F875D7827CE332A0006574C /* Ressource */,
 				66A9993C27C51DC500FBCA89 /* ViewModelTests.swift */,
-				66A35CB127C77CB4006B01AD /* StubManager.swift */,
+				4F875D7627CE2A480006574C /* StubNetworkManager.swift */,
 			);
 			path = ExchangeRatesTests;
 			sourceTree = "<group>";
@@ -196,6 +199,14 @@
 				05721C06A3632DA631D9EAEE /* Pods_Exchange_Rates_ExchangeRatesTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F875D7827CE332A0006574C /* Ressource */ = {
+			isa = PBXGroup;
+			children = (
+				4F875D7927CE334C0006574C /* ExchangeRates.json */,
+			);
+			path = Ressource;
 			sourceTree = "<group>";
 		};
 		66C8AFB327BD59430074DA24 /* Constante */ = {
@@ -319,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F875D7A27CE334C0006574C /* ExchangeRates.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,8 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F875D7727CE2A480006574C /* StubNetworkManager.swift in Sources */,
 				66A9993D27C51DC500FBCA89 /* ViewModelTests.swift in Sources */,
-				66A35CB227C77CB4006B01AD /* StubManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

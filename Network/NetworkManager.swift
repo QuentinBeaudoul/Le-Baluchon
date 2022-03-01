@@ -8,9 +8,15 @@
 import Foundation
 import Alamofire
 
-public class NetworkManager {
+public protocol NetworkManagerProtocol {
+    func fetchData<T: Decodable>(url: String, headers: [String: String]?, parameters: [String: Any]?, parser: T.Type, completion: @escaping (Result<T?, Error>) -> Void)
+}
 
-    public class func fetchData<T: Decodable>(url: String, headers: [String: String]? = nil, parameters: [String: Any]? = nil, parser: T.Type, completion: @escaping (Result<T?, Error>) -> Void) {
+public class NetworkManager: NetworkManagerProtocol {
+
+    public static let shared = NetworkManager()
+
+    public func fetchData<T: Decodable>(url: String, headers: [String: String]? = nil, parameters: [String: Any]? = nil, parser: T.Type, completion: @escaping (Result<T?, Error>) -> Void) {
         
         var afHeaders = HTTPHeaders()
         if let headers = headers {

@@ -14,8 +14,14 @@ protocol WeatherManagerProtocol {
 }
 
 public final class WeatherManager: WeatherManagerProtocol {
+
     public static let shared = WeatherManager()
-    private init() {}
+
+    var manager: NetworkManagerProtocol
+
+    init(manager: NetworkManagerProtocol = NetworkManager.shared) {
+        self.manager = manager
+    }
 
     public func getViewController() -> UIViewController {
         let viewController = WeatherViewController.makeFromStoryboard(in: Bundle(for: Self.self))
@@ -36,7 +42,7 @@ public final class WeatherManager: WeatherManagerProtocol {
         let url = Constante.weatherUrl
         let parameters: [String: Any] = ["appid": Constante.apiKey, "lat": lat ?? Constante.NYLat, "lon": lon ?? Constante.NYLon, "units": "metric"]
 
-        NetworkManager.fetchData(url: url, parameters: parameters, parser: WeatherContainer.self) { result in
+        manager.fetchData(url: url, headers: nil, parameters: parameters, parser: WeatherContainer.self) { result in
 
             switch result {
             case .success(let weatherContainer):

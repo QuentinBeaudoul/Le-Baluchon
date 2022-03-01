@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreLocation
+import LBNetwork
 
 protocol WeatherDelegate: AnyObject {
     func onLocationChanged(lat: Double, lon: Double)

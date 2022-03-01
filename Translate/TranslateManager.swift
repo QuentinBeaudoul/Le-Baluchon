@@ -10,6 +10,10 @@ import LBNetwork
 import Extension
 
 protocol TranslateManagerProtocol {
+
+    var manager: NetworkManagerProtocol { get set}
+    init(manager: NetworkManagerProtocol)
+    func fetchLanguages(completion: @escaping (Result<LanguageContainer?, Error>) -> Void)
     func fetchTranslation(text: String, sourceLang: String?, targetLang: String, completion: @escaping (Result<TranslationContainer?, Error>) -> Void)
     func getDeviceLang() -> String
     func getSourceLangs() -> [String]?
@@ -19,10 +23,15 @@ protocol TranslateManagerProtocol {
 }
 
 public final class TranslateManager: TranslateManagerProtocol {
+
     public static let shared = TranslateManager()
-    private init() {}
-    
+
+    var manager: NetworkManagerProtocol
     var languages: [Language]?
+    
+    init(manager: NetworkManagerProtocol = NetworkManager.shared) {
+        self.manager = manager
+    }
 
     public func getViewController() -> UIViewController {
         let viewController = TranslateViewController.makeFromStoryboard(in: Bundle(for: Self.self))
@@ -41,7 +50,7 @@ public final class TranslateManager: TranslateManagerProtocol {
         let url = Constante.languagesUrl
         let header = ["Authorization": Constante.authorization]
         
-        NetworkManager.fetchData(url: url, headers: header, parser: LanguageContainer.self) { result in
+        manager.fetchData(url: url, headers: header, parameters: nil, parser: LanguageContainer.self) { result in
             switch result {
             case .success(let container):
                 self.languages = container?.languages
@@ -56,7 +65,7 @@ public final class TranslateManager: TranslateManagerProtocol {
         let url = Constante.translateUrl
 
         let parameters: [String : Any] = ["auth_key": Constante.apikey, "text": text, "source_lang": sourceLang ?? getDeviceLang(), "target_lang": targetLang]
-        NetworkManager.fetchData(url: url, parameters: parameters, parser: TranslationContainer.self) { result in
+        manager.fetchData(url: url, headers: nil, parameters: parameters, parser: TranslationContainer.self) { result in
             switch result {
             case .success(let translationContainer):
                 completion(.success(translationContainer))

@@ -7,6 +7,7 @@
 
 import Foundation
 import Extension
+import LBNetwork
 
 class ExchangeRatesViewModel {
 

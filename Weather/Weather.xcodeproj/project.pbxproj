@@ -13,6 +13,8 @@
 		4F42356927A9871800512C5E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356827A9871800512C5E /* WeatherViewController.swift */; };
 		4F42356B27A9874800512C5E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42356A27A9874800512C5E /* WeatherViewModel.swift */; };
 		4F42358E27AE86E700512C5E /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42358D27AE86E700512C5E /* WeatherManager.swift */; };
+		4F875D8227CE738D0006574C /* StubNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F875D8127CE738D0006574C /* StubNetworkManager.swift */; };
+		4F875D8427CE78750006574C /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F875D8327CE78750006574C /* StubManager.swift */; };
 		4F92002E27C1344B00D9D5DF /* LBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F92002D27C1344B00D9D5DF /* LBNetwork.framework */; };
 		4F92002F27C1344B00D9D5DF /* LBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F92002D27C1344B00D9D5DF /* LBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F9A814D27BFA73000963D28 /* Constante.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A814C27BFA73000963D28 /* Constante.swift */; };
@@ -25,7 +27,6 @@
 		4F9A816027BFF2AD00963D28 /* WeatherDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A815F27BFF2AD00963D28 /* WeatherDetailsView.swift */; };
 		66A35CAA27C7770D006B01AD /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A35CA927C7770D006B01AD /* WeatherTests.swift */; };
 		66A35CAB27C7770D006B01AD /* Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F42353527A977F700512C5E /* Weather.framework */; platformFilter = ios; };
-		66A35CBF27C7CBAD006B01AD /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A35CBE27C7CBAD006B01AD /* StubManager.swift */; };
 		66A35CC227C7CE36006B01AD /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 66A35CC127C7CE36006B01AD /* Weather.json */; };
 		835DC512BA45B6D930846F14 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C3C8D0453D101E75B1DAC7 /* Pods_Weather.framework */; };
 		871280848C4539FE2BE8DE49 /* Pods_Weather_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C551D2E6293DCAD11CA35FD8 /* Pods_Weather_WeatherTests.framework */; };
@@ -69,6 +70,8 @@
 		4F42356827A9871800512C5E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		4F42356A27A9874800512C5E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		4F42358D27AE86E700512C5E /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		4F875D8127CE738D0006574C /* StubNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetworkManager.swift; sourceTree = "<group>"; };
+		4F875D8327CE78750006574C /* StubManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
 		4F92002D27C1344B00D9D5DF /* LBNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9A814C27BFA73000963D28 /* Constante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constante.swift; sourceTree = "<group>"; };
 		4F9A814F27BFAAEC00963D28 /* WeatherContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContainer.swift; sourceTree = "<group>"; };
@@ -80,7 +83,6 @@
 		4F9A815F27BFF2AD00963D28 /* WeatherDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsView.swift; sourceTree = "<group>"; };
 		66A35CA727C7770D006B01AD /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A35CA927C7770D006B01AD /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
-		66A35CBE27C7CBAD006B01AD /* StubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
 		66A35CC127C7CE36006B01AD /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
 		C551D2E6293DCAD11CA35FD8 /* Pods_Weather_WeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_WeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C88B35F15752F1516CF7B2 /* Pods-Weather-WeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-WeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-Weather-WeatherTests/Pods-Weather-WeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,7 +220,8 @@
 			children = (
 				66A35CC027C7CE17006B01AD /* Ressource */,
 				66A35CA927C7770D006B01AD /* WeatherTests.swift */,
-				66A35CBE27C7CBAD006B01AD /* StubManager.swift */,
+				4F875D8327CE78750006574C /* StubManager.swift */,
+				4F875D8127CE738D0006574C /* StubNetworkManager.swift */,
 			);
 			path = WeatherTests;
 			sourceTree = "<group>";
@@ -441,8 +444,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F875D8427CE78750006574C /* StubManager.swift in Sources */,
+				4F875D8227CE738D0006574C /* StubNetworkManager.swift in Sources */,
 				66A35CAA27C7770D006B01AD /* WeatherTests.swift in Sources */,
-				66A35CBF27C7CBAD006B01AD /* StubManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

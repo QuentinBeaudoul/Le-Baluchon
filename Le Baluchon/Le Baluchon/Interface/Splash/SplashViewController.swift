@@ -20,7 +20,7 @@ class SplashViewController: UIViewController {
         
         loaderView.applyActivityIndicator()
         
-        ExchangeRatesManager.shared.fetchRates()
+        ExchangeRatesManager.shared.fetchRates { _ in }
         
         TranslateManager.shared.fetchLanguages { _ in
             DispatchQueue.main.async {

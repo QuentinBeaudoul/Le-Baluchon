@@ -10,16 +10,23 @@ import Extension
 import LBNetwork
 
 protocol ExchangeRateManagerProtocol {
-    func fetchRates(completion: ((Result<Double, Error>) -> Void)?)
+    var manager: NetworkManagerProtocol { get set }
+    init(manager: NetworkManagerProtocol)
+    func fetchRates(completion: @escaping (Result<Double, Error>) -> Void)
     func getUsdRate() -> Double?
     func isExchangeRateAvailable() -> Bool
 }
 
 public final class ExchangeRatesManager: ExchangeRateManagerProtocol {
+
     public static let shared = ExchangeRatesManager()
-    private init() {}
+    var manager: NetworkManagerProtocol
     
     private(set) var usd: Double?
+
+    init(manager: NetworkManagerProtocol = NetworkManager.shared) {
+        self.manager = manager
+    }
 
     public func getViewController() -> UIViewController {
         let viewController = ExchangeRatesViewController.makeFromStoryboard(in: Bundle(for: Self.self))
@@ -34,19 +41,19 @@ public final class ExchangeRatesManager: ExchangeRateManagerProtocol {
         return viewController
     }
     
-    public func fetchRates(completion: ((Result<Double, Error>) -> Void)? = nil) {
+    public func fetchRates(completion: @escaping (Result<Double, Error>) -> Void) {
         let url = Constante.exchangeRatesUrl
         let parameters = ["access_key": Constante.apikey]
         
-        NetworkManager.fetchData(url: url, parameters: parameters, parser: ExchangeRatesContainer.self) { result in
+        manager.fetchData(url: url, headers: nil, parameters: parameters, parser: ExchangeRatesContainer.self) { result in
             switch result {
             case .success(let container):
                 if let usd = container?.rates.usd {
                     self.usd = usd
-                    completion?(.success(usd))
+                    completion(.success(usd))
                 }
             case .failure(let error):
-                completion?(.failure(error))
+                completion(.failure(error))
             }
         }
     }

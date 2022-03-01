@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import LBNetwork
 
 class TranslateViewModel {
     
     private(set) var source: String = TranslateManager.shared.getDeviceLang()
     private(set) var target: String?
     
-    private let manager: TranslateManagerProtocol
+    let manager: TranslateManagerProtocol
     
     init(manager: TranslateManagerProtocol = TranslateManager.shared) {
         self.manager = manager

@@ -10,7 +10,7 @@ import XCTest
 
 class ViewModelTests: XCTestCase {
 
-    let viewModel = TranslateViewModel(manager: StubManager())
+    let viewModel = TranslateViewModel(manager: TranslateManager(manager: StubNetworkManager()))
     
     override func setUp() {
         super.setUp()
@@ -60,6 +60,93 @@ class ViewModelTests: XCTestCase {
                 break
             }
         }
+    }
+
+    func testGivenNoLangs_WhenFetchingLanguages_ThenHasLanguages() {
+
+        // When
+        viewModel.manager.fetchLanguages { result in
+            // Then
+            switch result {
+            case .success(let container):
+                XCTAssertNotNil(container)
+            case .failure(let error):
+                XCTAssertThrowsError(error)
+            }
+        }
+    }
+
+    func testGivenLangsFetched_WhenWantToGetSourceLangs_ThenGettingSourceLangs() {
+
+        // Given
+
+        viewModel.manager.fetchLanguages {[self] result in
+            switch result {
+            case .success(_):
+
+                // When
+                let sourceLangs = viewModel.getSourceLangs()
+                let expectedResult = ["De", "Fr", "Es", "En"]
+                var res = true
+
+                expectedResult.forEach { lang in
+                    if !sourceLangs.contains(lang) {
+                        res = false
+                    }
+                }
+
+                // Then
+                XCTAssertTrue(res)
+
+            case .failure(let error):
+                XCTAssertThrowsError(error)
+            }
+        }
+    }
+
+    func testGivenLangsFetched_WhenWantToGetTargetLangsForSource_ThenGettingTargetLangs() {
+        // Given
+
+        viewModel.manager.fetchLanguages {[self] result in
+            switch result {
+            case .success(_):
+
+                // When
+                let source = "En"
+
+                let result = viewModel.getTargetLangs(for: source)
+                let expectedResult = ["De", "Es", "Fr"]
+                // Then
+                XCTAssertEqual(result, expectedResult)
+
+            case .failure(let error):
+                XCTAssertThrowsError(error)
+            }
+        }
+    }
+
+    func testGivenLiteralName_WhenGettingSubName_ThenHasSubName() {
+
+        // Given
+        let literalName = "Français"
+
+        // When
+        let result = viewModel.manager.getNameFromLiteral(for: literalName)
+
+        // Then
+        XCTAssertEqual(result, "Fr")
+    }
+
+    func testGivenName_WhenGettingLiteralName_ThenHasLiteralName() {
+
+        // Given
+        let name = "Fr"
+
+        // When
+        let result = viewModel.manager.getLiteralName(for: name)
+
+        // Then
+        XCTAssertEqual(result, "Français")
     }
 
 }
