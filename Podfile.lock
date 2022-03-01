@@ -8,7 +8,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Alamofire (~> 5.5)
   - LoadableViews
   - R.swift
   - SwiftLint
@@ -28,6 +27,6 @@ SPEC CHECKSUMS:
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SwiftLint: 6bc52a21f0fd44cab9aa2dc8e534fb9f5e3ec507
 
-PODFILE CHECKSUM: e1822d77a1e668217726ed179e72573cfab8e6b7
+PODFILE CHECKSUM: 56a732d595d729a0a960841280ec975d6f79482d
 
 COCOAPODS: 1.11.2

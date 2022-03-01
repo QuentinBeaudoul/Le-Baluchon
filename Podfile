@@ -27,7 +27,14 @@ end
 target 'Weather' do
   project 'Weather/Weather.xcodeproj'
 
-	pod 'LoadableViews'
+  pod 'LoadableViews'
+	
+	target 'WeatherTests' do 
+		inherit! :complete
+		pod 'R.swift'
+		pod 'Alamofire'
+	end	
+	
 end
 
 target 'Translate' do
@@ -51,7 +58,7 @@ end
 target 'Le Baluchon' do
   project 'Le Baluchon/Le Baluchon.xcodeproj'
 
-	pod 'Alamofire', '~> 5.5'
+  pod 'Alamofire'
   pod 'R.swift'
   pod 'LoadableViews'
 end
