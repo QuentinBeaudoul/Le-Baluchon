@@ -15,26 +15,15 @@ protocol WeatherDelegate: AnyObject {
     func didChangeAuthorization()
 }
 
-class WeatherViewModel: NSObject {
+class WeatherViewModel {
 
     private var weathers : [WeatherLocation: WeatherContainer?] = [.NY: nil, .currLoc: nil]
-    private(set) var canUseLocation: Bool
-    let locationManager = CLLocationManager()
 
     weak var delegate: WeatherDelegate?
 
-    override init() {
-        
-        if #available(iOS 14.0, *) {
-            canUseLocation = locationManager.authorizationStatus == .authorizedWhenInUse
-        } else {
-            canUseLocation = true
-        }
-        
-        super.init()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-
+    init() {
+        // TODO: Injection de manager
+        LocationManager.shared.delegate = self
     }
 
     func fetchWeather(lat: Double, lon: Double, manager: WeatherManagerProtocol = WeatherManager.shared, completion: @escaping (Result<Void, Error>) -> Void) {
@@ -62,9 +51,11 @@ class WeatherViewModel: NSObject {
     }
 
     func requestLocation() {
-        if canUseLocation {
-            locationManager.requestLocation()
-        }
+        LocationManager.shared.requestLocation()
+    }
+    
+    func canUseLocation() -> Bool {
+        return LocationManager.shared.canUseLocation
     }
 
     func getNumberOfItems() -> Int {
@@ -78,28 +69,16 @@ class WeatherViewModel: NSObject {
 
 }
 
-extension WeatherViewModel: CLLocationManagerDelegate {
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            let lat = location.coordinate.latitude
-            let lon = location.coordinate.longitude
-            delegate?.onLocationChanged(lat: lat, lon: lon)
-        }
+extension WeatherViewModel: LocationManagerDelegate {
+    func onUpdateLocation(lat: Double, lon: Double) {
+        delegate?.onLocationChanged(lat: lat, lon: lon)
     }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    
+    func didFailWithError(_ error: Error) {
         delegate?.onLocationFailed(error: error)
     }
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedWhenInUse:
-            // Enable your app's location features.
-            canUseLocation = true
-        default:
-            break
-        }
+    
+    func didChangeAuthorization() {
         delegate?.didChangeAuthorization()
     }
 }

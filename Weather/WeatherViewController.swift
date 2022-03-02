@@ -29,7 +29,7 @@ class WeatherViewController: UIViewController {
         
         viewModel.delegate = self
         viewModel.requestLocation()
-        noPermissionView.isHidden = viewModel.canUseLocation
+        noPermissionView.isHidden = viewModel.canUseLocation()
 
         tableView.register(UINib(nibName: WeatherDetailsView.getCellIdentifier(), bundle: Bundle(for: Self.self)), forCellReuseIdentifier: WeatherDetailsView.getCellIdentifier())
         tableView.dataSource = self
@@ -59,7 +59,7 @@ class WeatherViewController: UIViewController {
 extension WeatherViewController: WeatherDelegate {
 
     func didChangeAuthorization() {
-        if viewModel.canUseLocation {
+        if viewModel.canUseLocation() {
             viewModel.requestLocation()
         } else {
             UIAlertController.showAlert(title: "Authorization issue", message: "We need your authorization to display the weather informations based on your location", on: self)
