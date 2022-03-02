@@ -10,7 +10,7 @@ import XCTest
 
 class WeatherTests: XCTestCase {
     
-    let viewModel = WeatherViewModel()
+    let viewModel = WeatherViewModel(manager: WeatherManager(manager: StubNetworkManager()))
     
     override func setUp(completion: @escaping (Error?) -> Void) {
         super.setUp(completion: completion)
@@ -20,7 +20,7 @@ class WeatherTests: XCTestCase {
         let lon = -73.966176
         
         // When
-        viewModel.fetchWeather(lat: lat, lon: lon, manager: StubManager()) { result in
+        viewModel.fetchWeather(lat: lat, lon: lon) { result in
             switch result {
             case .success():
                 completion(nil)

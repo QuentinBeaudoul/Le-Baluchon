@@ -10,6 +10,8 @@ import Extension
 import LBNetwork
 
 protocol WeatherManagerProtocol {
+    var manager: NetworkManagerProtocol { get set}
+    init(manager: NetworkManagerProtocol)
     func getWeather(lat: Double?, lon: Double?, completion: @escaping ((Result<WeatherContainer?, Error>) -> Void))
 }
 

@@ -21,24 +21,26 @@ class WeatherViewModel {
 
     weak var delegate: WeatherDelegate?
 
-    init() {
-        // TODO: Injection de manager
+    private let manager: WeatherManagerProtocol
+    
+    init(manager: WeatherManagerProtocol = WeatherManager.shared) {
+        self.manager = manager
         LocationManager.shared.delegate = self
     }
 
-    func fetchWeather(lat: Double, lon: Double, manager: WeatherManagerProtocol = WeatherManager.shared, completion: @escaping (Result<Void, Error>) -> Void) {
+    func fetchWeather(lat: Double, lon: Double, completion: @escaping (Result<Void, Error>) -> Void) {
         manager.getWeather(lat: nil, lon: nil) { [self] result in
             switch result {
             case .success(let NYWeather):
                 weathers[.NY] = NYWeather
-                fetchCurrentLocationWeather(lat: lat, lon: lon, manager: manager, completion: completion)
+                fetchCurrentLocationWeather(lat: lat, lon: lon, completion: completion)
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
 
-    private func fetchCurrentLocationWeather(lat: Double, lon: Double, manager: WeatherManagerProtocol, completion: @escaping (Result<Void, Error>) -> Void) {
+    private func fetchCurrentLocationWeather(lat: Double, lon: Double, completion: @escaping (Result<Void, Error>) -> Void) {
         manager.getWeather(lat: lat, lon: lon) { [self] result in
             switch result {
             case .success(let currentLocationWeather):
